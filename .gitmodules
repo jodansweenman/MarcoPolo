@@ -1,0 +1,3 @@
+[submodule "docs/turtlebot2i.wiki"]
+	path = docs/turtlebot2i.wiki
+	url = https://github.com/Interbotix/turtlebot2i.wiki.git
