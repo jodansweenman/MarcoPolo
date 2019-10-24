@@ -1,5 +1,5 @@
 build/
 devel/
 logs/
-
+*.mp3
 .catkin_tools/
