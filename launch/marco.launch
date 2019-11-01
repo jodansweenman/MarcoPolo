@@ -1,0 +1,18 @@
+<launch>
+    <node name='marco_overlord'
+        pkg='marco_overlord'
+        type='marco_overlord.py'
+        output='screen'/>
+    
+    <node name='marco_speech_node'
+        pkg='speech_node'
+        type='marco_speech_node.py'
+        output='screen'/>
+
+    <node name='marco_transcription_node'
+        pkg='transcription_node'
+        type='marco_transcription_node.py'
+        respawn="true"
+        output='screen' />
+
+</launch>

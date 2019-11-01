@@ -1,0 +1,2 @@
+string synth_name
+string synth_text
