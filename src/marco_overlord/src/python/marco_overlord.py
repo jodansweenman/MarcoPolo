@@ -4,6 +4,7 @@ from statemachine import StateMachine, State
 from statemachine.exceptions import TransitionNotAllowed
 import rospy
 from geometry_msgs.msg import Point
+from std_msgs.msg import Bool
 from speech_node.msg import SynthRq, PlayRq
 from transcription_node.msg import TranscriptionResult
 
@@ -19,6 +20,9 @@ class MPOverlord:
 
         rospy.loginfo('Registering as publisher for /mpstate/play_rq')
         self.playrq_pub = rospy.Publisher('mpstate/play_rq', PlayRq, queue_size=10, latch=True)
+
+        rospy.loginfo('Registering as publisher for /mpstate/pause_rq')
+        self.pauserq_pub = rospy.Publisher('mpstate/pause_rq', Bool, queue_size=10)
 
         rospy.loginfo('Registering as subscriber of /ballxy')
         self.ballxy_sub = rospy.Subscriber('ballxy', Point, callback=self.ballxy_received)
@@ -45,11 +49,20 @@ class MPOverlord:
         query_string = data.transcribed_text
         conf_in_query = data.confidence
         rospy.loginfo("Received query: '%s' with confidence: %f" % (query_string, conf_in_query))
+        print("State: %s" % self.mpstate.current_state_value)
 
         if "Marco" in query_string:
             rospy.loginfo("Beginning of query for Marco")
             # Synthesize the location of the ball since next question is probably
             # related to the ball
+
+            #Pause the robot
+            try:
+                self.mpstate.pause()
+            except TransitionNotAllowed:
+                rospy.logwarn("Already paused, not transitioning")
+            else:
+                self.pauserq_pub.publish(Bool(data=True))
 
             if 'ballfound' in self.mpstate.current_state_value:
                 full_ball_text = self._generate_relative_dist_str()
@@ -58,12 +71,11 @@ class MPOverlord:
                                 synth_text=full_ball_text)
                 self.synrq_pub.publish(ballsynrq)
 
-            #TODO: Pause the robot
 
         elif "red ball" in query_string:
             rospy.loginfo("Received query is related to the ball")
             playrq = PlayRq()
-            if self.mpstate.current_state_value == 'ballfound_mapping':
+            if 'ballfound' in self.mpstate.current_state_value:
                 playrq.synth_name = 'ballfound_loc'
             else:
                 playrq.synth_name = 'ball_not_found'
@@ -71,6 +83,13 @@ class MPOverlord:
             self.playrq_pub.publish(playrq)
 
             #TODO: resume the movement of the robot
+
+            try:
+                self.mpstate.resume()
+            except TransitionNotAllowed:
+                rospy.logwarn("Not allowed to unpause from this state")
+            else:
+                self.pauserq_pub.publish(Bool(data=False))
 
         else:
             rospy.loginfo("Unknown Query")
