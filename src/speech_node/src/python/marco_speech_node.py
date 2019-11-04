@@ -35,7 +35,7 @@ class MarcoSpeaker:
     def _get_synth_result(self, text, client):
         rospy.loginfo("Getting result for '%s'" % text)
 
-        response = client.synthesize_speech(VoiceId='Joanna',
+        response = client.synthesize_speech(VoiceId='Brian',
                                             OutputFormat='mp3',
                                             Text=text)
         rospy.loginfo("Synthesis complete")
