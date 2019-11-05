@@ -99,8 +99,9 @@ class MPOverlord(StateMachine):
         return
 
     def _rq_gen_state_trans_msgs(self):
-        rospy.loginfo('Requesting generation of default messages')
+        rospy.loginfo('Requesting generation of state messages')
         for state in self.states:
+            rospy.sleep(1)
             print(state.name)
             synrq = SynthRq(synth_name=state.identifier,
                             synth_text="Now in %s" % state.name)
