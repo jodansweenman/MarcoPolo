@@ -7,6 +7,7 @@ import boto3
 import pygame
 import rospy
 from speech_node.msg import SynthRq, PlayRq
+import os
 
 class MarcoSpeaker:
     """
@@ -27,6 +28,8 @@ class MarcoSpeaker:
 
         rospy.loginfo("Subscribing to mpstate/play_rq")
         rospy.Subscriber('mpstate/play_rq', PlayRq, callback=self.handle_play_rq)
+
+        self.basePath = rospy.get_param('/marcopolo/mp3_path', os.path.dirname(os.path.abspath(__file__)))
 
         self.synth_jobs = {}
 
@@ -57,7 +60,7 @@ class MarcoSpeaker:
         else:
             self._play_audio_file(file_path='ball_not_found.mp3')
 
-    def _play_audio_file(self, file_path='speech.mp3'):
+    def _play_audio_file(self, file_path):
         rospy.loginfo("Loading %s for playback" % file_path)
         pygame.mixer.music.load(file_path)
         pygame.time.Clock().tick(1)
@@ -79,10 +82,12 @@ class MarcoSpeaker:
         rospy.loginfo("Synthesizing text for '%s'" % synth_text)
         response = self._get_synth_result(synth_text, self.polly_client)
 
-        rospy.loginfo("Writing file: '%s'" % synth_filename)
-        self._write_audio_file(response, file_name=synth_filename)
+        synth_fullname = os.path.join(self.basePath, synth_filename)
 
-        self.synth_jobs[synth_name] = synth_filename
+        rospy.loginfo("Writing file: '%s'" % synth_fullname)
+        self._write_audio_file(response, file_name=synth_fullname)
+
+        self.synth_jobs[synth_name] = synth_fullname
 
         return
 
