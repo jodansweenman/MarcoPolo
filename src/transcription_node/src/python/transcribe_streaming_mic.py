@@ -36,6 +36,7 @@ from google.cloud.speech import enums
 from google.cloud.speech import types
 import pyaudio
 from six.moves import queue
+import rospy
 
 # Audio recording parameters
 RATE = 16000
@@ -90,6 +91,8 @@ class MicrophoneStream(object):
             # data, and stop iteration if the chunk is None, indicating the
             # end of the audio stream.
             chunk = self._buff.get()
+            if rospy.is_shutdown():
+                return
             if chunk is None:
                 return
             data = [chunk]

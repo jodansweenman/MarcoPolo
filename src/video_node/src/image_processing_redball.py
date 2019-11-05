@@ -37,7 +37,7 @@ def red_ball_detection(frame):
 
     # Hue saturation values I found worked best, may need adjustments in different lighting
     redLow = (0, 140, 140)
-    redHigh = (255, 255, 255)
+    redHigh = (80, 255, 255)
 
     # masks the parts of the image which fits the HSV setting, fills in holes using erode/dilate
     mask = cv2.inRange(frameHSV, redLow, redHigh)
