@@ -1,19 +1,73 @@
 #!/usr/bin/env python
 
-from statemachine import StateMachine, State
 from statemachine.exceptions import TransitionNotAllowed
+from statemachine import StateMachine, State
 import rospy
 from geometry_msgs.msg import Point
 from std_msgs.msg import Bool
 from speech_node.msg import SynthRq, PlayRq
 from transcription_node.msg import TranscriptionResult
 
-class MPOverlord:
-    def __init__(self):
-        rospy.loginfo('Initializing Marco Polo Overlord')
-        self.mpstate = MPState()
+class MPOverlord(StateMachine):
 
-        self.mpstate.begin_mapping()
+    # List of States
+    initializing = State('Initializing', initial=True)
+    search_mapping = State('Searching - Mapping')
+    search_paused = State('Searching - Paused')
+    ballfound_mapping = State("Ball Found - Mapping")
+    ballfound_paused = State("Ball Found - Paused")
+
+    # These are all callbacks which play audio upon entering state
+    def on_enter_ballfound_mapping(self):
+        rospy.loginfo("Now in %s" % self.ballfound_mapping.name)
+        playrq = PlayRq(synth_name=self.ballfound_mapping.identifier)
+        self.playrq_pub.publish(playrq)
+        return
+    
+    def on_enter_ballfound_paused(self):
+        rospy.loginfo("Now in %s" % self.ballfound_paused.name)
+        playrq = PlayRq(synth_name=self.ballfound_paused.identifier)
+        self.playrq_pub.publish(playrq)
+        return
+    
+    def on_enter_search_mapping(self):
+        rospy.loginfo("Now in %s" % self.search_mapping.name)
+        playrq = PlayRq(synth_name=self.search_mapping.identifier)
+        self.playrq_pub.publish(playrq)
+        return
+    
+    def on_enter_search_paused(self):
+        rospy.loginfo("Now in %s" % self.search_paused.name)
+        playrq = PlayRq(synth_name=self.search_paused.identifier)
+        self.playrq_pub.publish(playrq)
+        return
+
+    # Events which will trigger transitions
+    begin_mapping = initializing.to(search_mapping)
+    found_ball = search_mapping.to(ballfound_mapping)
+    
+    ball_found_pause = ballfound_mapping.to(ballfound_paused)
+    ball_found_unpause = ballfound_paused.to(ballfound_mapping)
+    
+    searching_pause = search_mapping.to(search_paused)
+    searching_unpause = search_paused.to(search_mapping)
+
+    def resume(self):
+        if self.current_state == self.search_paused:
+            self.searching_unpause()
+        elif self.current_state == self.ballfound_paused:
+            self.ball_found_unpause()        
+    
+    def pause(self):
+        if self.current_state == self.search_mapping:
+            self.searching_pause()
+        elif self.current_state == self.ballfound_mapping:
+            self.ball_found_pause()
+
+    def __init__(self):
+        super(MPOverlord, self).__init__()
+
+        rospy.loginfo('Initializing Marco Polo Overlord')
 
         rospy.loginfo('Registering as publisher for /mpstate/synth_rq')
         self.synrq_pub = rospy.Publisher('mpstate/synth_rq', SynthRq, queue_size=10, latch=True)
@@ -33,9 +87,24 @@ class MPOverlord:
 
         self.ball_xy_localframe = None
 
+        rospy.sleep(1)
+
+        self._rq_gen_state_trans_msgs()
         self._rq_gen_default_message()
 
+        rospy.sleep(1)
+
+        self.begin_mapping()
+
         return
+
+    def _rq_gen_state_trans_msgs(self):
+        rospy.loginfo('Requesting generation of default messages')
+        for state in self.states:
+            print(state.name)
+            synrq = SynthRq(synth_name=state.identifier,
+                            synth_text="Now in %s" % state.name)
+            self.synrq_pub.publish(synrq)
 
     def _rq_gen_default_message(self):
         rospy.loginfo('Requesting generation of default message')
@@ -49,7 +118,7 @@ class MPOverlord:
         query_string = data.transcribed_text
         conf_in_query = data.confidence
         rospy.loginfo("Received query: '%s' with confidence: %f" % (query_string, conf_in_query))
-        print("State: %s" % self.mpstate.current_state_value)
+        print("State: %s" % self.current_state_value)
 
         if "Marco" in query_string:
             rospy.loginfo("Beginning of query for Marco")
@@ -58,13 +127,13 @@ class MPOverlord:
 
             #Pause the robot
             try:
-                self.mpstate.pause()
+                self.pause()
             except TransitionNotAllowed:
                 rospy.logwarn("Already paused, not transitioning")
             else:
                 self.pauserq_pub.publish(Bool(data=True))
 
-            if 'ballfound' in self.mpstate.current_state_value:
+            if 'ballfound' in self.current_state_value:
                 full_ball_text = self._generate_relative_dist_str()
             
                 ballsynrq = SynthRq(synth_name='ballfound_loc',
@@ -75,7 +144,7 @@ class MPOverlord:
         elif "red ball" in query_string:
             rospy.loginfo("Received query is related to the ball")
             playrq = PlayRq()
-            if 'ballfound' in self.mpstate.current_state_value:
+            if 'ballfound' in self.current_state_value:
                 playrq.synth_name = 'ballfound_loc'
             else:
                 playrq.synth_name = 'ball_not_found'
@@ -85,7 +154,7 @@ class MPOverlord:
             #TODO: resume the movement of the robot
 
             try:
-                self.mpstate.resume()
+                self.resume()
             except TransitionNotAllowed:
                 rospy.logwarn("Not allowed to unpause from this state")
             else:
@@ -127,61 +196,11 @@ class MPOverlord:
         self.ball_xy_localframe = (data.x, data.y)
 
         try:
-            self.mpstate.found_ball()
+            self.found_ball()
         except TransitionNotAllowed:
             rospy.logwarn("Ball already found, not transitioning")
 
         return
-
-class MPState(StateMachine):
-    """
-    State machine defining Marco Polo
-    """
-    # List of States
-    initializing = State('Initializing', initial=True)
-    search_mapping = State('Searching - Mapping')
-    search_paused = State('Searching - Paused')
-    ballfound_mapping = State("Ball Found - Mapping")
-    ballfound_paused = State("Ball Found - Paused")
-
-    # Events which will trigger transitions
-    begin_mapping = initializing.to(search_mapping)
-    found_ball = search_mapping.to(ballfound_mapping)
-    
-    ball_found_pause = ballfound_mapping.to(ballfound_paused)
-    ball_found_unpause = ballfound_paused.to(ballfound_mapping)
-    
-    searching_pause = search_mapping.to(search_paused)
-    searching_unpause = search_paused.to(search_mapping)
-    
-    def resume(self):
-        if self.current_state == self.search_paused:
-            self.searching_unpause()
-        elif self.current_state == self.ballfound_paused:
-            self.ball_found_unpause()        
-    
-    def pause(self):
-        if self.current_state == self.search_mapping:
-            self.searching_pause()
-        elif self.current_state == self.ballfound_mapping:
-            self.ball_found_pause()
-            
-    def __init__(self):
-        super(MPState, self).__init__()
-
-    def on_enter_search_mapping(self):
-        print("Now searching for the ball ...")
-        # Code to begin robot movement
-
-    def on_enter_ballfound_mapping(self):
-        print("Found the ball!  Continuing mapping ...")
-        
-    def on_enter_search_paused(self):
-        print("Pausing search for ball ...")
-    
-    def on_enter_ballfound_paused(self):
-        print("Pausing continous mapping.  Ball location is still known")
-    
 
 def main():
 
