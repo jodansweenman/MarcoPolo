@@ -12,6 +12,7 @@
 //#include "message_filters/subscriber.h"
 //#include "message_filters/synchronizer.h"
 //#include <message_filters/sync_policies/approximate_time.h>
+#include <tf/transform_datatypes.h>
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
@@ -136,9 +137,27 @@ void depth_find(const sensor_msgs::PointCloud2 pCloud)
 
 void geometrypoint(){
     geometry_msgs::Point msg;
-    msg.x = world_ball_x;      
-    msg.y = world_ball_y;      
-    msg.z = world_ball_z;      
+
+    //Creating Quaternion for robot quaternion orientation for manipulation
+    tf::Quaternion q_robot(robot.rotation.x, robot.rotation.y, robot.rotation.z, robot.rotation.w);
+  
+    //Putting data into matrix 3x3 format
+    tf::Matrix3x3 m_robot(q_robot);
+
+    //Variables for RPY, yaw in degrees, counters, and imar ground truth x and y
+    double r_roll, r_pitch, r_yaw, r_yawDeg;
+
+    //Conversion to Euler Imar
+    m_robot.getRPY(r_roll, r_pitch, r_yaw);
+    r_yawDeg = r_yaw * 180/M_PI;
+
+
+    float angle_w = 0 - tan((ball_initial.translation.x-robot.translation.x)/(ball_initial.translation.y/robot.translation.y));
+	float relative_x = cos(angle_w-r_yaw)*abs((ball_initial.translation.x-robot.translation.x));
+	float relative_y = sin(angle_w-r_yaw)*abs((ball_initial.translation.y-robot.translation.y));
+    msg.x = relative_x;      
+    msg.y = relative_y;      
+    msg.z = 0.0;      
     point.publish(msg);
     
 }
@@ -192,16 +211,16 @@ int main(int argc, char **argv)
       robot.rotation.z = robot_coord.transform.rotation.z;
       robot.rotation.w = robot_coord.transform.rotation.w;
 
-      try{
-          robot_coord = tfBuffer.lookupTransform("base_footprint", "odom", ros::Time(0));
-      }
-      catch (tf2::TransformException &ex) {
-          ROS_WARN("%s", ex.what());
-          ros::Duration(1.0).sleep();
-          continue;
-      }
-      world_ball_x = robot_ball_transform.transform.translation.x;
-      world_ball_y = robot_ball_transform.transform.translation.y;
+      //try{
+      //    robot_coord = tfBuffer.lookupTransform("base_footprint", "odom", ros::Time(0));
+      //}
+      //catch (tf2::TransformException &ex) {
+      //    ROS_WARN("%s", ex.what());
+      //    ros::Duration(1.0).sleep();
+      //    continue;
+      //}
+      //world_ball_x = robot_ball_transform.transform.translation.x;
+      //world_ball_y = robot_ball_transform.transform.translation.y;
 
       ros::spinOnce();
       loop_rate.sleep();
