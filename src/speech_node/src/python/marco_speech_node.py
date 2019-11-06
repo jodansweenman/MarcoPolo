@@ -57,8 +57,7 @@ class MarcoSpeaker:
 
         if synth_name in self.synth_jobs.keys():
             self._play_audio_file(file_path=self.synth_jobs[synth_name])
-        else:
-            self._play_audio_file(file_path='ball_not_found.mp3')
+        return
 
     def _play_audio_file(self, file_path):
         rospy.loginfo("Loading %s for playback" % file_path)
