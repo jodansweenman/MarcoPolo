@@ -36,8 +36,10 @@ def red_ball_detection(frame):
     frameHSV = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 
     # Hue saturation values I found worked best, may need adjustments in different lighting
-    redLow = (0, 140, 140)
-    redHigh = (80, 255, 255)
+    #cv2.imshow('HSV', frameHSV)
+    #cv2.waitKey(25)
+    redLow = (0, 170, 160)
+    redHigh = (15, 255, 255)
 
     # masks the parts of the image which fits the HSV setting, fills in holes using erode/dilate
     mask = cv2.inRange(frameHSV, redLow, redHigh)
@@ -50,10 +52,15 @@ def red_ball_detection(frame):
     imgg = np.zeros(frame.shape[0:2])
 
     # Finds the countours of the mask, contours are the outline of the same value
-    cnts, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    _, cnts, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     center = None
 
     default_return = np.array([0,0,0], dtype='int16')
+    #cv2.imshow('frame', frame)
+    #cv2.waitKey(25)
+    
+    #cv2.imshow('mask',mask)
+    #cv2.waitKey(25)
 
     # no mask found at all
     if len(cnts) < 1:
@@ -71,17 +78,19 @@ def red_ball_detection(frame):
             center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
 
         # make sure the object is large enough, can adjust this
-        if radius > 10:
+        if radius > 30:
             # Check to see if the object is a circle by checking mask fill of enclosing circle
             cv2.circle(imgg, center, int(radius), 255, -1)
             masked = cv2.bitwise_and(maskg.astype(np.uint8), maskg.astype(np.uint8), mask=imgg.astype(np.uint8))
             circle_fullness = np.sum(masked) / (np.pi * radius ** 2 * 255)
 
             # check if the circle is 80% filled with the mask as threshold
-            if circle_fullness > 0.8:
+            if circle_fullness > 0.6:
                 redball_detected = 1
-
-        return np.array([redball_detected, center[0],center[1]], dtype='int16')
+        if not redball_detected:
+            return default_return
+        else:
+            return np.array([redball_detected, center[0],center[1]], dtype='int16')
 
 
 
