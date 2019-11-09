@@ -78,8 +78,8 @@ class MPOverlord(StateMachine):
         rospy.loginfo('Registering as publisher for /mpstate/pause_rq')
         self.pauserq_pub = rospy.Publisher('mpstate/pause_rq', Bool, queue_size=10)
 
-        rospy.loginfo('Registering as subscriber of /ballxy')
-        self.ballxy_sub = rospy.Subscriber('ballxy', Point, callback=self.ballxy_received)
+        rospy.loginfo('Registering as subscriber of /geopoint')
+        self.ballxy_sub = rospy.Subscriber('geopoint', Point, callback=self.ballxy_received)
 
         rospy.loginfo('Registering as subscriber of /mpstate/transcription')
         self.query_sub = rospy.Subscriber('mpstate/transcription', TranscriptionResult,
@@ -121,7 +121,7 @@ class MPOverlord(StateMachine):
         rospy.loginfo("Received query: '%s' with confidence: %f" % (query_string, conf_in_query))
         print("State: %s" % self.current_state_value)
 
-        if "Marco" in query_string:
+        if ("Big Daddy" in query_string) or ("Marco" in query_string):
             rospy.loginfo("Beginning of query for Marco")
             # Synthesize the location of the ball since next question is probably
             # related to the ball
@@ -182,7 +182,7 @@ class MPOverlord(StateMachine):
         else:
             forward_back_text = 'behind me'
 
-        full_ball_text = 'The ball is located %s meters %s and %s meters %s.' % \
+        full_ball_text = 'The ball is located %.1f meters %s and %.1f meters %s.' % \
                     (abs(ball_relative_loc[0]),
                      left_right_text,
                      abs(ball_relative_loc[1]),
