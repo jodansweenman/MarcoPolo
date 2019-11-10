@@ -28,22 +28,16 @@ ros::Subscriber ballstatus2;
 //Global Variable Declarations for this node
 geometry_msgs::Transform robot;
 geometry_msgs::Transform ball_initial;
-geometry_msgs::PointStamped initial_pt;
 geometry_msgs::PointStamped transformed_pt;
+geometry_msgs::PointStamped world_pt;
 std_msgs::Int16MultiArray ballstate;
+
+//ROS tf2 initialization for tf listener
 
 int data0 = 0;
 int u = 0;
 int v = 0;
 int ball_flag = 0;
-float world_ball_x = 0; 
-float world_ball_y = 0; 
-float world_ball_z = 0;
-
-float X = 0.0;
-float Y = 0.0;
-float Z = 0.0;
-
 
 /**
  * This subscriber publishes a tf for the location of the ball and records it's current state.
@@ -55,30 +49,16 @@ void ballpose(const std_msgs::Int16MultiArray state1)
     v = state1.data[2];
     static tf2_ros::TransformBroadcaster br;
     geometry_msgs::TransformStamped ball;
-    if(state1.data[0]==1){
-        ball.header.stamp = ros::Time::now();
-        ball.header.frame_id = "map";
-        ball.child_frame_id = "ball_position";
-        ball.transform.translation.x = ball_initial.translation.x;
-        ball.transform.translation.y = ball_initial.translation.y;
-        ball.transform.translation.z = 0;
-        ball.transform.rotation.x = 0;
-        ball.transform.rotation.y = 0;
-        ball.transform.rotation.z = 0;
-        ball.transform.rotation.w = 1;
-    }
-    else{
-        ball.header.stamp = ros::Time::now();
-        ball.header.frame_id = "map";
-        ball.child_frame_id = "ball_position";
-        ball.transform.translation.x = 0;
-        ball.transform.translation.y = 0;
-        ball.transform.translation.z = 0;
-        ball.transform.rotation.x = 0;
-        ball.transform.rotation.y = 0;
-        ball.transform.rotation.z = 0;
-        ball.transform.rotation.w = 1;
-    }
+    ball.header.stamp = ros::Time::now();
+    ball.header.frame_id = "odom";
+    ball.child_frame_id = "ball_position";
+    ball.transform.translation.x = world_pt.point.x;
+    ball.transform.translation.y = world_pt.point.y;
+    ball.transform.translation.z = 0;
+    ball.transform.rotation.x = 0;
+    ball.transform.rotation.y = 0;
+    ball.transform.rotation.z = 0;
+    ball.transform.rotation.w = 1;
     br.sendTransform(ball);
 }
 
@@ -89,31 +69,62 @@ void ballpose(const std_msgs::Int16MultiArray state1)
 void depth_find(const sensor_msgs::PointCloud2 pCloud)
 {
     if(data0==1){
+
+        geometry_msgs::PointStamped initial_pt;
+
+        int width = pCloud.width;
+        int height = pCloud.height;
+
+        // Convert from u (column / width), v (row/height) to position in array
+        // where X,Y,Z data starts
+        int arrayPosition = v*pCloud.row_step + u*pCloud.point_step;
+
+        // compute position in array where x,y,z data start
+        int arrayPosX = arrayPosition + pCloud.fields[0].offset; // X has an offset of 0
+        int arrayPosY = arrayPosition + pCloud.fields[1].offset; // Y has an offset of 4
+        int arrayPosZ = arrayPosition + pCloud.fields[2].offset; // Z has an offset of 8
+
+        tf2_ros::Buffer tfBuffer2;
+        tf2_ros::TransformListener tfListener(tfBuffer2);
+
+        float x = 0.0;
+        float y = 0.0;
+        float z = 0.0;
+
+
+        memcpy(&y, &pCloud.data[arrayPosX], sizeof(float));
+        memcpy(&y, &pCloud.data[arrayPosY], sizeof(float));
+        memcpy(&x, &pCloud.data[arrayPosZ], sizeof(float));
+        
+        initial_pt.point.x = x;
+        initial_pt.point.y = y;
+        initial_pt.point.z = z; 
+
+
+        cout<<initial_pt.point.x<<" "<<initial_pt.point.y<<" "<<initial_pt.point.z<<endl;
+
         ball_flag = 1;
 
-        initial_pt.point.x = Z;
-        initial_pt.point.y = X;
-        initial_pt.point.z = Y;
+        geometry_msgs::TransformStamped world_coord;
+        try{
+            cout<<"got in geopoint"<<endl;
+            //Listening to transform between robot and world coordinates
+            world_coord = tfBuffer2.lookupTransform("odom", "base_footprint", ros::Time(0), ros::Duration(0.5));
+            
+            //Transform to give relative position of ball to robot translation and rotation
+            if(isnan(initial_pt.point.x)||initial_pt.point.x==0){
+
+            }
+            else{
+                tf2::doTransform(initial_pt, world_pt, world_coord);
+            }
+            cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
+        }
+        catch (tf2::TransformException &ex) {
+            ROS_WARN("%s", ex.what());
+            cout<<"got here"<<endl;
+        }
     }
-    int width = pCloud.width;
-    int height = pCloud.height;
-
-    // Convert from u (column / width), v (row/height) to position in array
-    // where X,Y,Z data starts
-    int arrayPosition = v*pCloud.row_step + u*pCloud.point_step;
-
-    // compute position in array where x,y,z data start
-    int arrayPosX = arrayPosition + pCloud.fields[0].offset; // X has an offset of 0
-    int arrayPosY = arrayPosition + pCloud.fields[1].offset; // Y has an offset of 4
-    int arrayPosZ = arrayPosition + pCloud.fields[2].offset; // Z has an offset of 8
-
-    memcpy(&X, &pCloud.data[arrayPosX], sizeof(float));
-    memcpy(&Y, &pCloud.data[arrayPosY], sizeof(float));
-    memcpy(&Z, &pCloud.data[arrayPosZ], sizeof(float));
-
-    //cout<<"XYZ "<<Z<<" "<<X<<" "<<Y<<endl;
-
-
 }
 
 
@@ -122,35 +133,16 @@ void depth_find(const sensor_msgs::PointCloud2 pCloud)
  */
 void geometrypoint(){
     geometry_msgs::Point msg;
-
-    //Creating Quaternion for robot quaternion orientation for manipulation
-    tf::Quaternion q_robot(robot.rotation.x, robot.rotation.y, robot.rotation.z, robot.rotation.w);
-  
-    //Putting data into matrix 3x3 format
-    tf::Matrix3x3 m_robot(q_robot);
-
-    //Variables for RPY, yaw in degrees, counters, and imar ground truth x and y
-    double r_roll, r_pitch, r_yaw, r_yawDeg;
-
-    //Conversion to Euler Imar
-    m_robot.getRPY(r_roll, r_pitch, r_yaw);
-    r_yawDeg = r_yaw * 180/M_PI;
-
-
-    float angle_w = 0 - tan((transformed_pt.point.x-robot.translation.x)/(transformed_pt.point.y-robot.translation.y));
-    float relative_x = sin(angle_w-r_yaw)*abs((transformed_pt.point.x-robot.translation.x));
-    float relative_y = cos(angle_w-r_yaw)*abs((transformed_pt.point.y-robot.translation.y));
-    //cout<<"relative_x "<<relative_x<<endl;
-    //msg.x = relative_x;      
-    //msg.y = relative_y;      
+     
     msg.z = 0.0;
 
-    if(isnan(relative_x) || relative_x == 0){
+    if(isnan(transformed_pt.point.x)){
         point.publish(msg);
+        //cout<<"publishing geopoint"<<endl;
     }
     else{
-        msg.x = -transformed_pt.point.y;      
         msg.y = transformed_pt.point.x;
+        msg.x = -transformed_pt.point.y;      
         point.publish(msg);
     }      
     
@@ -167,7 +159,11 @@ int main(int argc, char **argv)
 
   ros::NodeHandle n;
 
+  tf2_ros::Buffer tfBuffer;
+  tf2_ros::TransformListener tfListener(tfBuffer);
+
   ros::Rate loop_rate(10);
+
 
   //Ball /tf initialization
   ball_initial.translation.x = 0;
@@ -181,10 +177,6 @@ int main(int argc, char **argv)
 
   //Start of publisher
   point = n.advertise<geometry_msgs::Point>("geopoint", 1000);
-
-  //ROS tf2 initialization for tf listener
-  tf2_ros::Buffer tfBuffer;
-  tf2_ros::TransformListener tfListener(tfBuffer);
   
   //Loop for listener, publisher, and ROS transform
   while(ros::ok()){
@@ -192,11 +184,12 @@ int main(int argc, char **argv)
       geometry_msgs::TransformStamped robot_coord;
       geometry_msgs::TransformStamped robot_ball_transform;
       try{
+          cout<<"while loop main"<<endl;
           //Listening to transform between robot and world coordinates
           robot_coord = tfBuffer.lookupTransform("base_footprint", "odom", ros::Time(0));
 
           //Transform to give relative position of ball to robot translation and rotation
-          tf2::doTransform(initial_pt, transformed_pt, robot_coord);
+          tf2::doTransform(world_pt, transformed_pt, robot_coord);
           //cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
       }
       catch (tf2::TransformException &ex) {
@@ -205,19 +198,12 @@ int main(int argc, char **argv)
           continue;
       }
 
-      //storage of robot transform
-      robot.translation.x = robot_coord.transform.translation.x;
-      robot.translation.y = robot_coord.transform.translation.y;
-      robot.translation.z = robot_coord.transform.translation.y;
-
-      robot.rotation.x = robot_coord.transform.rotation.x;
-      robot.rotation.y = robot_coord.transform.rotation.y;
-      robot.rotation.z = robot_coord.transform.rotation.z;
-      robot.rotation.w = robot_coord.transform.rotation.w;
-
       ros::spinOnce();
       loop_rate.sleep();
-      geometrypoint();
+      if(ball_flag==1){
+          geometrypoint();
+      }
+      
   }
 
   return 0;

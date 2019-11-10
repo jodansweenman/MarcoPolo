@@ -1,6 +1,7 @@
-# Chris Neighbor
+#!/usr/bin/python
 
-#!/usr/bin/env python
+
+#Chris Neighbor
 
 import roslib
 import sys
@@ -18,9 +19,9 @@ for now the publishing format will be an int array with format
 [red_ball_detected(0 or 1), x_coordinates(0-640), y_coordinates(0-480)]
 """
 
-publisher_node = 'placeholder0'
+publisher_node = 'marco/ball_uv'
 # camera node for the turtlebot
-subscribing_node = '/camera/rgb/image_color'
+subscribing_node = '/camera/rgb/image_rect_color'
 
 class image_detector:
 
@@ -41,10 +42,10 @@ class image_detector:
 
         # checks image for red ball and returns center coordinates
         result = red_ball_detection(cv_image)
-
+        print(result)
         try:
             # sends the int16 array with detected bool and x,y coordinates
-            self.coordinates_pub.publish(results)
+            self.coordinates_pub.publish(Int16MultiArray(data=result))
             # displaying an image back
             #self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, "bgr8"))
         except CvBridgeError as e:
@@ -52,8 +53,8 @@ class image_detector:
 
 
 def main(args):
-    id = image_detector()
     rospy.init_node('image_detector', anonymous=True)
+    id = image_detector()
     try:
         rospy.spin()
     except KeyboardInterrupt:
