@@ -92,9 +92,9 @@ void depth_find(const sensor_msgs::PointCloud2 pCloud)
         float z = 0.0;
 
 
-        memcpy(&y, &pCloud.data[arrayPosX], sizeof(float));
-        memcpy(&y, &pCloud.data[arrayPosY], sizeof(float));
-        memcpy(&x, &pCloud.data[arrayPosZ], sizeof(float));
+        memcpy(&x, &pCloud.data[arrayPosX], sizeof(float)); //y
+        memcpy(&y, &pCloud.data[arrayPosY], sizeof(float)); //z
+        memcpy(&z, &pCloud.data[arrayPosZ], sizeof(float)); //x
         
         initial_pt.point.x = x;
         initial_pt.point.y = y;
@@ -107,9 +107,9 @@ void depth_find(const sensor_msgs::PointCloud2 pCloud)
 
         geometry_msgs::TransformStamped world_coord;
         try{
-            cout<<"got in geopoint"<<endl;
+            //cout<<"got in geopoint"<<endl;
             //Listening to transform between robot and world coordinates
-            world_coord = tfBuffer2.lookupTransform("odom", "base_footprint", ros::Time(0), ros::Duration(0.5));
+            world_coord = tfBuffer2.lookupTransform("odom", "camera_depth_optical_frame", ros::Time(0), ros::Duration(0.5));
             
             //Transform to give relative position of ball to robot translation and rotation
             if(isnan(initial_pt.point.x)||initial_pt.point.x==0){
@@ -118,12 +118,13 @@ void depth_find(const sensor_msgs::PointCloud2 pCloud)
             else{
                 tf2::doTransform(initial_pt, world_pt, world_coord);
             }
-            cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
+            //cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
         }
         catch (tf2::TransformException &ex) {
             ROS_WARN("%s", ex.what());
-            cout<<"got here"<<endl;
+            //cout<<"got here"<<endl;
         }
+    
     }
 }
 
@@ -142,7 +143,7 @@ void geometrypoint(){
     }
     else{
         msg.y = transformed_pt.point.x;
-        msg.x = -transformed_pt.point.y;      
+        msg.x = transformed_pt.point.y;      
         point.publish(msg);
     }      
     
@@ -154,57 +155,52 @@ void geometrypoint(){
  */
 int main(int argc, char **argv)
 {
-  //Node intitialization  
-  ros::init(argc, argv, "depthcloud");
-
-  ros::NodeHandle n;
-
-  tf2_ros::Buffer tfBuffer;
-  tf2_ros::TransformListener tfListener(tfBuffer);
-
-  ros::Rate loop_rate(10);
-
-
-  //Ball /tf initialization
-  ball_initial.translation.x = 0;
-  ball_initial.translation.y = 0;
-
-  //Subscribers being started
-  ballstatus = n.subscribe("/marco/ball_uv", 1000, ballpose);
-  //ballstatus2 = n.subscribe("/marco/redball_uv", 1000, depth_find);
-
-  pcloudsub = n.subscribe("/camera/depth/points", 1000, depth_find);
-
-  //Start of publisher
-  point = n.advertise<geometry_msgs::Point>("geopoint", 1000);
-  
-  //Loop for listener, publisher, and ROS transform
-  while(ros::ok()){
-      //Variables for transform
-      geometry_msgs::TransformStamped robot_coord;
-      geometry_msgs::TransformStamped robot_ball_transform;
-      try{
-          cout<<"while loop main"<<endl;
-          //Listening to transform between robot and world coordinates
-          robot_coord = tfBuffer.lookupTransform("base_footprint", "odom", ros::Time(0));
-
-          //Transform to give relative position of ball to robot translation and rotation
-          tf2::doTransform(world_pt, transformed_pt, robot_coord);
-          //cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
-      }
-      catch (tf2::TransformException &ex) {
-          ROS_WARN("%s", ex.what());
-          ros::Duration(1.0).sleep();
-          continue;
-      }
-
-      ros::spinOnce();
-      loop_rate.sleep();
-      if(ball_flag==1){
-          geometrypoint();
-      }
-      
-  }
+    //Node intitialization  
+    ros::init(argc, argv, "depthcloud");
+    ros::NodeHandle n;
+    tf2_ros::Buffer tfBuffer;
+    tf2_ros::TransformListener tfListener(tfBuffer);
+    ros::Rate loop_rate(10);
+    
+    //Ball /tf initialization
+    ball_initial.translation.x = 0;
+    ball_initial.translation.y = 0;
+    
+    //Subscribers being started
+    ballstatus = n.subscribe("/marco/ball_uv", 1000, ballpose);
+    //ballstatus2 = n.subscribe("/marco/redball_uv", 1000, depth_find);
+    
+    pcloudsub = n.subscribe("/camera/depth/points", 1000, depth_find);
+    
+    //Start of publisher
+    point = n.advertise<geometry_msgs::Point>("geopoint", 1000);
+    
+    //Loop for listener, publisher, and ROS transform
+    while(ros::ok()){
+        
+        //Variables for transform
+        geometry_msgs::TransformStamped robot_coord;
+        geometry_msgs::TransformStamped robot_ball_transform;
+        try{
+            //cout<<"while loop main"<<endl;
+            //Listening to transform between robot and world coordinates
+            robot_coord = tfBuffer.lookupTransform("base_footprint", "odom", ros::Time(0));
+            //Transform to give relative position of ball to robot translation and rotation
+            tf2::doTransform(world_pt, transformed_pt, robot_coord);
+            //cout<<"initial point "<<initial_pt.point.x<<" transformed point "<<transformed_pt.point.x<<endl;
+        }
+        catch (tf2::TransformException &ex) {
+            ROS_WARN("%s", ex.what());
+            ros::Duration(1.0).sleep();
+            continue;
+        }
+        
+        ros::spinOnce();
+        loop_rate.sleep();
+        if(ball_flag==1){
+            geometrypoint();
+        }
+    }
 
   return 0;
 }
