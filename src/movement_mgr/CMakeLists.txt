@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_runtime
   std_msgs
   move_base_msgs
+  frontier_exploration
 )
 
 ## System dependencies are found with CMake's conventions
@@ -114,7 +115,16 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES movement_mgr
-  CATKIN_DEPENDS actionlib actionlib_msgs depth_finder marco_overlord rospy geometry_msgs message_runtime std_msgs move_base_msgs
+  CATKIN_DEPENDS actionlib
+  actionlib_msgs
+  depth_finder
+  marco_overlord
+  rospy
+  geometry_msgs
+  message_runtime
+  std_msgs
+  move_base_msgs
+  frontier_exploration
 #  DEPENDS system_lib
 )
 

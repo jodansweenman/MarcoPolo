@@ -70,6 +70,7 @@
   <depend>message_runtime</depend>
   <depend>std_msgs</depend>
   <depend>move_base_msgs</depend>
+  <depend>frontier_exploration</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
