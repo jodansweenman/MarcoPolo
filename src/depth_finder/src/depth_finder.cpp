@@ -21,6 +21,7 @@ using namespace std;
 
 //Declaration of ROS Publishers and Subscribers
 ros::Publisher point;
+ros::Publisher world_pt_pub;
 ros::Subscriber pcloudsub;
 ros::Subscriber ballstatus;
 ros::Subscriber ballstatus2;
@@ -174,6 +175,7 @@ int main(int argc, char **argv)
     
     //Start of publisher
     point = n.advertise<geometry_msgs::Point>("geopoint", 1000);
+    world_pt_pub = n.advertise<geometry_msgs::Point>("/marco/world_pt", 10);
     
     //Loop for listener, publisher, and ROS transform
     while(ros::ok()){
