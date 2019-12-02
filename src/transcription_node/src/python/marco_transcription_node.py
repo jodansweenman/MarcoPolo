@@ -77,13 +77,18 @@ def main():
     rospy.loginfo('Registering as publisher for /mpstate/transcription')
     trans_pub = rospy.Publisher('mpstate/transcription', TranscriptionResult, queue_size=10, latch=True)
 
+    # Some short snippets which are likely to be told to Marco.
+    marco_phrases = ['hey marco', 'where is the', 'go get the']
+
     language_code = 'en-US'  # a BCP-47 language tag
 
     client = speech.SpeechClient()
     config = types.RecognitionConfig(
         encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
         sample_rate_hertz=RATE,
-        language_code=language_code)
+        language_code=language_code,
+        phrases=marco_phrases)
+
     streaming_config = types.StreamingRecognitionConfig(
         config=config,
         interim_results=True)
