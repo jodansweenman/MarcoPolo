@@ -1,0 +1,1426 @@
+... logging to /home/marcopolo/.ros/log/6c764314-0039-11ea-a956-a0c589041e7e/roslaunch-marcopolo-570x-DVT3-31457.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;launch/marco_joule.launch
+[1mstarted roslaunch server http://192.168.1.101:36811/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /bumper2pointcloud/pointcloud_radius: 0.24
+ * /camera/camera_nodelet_manager/num_worker_threads: 4
+ * /camera/depth_rectify_depth/interpolation: 0
+ * /camera/depth_registered_rectify_depth/interpolation: 0
+ * /camera/disparity_depth/max_range: 4.0
+ * /camera/disparity_depth/min_range: 0.5
+ * /camera/disparity_registered_hw/max_range: 4.0
+ * /camera/disparity_registered_hw/min_range: 0.5
+ * /camera/driver/auto_exposure: True
+ * /camera/driver/auto_white_balance: True
+ * /camera/driver/bootorder: 0
+ * /camera/driver/color_depth_synchronization: False
+ * /camera/driver/depth_camera_info_url: 
+ * /camera/driver/depth_frame_id: camera_depth_opti...
+ * /camera/driver/depth_registration: True
+ * /camera/driver/device_id: #1
+ * /camera/driver/devnums: 1
+ * /camera/driver/rgb_camera_info_url: 
+ * /camera/driver/rgb_frame_id: camera_rgb_optica...
+ * /camera_sr300/depth_rectify_depth/interpolation: 0
+ * /camera_sr300/disparity_depth/max_range: 4.0
+ * /camera_sr300/disparity_depth/min_range: 0.5
+ * /camera_sr300/disparity_registered_sw/max_range: 4.0
+ * /camera_sr300/disparity_registered_sw/min_range: 0.5
+ * /camera_sr300/driver/base_frame_id: camera_sr300_link
+ * /camera_sr300/driver/camera_type: SR300
+ * /camera_sr300/driver/color_fps: 30
+ * /camera_sr300/driver/color_frame_id: camera_sr300_rgb_...
+ * /camera_sr300/driver/color_height: 480
+ * /camera_sr300/driver/color_optical_frame_id: camera_sr300_rgb_...
+ * /camera_sr300/driver/color_width: 640
+ * /camera_sr300/driver/depth_fps: 30
+ * /camera_sr300/driver/depth_frame_id: camera_sr300_dept...
+ * /camera_sr300/driver/depth_height: 480
+ * /camera_sr300/driver/depth_optical_frame_id: camera_sr300_dept...
+ * /camera_sr300/driver/depth_width: 640
+ * /camera_sr300/driver/enable_color: True
+ * /camera_sr300/driver/enable_depth: True
+ * /camera_sr300/driver/enable_fisheye: False
+ * /camera_sr300/driver/enable_imu: False
+ * /camera_sr300/driver/enable_ir2: True
+ * /camera_sr300/driver/enable_ir: True
+ * /camera_sr300/driver/enable_pointcloud: False
+ * /camera_sr300/driver/enable_tf: False
+ * /camera_sr300/driver/fisheye_frame_id: camera_sr300_fish...
+ * /camera_sr300/driver/fisheye_optical_frame_id: camera_sr300_fish...
+ * /camera_sr300/driver/imu_frame_id: camera_sr300_imu_...
+ * /camera_sr300/driver/imu_optical_frame_id: camera_sr300_imu_...
+ * /camera_sr300/driver/ir2_frame_id: camera_sr300_ir2_...
+ * /camera_sr300/driver/ir2_optical_frame_id: camera_sr300_ir2_...
+ * /camera_sr300/driver/ir_frame_id: camera_sr300_ir_f...
+ * /camera_sr300/driver/ir_optical_frame_id: camera_sr300_ir_o...
+ * /camera_sr300/driver/mode: manual
+ * /camera_sr300/driver/serial_no: 
+ * /camera_sr300/driver/usb_port_id: 
+ * /camera_sr300/points_xyzrgb_sw_registered/exact_sync: True
+ * /camera_sr300/points_xyzrgb_sw_registered/queue_size: 100
+ * /cmd_vel_mux/yaml_cfg_file: /home/marcopolo/t...
+ * /depthimage_to_laserscan/output_frame_id: /camera_depth_frame
+ * /depthimage_to_laserscan/range_min: 0.45
+ * /depthimage_to_laserscan/scan_height: 10
+ * /diagnostic_aggregator/analyzers/input_ports/contains: ['Digital Input',...
+ * /diagnostic_aggregator/analyzers/input_ports/path: Input Ports
+ * /diagnostic_aggregator/analyzers/input_ports/remove_prefix: mobile_base_nodel...
+ * /diagnostic_aggregator/analyzers/input_ports/timeout: 5.0
+ * /diagnostic_aggregator/analyzers/input_ports/type: diagnostic_aggreg...
+ * /diagnostic_aggregator/analyzers/kobuki/contains: ['Watchdog', 'Mot...
+ * /diagnostic_aggregator/analyzers/kobuki/path: Kobuki
+ * /diagnostic_aggregator/analyzers/kobuki/remove_prefix: mobile_base_nodel...
+ * /diagnostic_aggregator/analyzers/kobuki/timeout: 5.0
+ * /diagnostic_aggregator/analyzers/kobuki/type: diagnostic_aggreg...
+ * /diagnostic_aggregator/analyzers/power/contains: ['Battery', 'Lapt...
+ * /diagnostic_aggregator/analyzers/power/path: Power System
+ * /diagnostic_aggregator/analyzers/power/remove_prefix: mobile_base_nodel...
+ * /diagnostic_aggregator/analyzers/power/timeout: 5.0
+ * /diagnostic_aggregator/analyzers/power/type: diagnostic_aggreg...
+ * /diagnostic_aggregator/analyzers/sensors/contains: ['Cliff Sensor', ...
+ * /diagnostic_aggregator/analyzers/sensors/path: Sensors
+ * /diagnostic_aggregator/analyzers/sensors/remove_prefix: mobile_base_nodel...
+ * /diagnostic_aggregator/analyzers/sensors/timeout: 5.0
+ * /diagnostic_aggregator/analyzers/sensors/type: diagnostic_aggreg...
+ * /diagnostic_aggregator/base_path: 
+ * /diagnostic_aggregator/pub_rate: 1.0
+ * /dock_drive/min_abs_v: 0.01
+ * /dock_drive/min_abs_w: 0.1
+ * /explore_server/explore_costmap/explore_boundary/frontier_travel_point: closest
+ * /explore_server/explore_costmap/explore_boundary/resize_to_boundary: True
+ * /explore_server/explore_costmap/footprint: [[0.2, 0.0], [0.0...
+ * /explore_server/explore_costmap/global_frame: map
+ * /explore_server/explore_costmap/inflation/inflation_radius: 0.2
+ * /explore_server/explore_costmap/plugins: [{'type': 'fronti...
+ * /explore_server/explore_costmap/publish_frequency: 5.0
+ * /explore_server/explore_costmap/resolution: 0.05
+ * /explore_server/explore_costmap/robot_base_frame: base_link
+ * /explore_server/explore_costmap/robot_radius: 0.2
+ * /explore_server/explore_costmap/rolling_window: False
+ * /explore_server/explore_costmap/sensor/laser/clearing: True
+ * /explore_server/explore_costmap/sensor/laser/data_type: LaserScan
+ * /explore_server/explore_costmap/sensor/laser/inf_is_valid: True
+ * /explore_server/explore_costmap/sensor/laser/marking: True
+ * /explore_server/explore_costmap/sensor/laser/obstacle_range: 3.0
+ * /explore_server/explore_costmap/sensor/laser/raytrace_range: 3.0
+ * /explore_server/explore_costmap/sensor/laser/topic: scan
+ * /explore_server/explore_costmap/sensor/observation_sources: laser
+ * /explore_server/explore_costmap/track_unknown_space: True
+ * /explore_server/explore_costmap/transform_tolerance: 0.5
+ * /explore_server/explore_costmap/update_frequency: 5.0
+ * /explore_server/frequency: 2.0
+ * /explore_server/goal_aliasing: 3.0
+ * /mobile_base/base_frame: base_footprint
+ * /mobile_base/battery_capacity: 16.5
+ * /mobile_base/battery_dangerous: 13.2
+ * /mobile_base/battery_low: 14.0
+ * /mobile_base/cmd_vel_timeout: 0.6
+ * /mobile_base/device_port: /dev/kobuki
+ * /mobile_base/odom_frame: odom
+ * /mobile_base/publish_tf: True
+ * /mobile_base/use_imu_heading: True
+ * /mobile_base/wheel_left_joint_name: wheel_left_joint
+ * /mobile_base/wheel_right_joint_name: wheel_right_joint
+ * /move_base/DWAPlannerROS/acc_lim_theta: 2.0
+ * /move_base/DWAPlannerROS/acc_lim_x: 1.0
+ * /move_base/DWAPlannerROS/acc_lim_y: 0.0
+ * /move_base/DWAPlannerROS/forward_point_distance: 0.325
+ * /move_base/DWAPlannerROS/global_frame_id: odom
+ * /move_base/DWAPlannerROS/goal_distance_bias: 24.0
+ * /move_base/DWAPlannerROS/max_rot_vel: 2.0
+ * /move_base/DWAPlannerROS/max_scaling_factor: 0.2
+ * /move_base/DWAPlannerROS/max_trans_vel: 0.5
+ * /move_base/DWAPlannerROS/max_vel_x: 0.2
+ * /move_base/DWAPlannerROS/max_vel_y: 0.0
+ * /move_base/DWAPlannerROS/min_rot_vel: 0.4
+ * /move_base/DWAPlannerROS/min_trans_vel: 0.1
+ * /move_base/DWAPlannerROS/min_vel_x: 0.0
+ * /move_base/DWAPlannerROS/min_vel_y: 0.0
+ * /move_base/DWAPlannerROS/occdist_scale: 0.5
+ * /move_base/DWAPlannerROS/oscillation_reset_dist: 0.05
+ * /move_base/DWAPlannerROS/path_distance_bias: 64.0
+ * /move_base/DWAPlannerROS/publish_cost_grid_pc: True
+ * /move_base/DWAPlannerROS/publish_traj_pc: True
+ * /move_base/DWAPlannerROS/rot_stopped_vel: 0.4
+ * /move_base/DWAPlannerROS/scaling_speed: 0.25
+ * /move_base/DWAPlannerROS/sim_time: 1.7
+ * /move_base/DWAPlannerROS/stop_time_buffer: 0.2
+ * /move_base/DWAPlannerROS/trans_stopped_vel: 0.1
+ * /move_base/DWAPlannerROS/vtheta_samples: 20
+ * /move_base/DWAPlannerROS/vx_samples: 6
+ * /move_base/DWAPlannerROS/vy_samples: 1
+ * /move_base/DWAPlannerROS/xy_goal_tolerance: 0.15
+ * /move_base/DWAPlannerROS/yaw_goal_tolerance: 0.3
+ * /move_base/GlobalPlanner/allow_unknown: True
+ * /move_base/GlobalPlanner/cost_factor: 3.0
+ * /move_base/GlobalPlanner/default_tolerance: 0.0
+ * /move_base/GlobalPlanner/lethal_cost: 253
+ * /move_base/GlobalPlanner/neutral_cost: 50
+ * /move_base/GlobalPlanner/old_navfn_behavior: False
+ * /move_base/GlobalPlanner/planner_costmap_publish_frequency: 0.0
+ * /move_base/GlobalPlanner/planner_window_x: 0.0
+ * /move_base/GlobalPlanner/planner_window_y: 0.0
+ * /move_base/GlobalPlanner/publish_potential: True
+ * /move_base/GlobalPlanner/publish_scale: 100
+ * /move_base/GlobalPlanner/use_dijkstra: True
+ * /move_base/GlobalPlanner/use_grid_path: False
+ * /move_base/GlobalPlanner/use_quadratic: True
+ * /move_base/NavfnROS/allow_unknown: False
+ * /move_base/NavfnROS/default_tolerance: 0.0
+ * /move_base/NavfnROS/planner_window_x: 0.0
+ * /move_base/NavfnROS/planner_window_y: 0.0
+ * /move_base/NavfnROS/visualize_potential: False
+ * /move_base/base_global_planner: navfn/NavfnROS
+ * /move_base/base_local_planner: dwa_local_planner...
+ * /move_base/controller_frequency: 5.0
+ * /move_base/controller_patience: 3.0
+ * /move_base/global_costmap/global_frame: map
+ * /move_base/global_costmap/inflation_layer/cost_scaling_factor: 5.0
+ * /move_base/global_costmap/inflation_layer/enabled: True
+ * /move_base/global_costmap/inflation_layer/inflation_radius: 0.5
+ * /move_base/global_costmap/map_type: voxel
+ * /move_base/global_costmap/max_obstacle_height: 0.6
+ * /move_base/global_costmap/obstacle_layer/bump/clearing: False
+ * /move_base/global_costmap/obstacle_layer/bump/data_type: PointCloud2
+ * /move_base/global_costmap/obstacle_layer/bump/marking: True
+ * /move_base/global_costmap/obstacle_layer/bump/max_obstacle_height: 0.15
+ * /move_base/global_costmap/obstacle_layer/bump/min_obstacle_height: 0.0
+ * /move_base/global_costmap/obstacle_layer/bump/topic: mobile_base/senso...
+ * /move_base/global_costmap/obstacle_layer/combination_method: 1
+ * /move_base/global_costmap/obstacle_layer/enabled: True
+ * /move_base/global_costmap/obstacle_layer/mark_threshold: 0
+ * /move_base/global_costmap/obstacle_layer/max_obstacle_height: 0.6
+ * /move_base/global_costmap/obstacle_layer/observation_sources: scan bump
+ * /move_base/global_costmap/obstacle_layer/obstacle_range: 2.5
+ * /move_base/global_costmap/obstacle_layer/origin_z: 0.0
+ * /move_base/global_costmap/obstacle_layer/publish_voxel_map: False
+ * /move_base/global_costmap/obstacle_layer/raytrace_range: 3.0
+ * /move_base/global_costmap/obstacle_layer/scan/clearing: True
+ * /move_base/global_costmap/obstacle_layer/scan/data_type: LaserScan
+ * /move_base/global_costmap/obstacle_layer/scan/marking: True
+ * /move_base/global_costmap/obstacle_layer/scan/max_obstacle_height: 0.35
+ * /move_base/global_costmap/obstacle_layer/scan/min_obstacle_height: 0.25
+ * /move_base/global_costmap/obstacle_layer/scan/topic: scan
+ * /move_base/global_costmap/obstacle_layer/track_unknown_space: True
+ * /move_base/global_costmap/obstacle_layer/unknown_threshold: 15
+ * /move_base/global_costmap/obstacle_layer/z_resolution: 0.2
+ * /move_base/global_costmap/obstacle_layer/z_voxels: 2
+ * /move_base/global_costmap/plugins: [{'type': 'costma...
+ * /move_base/global_costmap/publish_frequency: 0.5
+ * /move_base/global_costmap/robot_base_frame: base_footprint
+ * /move_base/global_costmap/robot_radius: 0.2
+ * /move_base/global_costmap/static_layer/enabled: True
+ * /move_base/global_costmap/static_map: True
+ * /move_base/global_costmap/transform_tolerance: 0.5
+ * /move_base/global_costmap/update_frequency: 1.0
+ * /move_base/local_costmap/global_frame: odom
+ * /move_base/local_costmap/height: 4.0
+ * /move_base/local_costmap/inflation_layer/cost_scaling_factor: 5.0
+ * /move_base/local_costmap/inflation_layer/enabled: True
+ * /move_base/local_costmap/inflation_layer/inflation_radius: 0.5
+ * /move_base/local_costmap/map_type: voxel
+ * /move_base/local_costmap/max_obstacle_height: 0.6
+ * /move_base/local_costmap/obstacle_layer/bump/clearing: False
+ * /move_base/local_costmap/obstacle_layer/bump/data_type: PointCloud2
+ * /move_base/local_costmap/obstacle_layer/bump/marking: True
+ * /move_base/local_costmap/obstacle_layer/bump/max_obstacle_height: 0.15
+ * /move_base/local_costmap/obstacle_layer/bump/min_obstacle_height: 0.0
+ * /move_base/local_costmap/obstacle_layer/bump/topic: mobile_base/senso...
+ * /move_base/local_costmap/obstacle_layer/combination_method: 1
+ * /move_base/local_costmap/obstacle_layer/enabled: True
+ * /move_base/local_costmap/obstacle_layer/mark_threshold: 0
+ * /move_base/local_costmap/obstacle_layer/max_obstacle_height: 0.6
+ * /move_base/local_costmap/obstacle_layer/observation_sources: scan bump
+ * /move_base/local_costmap/obstacle_layer/obstacle_range: 2.5
+ * /move_base/local_costmap/obstacle_layer/origin_z: 0.0
+ * /move_base/local_costmap/obstacle_layer/publish_voxel_map: False
+ * /move_base/local_costmap/obstacle_layer/raytrace_range: 3.0
+ * /move_base/local_costmap/obstacle_layer/scan/clearing: True
+ * /move_base/local_costmap/obstacle_layer/scan/data_type: LaserScan
+ * /move_base/local_costmap/obstacle_layer/scan/marking: True
+ * /move_base/local_costmap/obstacle_layer/scan/max_obstacle_height: 0.35
+ * /move_base/local_costmap/obstacle_layer/scan/min_obstacle_height: 0.25
+ * /move_base/local_costmap/obstacle_layer/scan/topic: scan
+ * /move_base/local_costmap/obstacle_layer/track_unknown_space: True
+ * /move_base/local_costmap/obstacle_layer/unknown_threshold: 15
+ * /move_base/local_costmap/obstacle_layer/z_resolution: 0.2
+ * /move_base/local_costmap/obstacle_layer/z_voxels: 2
+ * /move_base/local_costmap/plugins: [{'type': 'costma...
+ * /move_base/local_costmap/publish_frequency: 2.0
+ * /move_base/local_costmap/resolution: 0.05
+ * /move_base/local_costmap/robot_base_frame: base_footprint
+ * /move_base/local_costmap/robot_radius: 0.2
+ * /move_base/local_costmap/rolling_window: True
+ * /move_base/local_costmap/static_layer/enabled: True
+ * /move_base/local_costmap/static_map: False
+ * /move_base/local_costmap/transform_tolerance: 0.5
+ * /move_base/local_costmap/update_frequency: 5.0
+ * /move_base/local_costmap/width: 4.0
+ * /move_base/oscillation_distance: 0.2
+ * /move_base/oscillation_timeout: 10.0
+ * /move_base/planner_frequency: 1.0
+ * /move_base/planner_patience: 5.0
+ * /move_base/shutdown_costmaps: False
+ * /navigation_velocity_smoother/accel_lim_v: 1.0
+ * /navigation_velocity_smoother/accel_lim_w: 2.0
+ * /navigation_velocity_smoother/decel_factor: 1.5
+ * /navigation_velocity_smoother/frequency: 20.0
+ * /navigation_velocity_smoother/robot_feedback: 2
+ * /navigation_velocity_smoother/speed_lim_v: 0.8
+ * /navigation_velocity_smoother/speed_lim_w: 5.4
+ * /robot/name: turtlebot
+ * /robot/type: turtlebot
+ * /robot_description: <?xml version="1....
+ * /robot_state_publisher/publish_frequency: 5.0
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+ * /rtabmap/rtabmap/Grid/FromDepth: false
+ * /rtabmap/rtabmap/Icp/CoprrespondenceRatio: 0.3
+ * /rtabmap/rtabmap/Kp/MaxDepth: 4.0
+ * /rtabmap/rtabmap/Mem/IncrementalMemory: true
+ * /rtabmap/rtabmap/Mem/InitWMWithAllNodes: false
+ * /rtabmap/rtabmap/Mem/RehearsalSimilarity: 0.30
+ * /rtabmap/rtabmap/RGBD/AngularUpdate: 0.1
+ * /rtabmap/rtabmap/RGBD/LinearUpdate: 0.1
+ * /rtabmap/rtabmap/RGBD/OptimizeFromGraphEnd: false
+ * /rtabmap/rtabmap/RGBD/ProximityBySpace: true
+ * /rtabmap/rtabmap/Reg/Force3DoF: true
+ * /rtabmap/rtabmap/Reg/Strategy: 1
+ * /rtabmap/rtabmap/Rtabmap/TimeThr: 700
+ * /rtabmap/rtabmap/Vis/InlierDistance: 0.1
+ * /rtabmap/rtabmap/Vis/MinInliers: 5
+ * /rtabmap/rtabmap/database_path: rtabmap.db
+ * /rtabmap/rtabmap/frame_id: base_footprint
+ * /rtabmap/rtabmap/odom_frame_id: odom
+ * /rtabmap/rtabmap/subscribe_depth: True
+ * /rtabmap/rtabmap/subscribe_scan: True
+ * /rtabmap/rtabmap/wait_for_transform_duration: 0.2
+
+NODES
+  /camera/
+    camera_nodelet_manager (nodelet/nodelet)
+    depth_metric (nodelet/nodelet)
+    depth_metric_rect (nodelet/nodelet)
+    depth_points (nodelet/nodelet)
+    depth_rectify_depth (nodelet/nodelet)
+    depth_registered_hw_metric_rect (nodelet/nodelet)
+    depth_registered_metric (nodelet/nodelet)
+    depth_registered_rectify_depth (nodelet/nodelet)
+    disparity_depth (nodelet/nodelet)
+    disparity_registered_hw (nodelet/nodelet)
+    driver (nodelet/nodelet)
+    ir_rectify_ir (nodelet/nodelet)
+    points_xyzrgb_hw_registered (nodelet/nodelet)
+    rgb_rectify_color (nodelet/nodelet)
+  /rtabmap/
+    rtabmap (rtabmap_ros/rtabmap)
+  /camera_sr300/
+    depth_metric (nodelet/nodelet)
+    depth_metric_rect (nodelet/nodelet)
+    depth_points (nodelet/nodelet)
+    depth_rectify_depth (nodelet/nodelet)
+    depth_registered_sw_metric_rect (nodelet/nodelet)
+    disparity_depth (nodelet/nodelet)
+    disparity_registered_sw (nodelet/nodelet)
+    driver (nodelet/nodelet)
+    ir_rectify_ir (nodelet/nodelet)
+    points_xyzrgb_sw_registered (nodelet/nodelet)
+    register_depth_rgb (nodelet/nodelet)
+    rgb_debayer (nodelet/nodelet)
+    rgb_rectify_color (nodelet/nodelet)
+    rgb_rectify_mono (nodelet/nodelet)
+  /
+    bumper2pointcloud (nodelet/nodelet)
+    cmd_vel_mux (nodelet/nodelet)
+    depthimage_to_laserscan (nodelet/nodelet)
+    diagnostic_aggregator (diagnostic_aggregator/aggregator_node)
+    dock_drive (nodelet/nodelet)
+    dock_drive_manager (nodelet/nodelet)
+    explore_client (frontier_exploration/explore_client)
+    explore_server (frontier_exploration/explore_server)
+    kobuki_safety_controller (nodelet/nodelet)
+    marco_depth_finder (depth_finder/depth)
+    marco_mvmt_mgr (movement_mgr/mvt_mgr_node.py)
+    marco_vision (video_node/marco_image_node.py)
+    mobile_base (nodelet/nodelet)
+    mobile_base_nodelet_manager (nodelet/nodelet)
+    move_base (move_base/move_base)
+    navigation_velocity_smoother (nodelet/nodelet)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+
+auto-starting new master
+[1mprocess[master]: started with pid [31472][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;launch/marco_joule.launch http://localhost:11311
+[1msetting /run_id to 6c764314-0039-11ea-a956-a0c589041e7e[0m
+[1mprocess[rosout-1]: started with pid [31485][0m
+started core service [/rosout]
+[1mprocess[explore_client-2]: started with pid [31502][0m
+[1mprocess[explore_server-3]: started with pid [31503][0m
+[1mprocess[robot_state_publisher-4]: started with pid [31510][0m
+[1mprocess[diagnostic_aggregator-5]: started with pid [31529][0m
+[1mprocess[mobile_base_nodelet_manager-6]: started with pid [31538][0m
+[1mprocess[mobile_base-7]: started with pid [31549][0m
+[1mprocess[cmd_vel_mux-8]: started with pid [31566][0m
+[1mprocess[bumper2pointcloud-9]: started with pid [31573][0m
+[1mprocess[camera/camera_nodelet_manager-10]: started with pid [31595][0m
+[1mprocess[camera/driver-11]: started with pid [31603][0m
+[1mprocess[camera/rgb_rectify_color-12]: started with pid [31626][0m
+[1mprocess[camera/ir_rectify_ir-13]: started with pid [31632][0m
+[1mprocess[camera/depth_rectify_depth-14]: started with pid [31648][0m
+[1mprocess[camera/depth_metric_rect-15]: started with pid [31654][0m
+[1mprocess[camera/depth_metric-16]: started with pid [31679][0m
+[1mprocess[camera/depth_points-17]: started with pid [31689][0m
+[1mprocess[camera/depth_registered_rectify_depth-18]: started with pid [31713][0m
+[1mprocess[camera/points_xyzrgb_hw_registered-19]: started with pid [31738][0m
+[1mprocess[camera/depth_registered_hw_metric_rect-20]: started with pid [31760][0m
+[1mprocess[camera/depth_registered_metric-21]: started with pid [31777][0m
+[1mprocess[camera/disparity_depth-22]: started with pid [31786][0m
+[1mprocess[camera/disparity_registered_hw-23]: started with pid [31803][0m
+[1mprocess[depthimage_to_laserscan-24]: started with pid [31824][0m
+[1mprocess[camera_sr300/driver-25]: started with pid [31839][0m
+[1mprocess[camera_sr300/rgb_debayer-26]: started with pid [31847][0m
+[1mprocess[camera_sr300/rgb_rectify_mono-27]: started with pid [31859][0m
+[1mprocess[camera_sr300/rgb_rectify_color-28]: started with pid [31868][0m
+[1mprocess[camera_sr300/ir_rectify_ir-29]: started with pid [31886][0m
+[1mprocess[camera_sr300/depth_rectify_depth-30]: started with pid [31891][0m
+[1mprocess[cam[0m[ INFO] [1573005726.708861747]: Initializing nodelet with 4 worker threads.[0m
+[0m[ INFO] [1573005728.634312933]: Device "2bc5/0401@1/11" found.[0m
+Warning: USB events thread - failed to set priority. This might cause loss of data...
+[0m[ INFO] [1573005729.813861844]: Starting color stream.[0m
+[0m[ INFO] [1573005730.300102528]: Starting depth stream.[0m
+[0m[ INFO] [1573005730.302301217]: using default calibration URL[0m
+[0m[ INFO] [1573005730.302444912]: camera calibration URL: file:///home/marcopolo/.ros/camera_info/rgb_Astra_Orbbec.yaml[0m
+Intel RealSense F200_camera ; 2.60.0.0
+Intel RealSense LR200_camera ; 2.0.71.18
+Intel RealSense R200_camera ; 1.0.72.06
+Intel RealSense SR300_camera ; 3.10.10.0
+Intel RealSense ZR300_adapter ; 1.29.0.0
+Intel RealSense ZR300_camera ; 2.0.71.28
+Intel RealSense ZR300_motion_module ; 1.25.0.0
+[0m[ INFO] [1573005727.449316165]: Starting node...[0m
+[0m[ INFO] [1573005727.682982011]: Initializing nodelet with 4 worker threads.[0m
+[0m[ INFO] [1573005728.482706677]: /rtabmap/rtabmap(maps): map_filter_radius          = 0.000000[0m
+[0m[ INFO] [1573005728.482758565]: /rtabmap/rtabmap(maps): map_filter_angle           = 30.000000[0m
+[0m[ INFO] [1573005728.482782540]: /rtabmap/rtabmap(maps): map_cleanup                = true[0m
+[0m[ INFO] [1573005728.482812237]: /rtabmap/rtabmap(maps): map_always_update          = false[0m
+[0m[ INFO] [1573005728.482834506]: /rtabmap/rtabmap(maps): map_empty_ray_tracing      = true[0m
+[0m[ INFO] [1573005728.482856986]: /rtabmap/rtabmap(maps): cloud_output_voxelized     = true[0m
+[0m[ INFO] [1573005728.482878217]: /rtabmap/rtabmap(maps): cloud_subtract_filtering   = false[0m
+[0m[ INFO] [1573005728.482907689]: /rtabmap/rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2[0m
+[0m[ INFO] [1573005728.498526085]: /rtabmap/rtabmap(maps): octomap_tree_depth         = 16[0m
+[0m[ INFO] [1573005728.818652458]: rtabmap: frame_id      = base_footprint[0m
+[0m[ INFO] [1573005728.818722173]: rtabmap: odom_frame_id = odom[0m
+[0m[ INFO] [1573005728.818757814]: rtabmap: map_frame_id  = map[0m
+[0m[ INFO] [1573005728.818799334]: rtabmap: use_action_for_goal  = false[0m
+[0m[ INFO] [1573005728.818837376]: rtabmap: tf_delay      = 0.050000[0m
+[0m[ INFO] [1573005728.818879608]: rtabmap: tf_tolerance  = 0.100000[0m
+[0m[ INFO] [1573005728.818912677]: rtabmap: odom_sensor_sync   = false[0m
+[0m[ INFO] [1573005729.526020166]: Setting RTAB-Map parameter "Grid/FromDepth"="false"[0m
+[0m[ INFO] [1573005730.448589088]: Setting RTAB-Map parameter "Kp/MaxDepth"="4.0"[0m
+[0m[ INFO] [1573005730.808134554]: Setting RTAB-Map parameter "Mem/IncrementalMemory"="true"[0m
+[0m[ INFO] [1573005730.816321362]: Setting RTAB-Map parameter "Mem/InitWMWithAllNodes"="false"[0m
+[0m[ INFO] [1573005731.019057079]: Setting RTAB-Map parameter "Mem/RehearsalSimilarity"="0.30"[0m
+[0m[ INFO] [1573005731.205939508]: Setting RTAB-Map parameter "RGBD/AngularUpdate"="0.1"[0m
+[0m[ INFO] [1573005731.244850937]: Setting RTAB-Map parameter "RGBD/LinearUpdate"="0.1"[0m
+[0m[ INFO] [1573005731.382462017]: Setting RTAB-Map parameter "RGBD/OptimizeFromGraphEnd"="false"[0m
+[0m[ INFO] [1573005731.449699895]: Setting RTAB-Map parameter "RGBD/ProximityBySpace"="true"[0m
+[0m[ INFO] [1573005731.552826143]: Setting RTAB-Map parameter "Reg/Force3DoF"="true"[0m
+[0m[ INFO] [1573005731.567941131]: Setting RTAB-Map parameter "Reg/Strategy"="1"[0m
+[0m[ INFO] [1573005731.912367229]: Setting RTAB-Map parameter "Rtabmap/TimeThr"="700"[0m
+[0m[ INFO] [1573005732.634326177]: Setting RTAB-Map parameter "Vis/InlierDistance"="0.1"[0m
+[0m[ INFO] [1573005732.667125151]: Setting RTAB-Map parameter "Vis/MinInliers"="5"[0m
+[0m[ INFO] [1573005733.813680846]: Setting "Grid/RangeMax" parameter to 0 (default 5.000000) as "subscribe_scan" or "subscribe_scan_cloud" is true.[0m
+[33m[ WARN] [1573005733.813836082]: Setting "RGBD/ProximityPathMaxNeighbors" parameter to 10 (default 0) as "subscribe_scan" is true and "Reg/Strategy" uses ICP. Proximity detection by space will be also done by merging close scans. To disable, set "RGBD/ProximityPathMaxNeighbors" to 0. To suppress this warning, add <param name="RGBD/ProximityPathMaxNeighbors" type="string" value="10"/>[0m
+[0m[ INFO] [1573005734.573967088]: RTAB-Map detection rate = 1.000000 Hz[0m
+[0m[ INFO] [1573005734.579264890]: rtabmap: Deleted database "/home/marcopolo/.ros/rtabmap.db" (--delete_db_on_start or -d are set).[0m
+[0m[ INFO] [1573005734.580388514]: rtabmap: Using database from "/home/marcopolo/.ros/rtabmap.db" (0 MB).[0m
+[0m[ INFO] [1573005734.892915690]: rtabmap: Database version = "0.19.5".[0m
+[0m[ INFO] [1573005735.120883365]: /rtabmap/rtabmap: subscribe_depth = true[0m
+[0m[ INFO] [1573005735.120944998]: /rtabmap/rtabmap: subscribe_rgb = true[0m
+[0m[ INFO] [1573005735.120972087]: /rtabmap/rtabmap: subscribe_stereo = false[0m
+[0m[ INFO] [1573005735.121001839]: /rtabmap/rtabmap: subscribe_rgbd = false (rgbd_cameras=1)[0m
+[0m[ INFO] [1573005735.121095222]: /rtabmap/rtabmap: subscribe_odom_info = false[0m
+[0m[ INFO] [1573005735.121142842]: /rtabmap/rtabmap: subscribe_user_data = false[0m
+[0m[ INFO] [1573005735.121169478]: /rtabmap/rtabmap: subscribe_scan = true[0m
+[0m[ INFO] [1573005735.121194843]: /rtabmap/rtabmap: subscribe_scan_cloud = false[0m
+[0m[ INFO] [1573005735.121220107]: /rtabmap/rtabmap: queue_size    = 10[0m
+[0m[ INFO] [1573005735.121382684]: /rtabmap/rtabmap: approx_sync   = true[0m
+[0m[ INFO] [1573005735.121552123]: Setup depth callback[0m
+[0m[ INFO] [1573005735.328568054]: 
+/rtabmap/rtabmap subscribed to (approx sync):
+   /camera/rgb/image_raw,
+   /camera/depth_registered/image_raw,
+   /camera/rgb/camera_info,
+   /scan[0m
+[0m[ INFO] [1573005735.503762109]: rtabmap 0.19.5 started...[0m
+[0m[ INFO] [1573005735.937646515]: rtabmap (1): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1528s, Maps update=0.0339s pub=0.0024s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005736.994256325]: rtabmap (2): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1317s, Maps update=0.0258s pub=0.0001s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005737.921496984]: rtabmap (3): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1272s, Maps update=0.0377s pub=0.0001s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005738.890388928]: rtabmap (4): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1003s, Maps update=0.0396s pub=0.0001s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005740.082682407]: rtabmap (5): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1126s, Maps update=0.1789s pub=0.0001s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005740.980905057]: rtabmap (6): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1223s, Maps update=0.0272s pub=0.0001s (local map=1, WM=1)[0m
+[0m[ INFO] [1573005742.036887581]: rtabmap (7): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1475s, Maps update=0.0286s pub=0.0003s (local map=2, WM=2)[0m
+[0m[ INFO] [1573005743.017666039]: rtabmap (8): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1335s, Maps update=0.0250s pub=0.0006s (local map=3, WM=3)[0m
+[0m[ INFO] [1573005744.135749832]: rtabmap (9): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1501s, Maps update=0.0249s pub=0.0004s (local map=4, WM=4)[0m
+[0m[ INFO] [1573005745.205961187]: rtabmap (10): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1871s, Maps update=0.0287s pub=0.0003s (local map=5, WM=5)[0m
+[0m[ INFO] [1573005746.272886499]: rtabmap (11): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1499s, Maps update=0.0299s pub=0.0009s (local map=6, WM=6)[0m
+[0m[ INFO] [1573005747.301499849]: rtabmap (12): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1524s, Maps update=0.0051s pub=0.0006s (local map=7, WM=7)[0m
+[0m[ INFO] [1573005748.346870168]: rtabmap (13): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1538s, Maps update=0.0336s pub=0.0005s (local map=8, WM=8)[0m
+[0m[ INFO] [1573005749.343250467]: rtabmap (14): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1479s, Maps update=0.0359s pub=0.0005s (local map=9, WM=9)[0m
+[0m[ INFO] [1573005750.503202545]: rtabmap (15): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1561s, Maps update=0.0396s pub=0.0006s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005751.390100420]: rtabmap (16): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1492s, Maps update=0.0350s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005752.399416938]: rtabmap (17): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1352s, Maps update=0.0295s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005753.448862256]: rtabmap (18): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1295s, Maps update=0.0289s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005754.487116080]: rtabmap (19): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1617s, Maps update=0.0340s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005755.556018723]: rtabmap (20): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2200s, Maps update=0.0358s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005756.537821915]: rtabmap (21): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2082s, Maps update=0.0363s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005757.522489170]: rtabmap (22): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1820s, Maps update=0.0360s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005758.693405961]: rtabmap (23): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2105s, Maps update=0.0496s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005759.614653975]: rtabmap (24): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1397s, Maps update=0.0393s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005760.836156665]: rtabmap (25): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2980s, Maps update=0.0357s pub=0.0001s (local map=10, WM=10)[0m
+[0m[ INFO] [1573005761.624544994]: rtabmap (26): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1326s, Maps update=0.0280s pub=0.0009s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005762.640331484]: rtabmap (27): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1501s, Maps update=0.0251s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005763.667901739]: rtabmap (28): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1610s, Maps update=0.0381s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005764.729577554]: rtabmap (29): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1959s, Maps update=0.0369s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005765.872697218]: rtabmap (30): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1616s, Maps update=0.1905s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005766.786687909]: rtabmap (31): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1766s, Maps update=0.0545s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005767.706909287]: rtabmap (32): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1387s, Maps update=0.0010s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005768.744809142]: rtabmap (33): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1531s, Maps update=0.0303s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005769.767154328]: rtabmap (34): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1466s, Maps update=0.0298s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005770.944005690]: rtabmap (35): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1523s, Maps update=0.1908s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005771.840865264]: rtabmap (36): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1543s, Maps update=0.0523s pub=0.0001s (local map=11, WM=11)[0m
+[0m[ INFO] [1573005772.932764233]: rtabmap (37): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1845s, Maps update=0.0367s pub=0.0038s (local map=12, WM=12)[0m
+[33m[ WARN] (2019-11-05 18:02:54.096) Rtabmap.cpp:2151::process() Rejected loop closure 1 -> 38: Not enough inliers 0/5 (matches=8) between 1 and 38[0m
+[0m[ INFO] [1573005774.406490914]: rtabmap (38): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6340s, Maps update=0.0328s pub=0.0006s (local map=13, WM=13)[0m
+[0m[ INFO] [1573005775.439637318]: rtabmap (39): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6122s, Maps update=0.0285s pub=0.0007s (local map=14, WM=14)[0m
+[33m[ WARN] (2019-11-05 18:02:56.300) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 40 <-> 7) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.021609 (edge 7->39, type=1, abs error=0.008380 m, stddev=0.002773). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:02:56.301) Rtabmap.cpp:2953::process() Loop closure 40->7 rejected![0m
+[33m[ WARN] (2019-11-05 18:02:56.301) Rtabmap.cpp:2953::process() Loop closure 40->1 rejected![0m
+[0m[ INFO] [1573005776.491248930]: rtabmap (40): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6378s, Maps update=0.0423s pub=0.0015s (local map=15, WM=15)[0m
+[33m[ WARN] (2019-11-05 18:02:57.140) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 11 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005777.182664389]: rtabmap (41): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3089s, Maps update=0.0323s pub=0.0006s (local map=16, WM=16)[0m
+[33m[ WARN] (2019-11-05 18:02:58.260) Rtabmap.cpp:2151::process() Rejected loop closure 12 -> 42: Cannot compute transform (ICP correction too large -> 0[33m[ WARN] [1573005732.842622621]: Timed out waiting for transform from base_footprint to map to become available before running costmap, tf error: canTransform: target_frame map does not exist.. canTransform returned after 0.100043 timeout was 0.1.[0m
+[0m[ INFO] [1573005735.218468359]: Using plugin "static_layer"[0m
+[0m[ INFO] [1573005735.279767585]: Requesting the map...[0m
+[0m[ INFO] [1573005736.035421505]: Resizing costmap to 88 X 57 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005736.135480202]: Received a 88 X 57 map at 0.050000 m/pix[0m
+[0m[ INFO] [1573005736.155411029]: Using plugin "obstacle_layer"[0m
+[0m[ INFO] [1573005736.176759108]:     Subscribed to Topics: scan bump[0m
+[0m[ INFO] [1573005736.500471429]: Using plugin "inflation_layer"[0m
+[0m[ INFO] [1573005736.921255508]: Using plugin "obstacle_layer"[0m
+[0m[ INFO] [1573005736.944776690]:     Subscribed to Topics: scan bump[0m
+[0m[ INFO] [1573005737.299529119]: Using plugin "inflation_layer"[0m
+[0m[ INFO] [1573005737.602554683]: Created local_planner dwa_local_planner/DWAPlannerROS[0m
+[0m[ INFO] [1573005737.617572945]: Sim period is set to 0.20[0m
+[0m[ INFO] [1573005738.966936878]: Recovery behavior will clear layer obstacles[0m
+[0m[ INFO] [1573005738.993313194]: Recovery behavior will clear layer obstacles[0m
+[0m[ INFO] [1573005739.160726870]: odom received![0m
+[0m[ INFO] [1573005739.621935123]: Got new plan[0m
+[0m[ INFO] [1573005740.622297221]: Got new plan[0m
+[0m[ INFO] [1573005741.423635555]: Got new plan[0m
+[0m[ INFO] [1573005742.037129610]: Resizing costmap to 88 X 67 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005742.622126289]: Got new plan[0m
+[0m[ INFO] [1573005743.017731158]: Resizing costmap to 89 X 133 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005743.621947806]: Got new plan[0m
+[0m[ INFO] [1573005744.136314141]: Resizing costmap to 152 X 133 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005744.622210230]: Got new plan[0m
+[0m[ INFO] [1573005745.206462828]: Resizing costmap to 172 X 146 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005745.622071077]: Got new plan[0m
+[0m[ INFO] [1573005746.273245072]: Resizing costmap to 172 X 177 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005746.621928903]: Got new plan[0m
+[0m[ INFO] [1573005747.302400720]: Resizing costmap to 172 X 207 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005747.622001328]: Got new plan[0m
+[0m[ INFO] [1573005748.621914346]: Got new plan[0m
+[0m[ INFO] [1573005749.343816078]: Resizing costmap to 200 X 207 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005749.621964053]: Got new plan[0m
+[33m[ WARN] [1573005749.821977856]: Clearing costmap to unstuck robot (3.000000m).[0m
+[0m[ INFO] [1573005750.221899298]: Got new plan[0m
+[0m[ INFO] [1573005750.222026078]: Goal reached[0m
+[33m[ WARN] [1573005755.524434691]: Clearing costmap to unstuck robot (3.000000m).[0m
+[33m[ WARN] [1573005760.724995393]: Rotate recovery behavior started.[0m
+[33m[ WARN] [1573005766.324426390]: Clearing costmap to unstuck robot (1.840000m).[0m
+[33m[ WARN] [1573005771.524439629]: Rotate recovery behavior started.[0m
+[0m[ INFO] [1573005774.406762730]: Resizing costmap to 198 X 216 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005775.440028995]: Resizing costmap to 199 X 217 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005777.183045064]: Resizing costmap to 215 X 222 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005778.517566691]: Resizing costmap to 214 X 227 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005780.026040067]: Got new plan[0m
+[0m[ INFO] [1573005780.463362240]: Resizing costmap to 216 X 227 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005781.027700646]: Got new plan[0m
+[0m[ INFO] [1573005781.606862014]: Resizing costmap to 215 X 227 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005781.827667422]: Got new plan[0m
+[0m[ INFO] [1573005782.730802789]: Resizing costmap to 215 X 254 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005783.025981040]: Got new plan[0m
+[0m[ INFO] [1573005783.590566521]: Resizing costmap to 215 X 252 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005784.026276357]: Got new plan[0m
+[0m[ INFO] [1573005785.026239686]: Got.341228 m 0.138111 rad, limits=0.200000 m, 0.780000 rad)[0m
+[0m[ INFO] [1573005778.516883888]: rtabmap (42): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6061s, Maps update=0.0340s pub=0.0007s (local map=17, WM=17)[0m
+[33m[ WARN] (2019-11-05 18:02:59.462) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 43 <-> 11) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 5.070873 (edge 11->12, type=0, abs error=0.160355 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:02:59.462) Rtabmap.cpp:2953::process() Loop closure 43->11 rejected![0m
+[33m[ WARN] (2019-11-05 18:02:59.462) Rtabmap.cpp:2953::process() Loop closure 43->12 rejected![0m
+[33m[ WARN] (2019-11-05 18:02:59.462) Rtabmap.cpp:2953::process() Loop closure 43->1 rejected![0m
+[0m[ INFO] [1573005779.513101810]: rtabmap (43): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5277s, Maps update=0.0450s pub=0.0006s (local map=18, WM=18)[0m
+[0m[ INFO] [1573005780.463328999]: rtabmap (44): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4393s, Maps update=0.0417s pub=0.0010s (local map=19, WM=19)[0m
+[0m[ INFO] [1573005781.601471902]: rtabmap (45): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5944s, Maps update=0.0333s pub=0.0008s (local map=20, WM=20)[0m
+[33m[ WARN] (2019-11-05 18:03:02.394) Rtabmap.cpp:2151::process() Rejected loop closure 9 -> 46: Cannot compute transform (ICP correction too large -> 0.227896 m 0.348305 rad, limits=0.200000 m, 0.780000 rad)[0m
+[0m[ INFO] [1573005782.730270900]: rtabmap (46): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6536s, Maps update=0.0357s pub=0.0007s (local map=21, WM=21)[0m
+[0m[ INFO] [1573005783.591933606]: rtabmap (47): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4027s, Maps update=0.0404s pub=0.0034s (local map=22, WM=22)[0m
+[33m[ WARN] (2019-11-05 18:03:04.733) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 48 <-> 38) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.288691 (edge 7->8, type=0, abs error=0.103998 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:04.733) Rtabmap.cpp:2953::process() Loop closure 48->38 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:04.733) Rtabmap.cpp:2953::process() Loop closure 48->37 rejected![0m
+[0m[ INFO] [1573005784.767987465]: rtabmap (48): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5608s, Maps update=0.0286s pub=0.0008s (local map=23, WM=23)[0m
+[0m[ INFO] [1573005785.638976253]: rtabmap (49): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3881s, Maps update=0.0405s pub=0.0006s (local map=24, WM=24)[0m
+[33m[ WARN] (2019-11-05 18:03:06.809) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 50 <-> 39) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 4.811690 (edge 38->39, type=0, abs error=0.152159 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:06.809) Rtabmap.cpp:2953::process() Loop closure 50->39 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:06.809) Rtabmap.cpp:2953::process() Loop closure 50->38 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:06.809) Rtabmap.cpp:2953::process() Loop closure 50->37 rejected![0m
+[0m[ INFO] [1573005786.849107217]: rtabmap (50): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5634s, Maps update=0.0340s pub=0.0011s (local map=25, WM=25)[0m
+[33m[ WARN] (2019-11-05 18:03:07.900) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 51 <-> 7) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.084183 (edge 39->40, type=0, abs error=0.097530 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:07.900) Rtabmap.cpp:2953::process() Loop closure 51->7 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:07.900) Rtabmap.cpp:2953::process() Loop closure 51->40 rejected![0m
+[0m[ INFO] [1573005787.937262281]: rtabmap (51): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5764s, Maps update=0.0314s pub=0.0007s (local map=26, WM=26)[0m
+[33m[ WARN] (2019-11-05 18:03:08.984) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 52 <-> 40) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.564208 (edge 39->40, type=0, abs error=0.112710 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:08.984) Rtabmap.cpp:2953::process() Loop closure 52->40 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:08.984) Rtabmap.cpp:2953::process() Loop closure 52->14 rejected![0m
+[0m[ INFO] [1573005789.023808772]: rtabmap (52): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5744s, Maps update=0.0306s pub=0.0015s (local map=27, WM=27)[0m
+[0m[ INFO] [1573005789.826846205]: rtabmap (53): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3648s, Maps update=0.0451s pub=0.0007s (local map=28, WM=28)[0m
+[0m[ INFO] [1573005790.741059226]: rtabmap (54): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1762s, Maps update=0.0319s pub=0.0001s (local map=28, WM=28)[0m
+[0m[ INFO] [1573005792.098645527]: rtabmap (55): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6120s, Maps update=0.0447s pub=0.0027s (local map=29, WM=29)[0m
+[0m[ INFO] [1573005792.676324026]: rtabmap (56): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1891s, Maps update=0.0422s pub=0.0001s (local map=29, WM=29)[0m
+[0m[ INFO] [1573005793.967779243]: rtabmap (57): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3752s, Maps update=0.0336s pub=0.0016s (local map=30, WM=30)[0m
+[0m[ INFO] [1573005795.054637282]: rtabmap (58): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5337s, Maps update=0.0375s pub=0.0008s (local map=31, WM=31)[0m
+[33m[ WARN] (2019-11-05 18:03:15.795) Rtabmap.cpp:2151::process() Rejected loop closure 41 -> 59: Not enough inliers 0/5 (matches=4) between 41 and 59[0m
+[0m[ INFO] [1573005795.937881618]: rtabmap (59): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3852s, Maps update=0.0349s pub=0.0008s (local map=32, WM=32)[0m
+[0m[ INFO] [1573005796.848052331]: rtabmap (60): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2770s, Maps update=0.0469s pub=0.0010s (local map=33, WM=33)[0m
+[0m[ INFO] [1573005797.859856548]: rtabmap (61): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2745s, Maps update=0.0380s pub=0.0009s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005798.916175294]: rtabmap (62): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2974s, Maps update=0.0357s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005800.008870968]: rtabmap (63): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3022s, Maps update=0.0592s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005801.000448011]: rtabmap (64): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3045s, Maps update=0.0016s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005802.058438812]: rtabmap (65): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3177s, Maps update=0.0385s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005803.080148417]: rtabmap (66): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2930s, Maps update=0.0308s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005804.081030056]: rtabmap (67): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2793s, Maps update=0.0336s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005805.213787931]: rtabmap (68): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2868s, Maps update=0.0365s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005806.232972633]: rtabmap (69): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2908s, Maps update=0.0499s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005807.252631166]: rtabmap (70): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2921s, Maps update=0.0319s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005808.437084972]: rtabmap (71): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3047s, Maps update=0.1878s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005809.294855763]: rtabmap (72): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3046s, Maps update=0.0351s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005810.306621027]: rtabmap (73): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2479s, Maps update=0.0345s pub=0.0001s (local map=34, WM=34)[0m
+[0m[ INFO] [1573005811.328109273]: rtabmap (74): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2680s, Maps update=0.0033s pub=0.0009s (local map=35, WM=35)[0m
+[0m[ INFO] [1573005812.724818290]: rtabmap (75): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5571s, Maps update=0.0417s pub=0.0010s (local map=36, WM=36)[0m
+[33m[ WARN] (2019-11-05 18:03:33.509) Rtabmap.cpp:2919::process() Rejecting all added loop closures (1, first is 76 <-> 11) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 9.633238 (edge 75->76, type=0, abs error=0.304630 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:33.509) Rtabmap.cpp:2943::process() Rejecting all added loop closures (1, first is 76 <-> 11) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 4.804829 (edge 75->76, type=0, abs error=8.705636 deg, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:33.509) Rtabmap.cpp:2953::process() Loop closure 76->11 rejected![0m
+[0m[ INFO] [1573005813.718395474]: rtabmap (76): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5034s, Maps update=0.0570s pub=0.0009s (local map=37, WM=37)[0m
+[0m[ INFO] [1573005814.611048783]: rtabmap (77): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3956s, Maps update=0.0419s pub=0.0014s (local map=38, WM=38)[0m
+[33m[ WARN] (2019-11-05 18:03:35.547) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 55 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005815.632052172]: rtabmap (78): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4007s, Maps update=0.0375s pub=0.0013s (local map=39, WM=39)[0m
+[33m[ WARN] (2019-11-05 18:03:36.577) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 57 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005816.647982802]: rtabmap (79): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3579s, Maps update=0.0525s pub=0.0012s (local map=40, WM=40)[0m
+[33m[ WARN] (2019-11-05 18:03:37.640) Rtabmap.cpp:2919::process() Rejecting all added loop closures (1, first is 80 <-> 58) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 4.367219 (edge 79->80, type=0, abs error=0.138104 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:37.640) Rtabmap.cpp:2953::process() Loop closure 80->58 rejected![0m
+[0m[ INFO] [1573005817.683220113]: rtabmap (80): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3749s, Maps update=0.0377s pub=0.0010s (local map=41, WM=41)[0m
+[0m[ INFO] [1573005818.660962024]: rtabmap (81): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3563s, Maps update=0.0412s pub=0.0012s (local map=42, WM=42)[0m
+[0m[ INFO] [1573005819.862882642]: rtabmap (82): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5284s, Maps update=0.0486s pub=0.0040s (local map=43, WM=43)[0m
+[0m[ INFO] [1573005820.670888461]: rtabmap (83): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3080s, Maps update=0.0305s pub=0.0001s (local map=43, WM=43)[0m
+[0m[ INFO] [1573005821.706803044]: rtabmap (84): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3077s, Maps update=0.0374s pub=0.0001s (local map=43, WM=43)[0m
+[33m[ WARN] (2019-11-05 18:03:42.717) Rtabmap.cpp:2151::process() Rejected loop closure 42 -> 85: Not enough inliers 0/5 (matches=13) between  new plan[0m
+[0m[ INFO] [1573005785.640152089]: Resizing costmap to 215 X 252 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005786.026090011]: Got new plan[0m
+[0m[ INFO] [1573005787.025981975]: Got new plan[0m
+[0m[ INFO] [1573005788.026810182]: Got new plan[0m
+[0m[ INFO] [1573005789.023710943]: Resizing costmap to 216 X 252 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005789.026029752]: Got new plan[0m
+[0m[ INFO] [1573005789.826165603]: Resizing costmap to 215 X 253 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005790.026011881]: Got new plan[0m
+[33m[ WARN] [1573005790.226229668]: Clearing costmap to unstuck robot (3.000000m).[0m
+[0m[ INFO] [1573005790.625989000]: Got new plan[0m
+[0m[ INFO] [1573005791.626214720]: Got new plan[0m
+[0m[ INFO] [1573005792.097394965]: Resizing costmap to 215 X 322 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005792.626321607]: Got new plan[0m
+[0m[ INFO] [1573005793.626013433]: Got new plan[0m
+[0m[ INFO] [1573005793.826109372]: Goal reached[0m
+[0m[ INFO] [1573005794.523870656]: Got new plan[0m
+[0m[ INFO] [1573005795.055159640]: Resizing costmap to 216 X 322 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005795.524196291]: Got new plan[0m
+[0m[ INFO] [1573005796.524785504]: Got new plan[0m
+[0m[ INFO] [1573005796.848448852]: Resizing costmap to 220 X 322 at 0.050000 m/pix[0m
+[33m[ WARN] [1573005796.930160188]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005797.123868501]: Got new plan[0m
+[33m[ WARN] [1573005797.130841640]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005797.324057183]: Got new plan[0m
+[33m[ WARN] [1573005797.334465394]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005797.524131313]: Got new plan[0m
+[33m[ WARN] [1573005797.730341395]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005797.862527631]: Resizing costmap to 221 X 322 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005797.923924328]: Got new plan[0m
+[33m[ WARN] [1573005797.930449968]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005798.123896056]: Got new plan[0m
+[33m[ WARN] [1573005798.133194562]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005798.324072146]: Got new plan[0m
+[33m[ WARN] [1573005798.330491627]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005798.523857679]: Got new plan[0m
+[33m[ WARN] [1573005798.529775903]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005798.723847401]: Got new plan[0m
+[33m[ WARN] [1573005798.729683371]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005798.923850689]: Got new plan[0m
+[33m[ WARN] [1573005798.930136480]: DWA planner failed to produce path.[0m
+[33m[ WARN] [1573005804.323854121]: Clearing costmap to unstuck robot (3.000000m).[0m
+[33m[ WARN] [1573005809.523842525]: Rotate recovery behavior started.[0m
+[0m[ INFO] [1573005812.725321882]: Resizing costmap to 221 X 322 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005815.633870925]: Resizing costmap to 221 X 373 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005816.649039191]: Resizing costmap to 221 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005817.684380508]: Resizing costmap to 222 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005818.664187568]: Resizing costmap to 222 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005819.863584309]: Resizing costmap to 222 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005820.225347082]: Got new plan[0m
+[33m[ WARN] [1573005820.232767864]: DWA planner failed to produce path.[0m
+[33m[ WARN] [1573005820.425372591]: Clearing costmap to unstuck robot (3.000000m).[0m
+[0m[ INFO] [1573005820.825323661]: Got new plan[0m
+[33m[ WARN] [1573005820.831631516]: DWA planner failed to produce path.[0m
+[33m[ WARN] [1573005821.025362724]: Rotate recovery behavior started.[0m
+[0m[ INFO] [1573005825.080467959]: Resizing costmap to 222 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005827.863487320]: Resizing costmap to 222 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005828.908983532]: Resizing costmap to 223 X 372 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005829.478137928]: Got new plan[0m
+[0m[ INFO]42 and 85[0m
+[33m[ WARN] (2019-11-05 18:03:42.876) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 61 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005822.926405250]: rtabmap (85): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5159s, Maps update=0.0400s pub=0.0009s (local map=44, WM=44)[0m
+[33m[ WARN] (2019-11-05 18:03:43.961) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 86 <-> 13) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.110536 (edge 11->12, type=0, abs error=0.098364 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:43.961) Rtabmap.cpp:2953::process() Loop closure 86->13 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:43.961) Rtabmap.cpp:2953::process() Loop closure 86->11 rejected![0m
+[0m[ INFO] [1573005824.140392203]: rtabmap (86): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5733s, Maps update=0.1706s pub=0.0010s (local map=45, WM=45)[0m
+[0m[ INFO] [1573005825.080200642]: rtabmap (87): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5985s, Maps update=0.0508s pub=0.0035s (local map=46, WM=46)[0m
+[0m[ INFO] [1573005825.895626462]: rtabmap (88): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4251s, Maps update=0.0325s pub=0.0009s (local map=47, WM=47)[0m
+[33m[ WARN] (2019-11-05 18:03:46.805) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 77 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005826.864995641]: rtabmap (89): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3983s, Maps update=0.0304s pub=0.0024s (local map=48, WM=48)[0m
+[0m[ INFO] [1573005827.861626207]: rtabmap (90): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3470s, Maps update=0.0480s pub=0.0009s (local map=49, WM=49)[0m
+[0m[ INFO] [1573005828.905469622]: rtabmap (91): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3980s, Maps update=0.0121s pub=0.0010s (local map=50, WM=50)[0m
+[33m[ WARN] (2019-11-05 18:03:50.521) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 92 <-> 74) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.514054 (edge 61->74, type=0, abs error=0.111124 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:50.521) Rtabmap.cpp:2953::process() Loop closure 92->74 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:50.521) Rtabmap.cpp:2953::process() Loop closure 92->61 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:50.521) Rtabmap.cpp:2953::process() Loop closure 92->78 rejected![0m
+[0m[ INFO] [1573005830.567709301]: rtabmap (92): Rate=1.00s, Limit=0.700s, RTAB-Map=0.9654s, Maps update=0.0314s pub=0.0011s (local map=49, WM=49)[0m
+[33m[ WARN] (2019-11-05 18:03:51.474) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 93 <-> 74) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 5.886985 (edge 61->74, type=0, abs error=0.186163 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:51.474) Rtabmap.cpp:2943::process() Rejecting all added loop closures (3, first is 93 <-> 74) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 5.250452 (edge 61->74, type=0, abs error=9.513040 deg, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:51.474) Rtabmap.cpp:2953::process() Loop closure 93->74 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:51.474) Rtabmap.cpp:2953::process() Loop closure 93->61 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:51.474) Rtabmap.cpp:2953::process() Loop closure 93->78 rejected![0m
+[0m[ INFO] [1573005831.527404845]: rtabmap (93): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8434s, Maps update=0.0409s pub=0.0016s (local map=45, WM=48)[0m
+[33m[ WARN] (2019-11-05 18:03:52.574) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 93 <-> 74) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 6.890189 (edge 61->74, type=0, abs error=0.217887 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:52.574) Rtabmap.cpp:2943::process() Rejecting all added loop closures (3, first is 93 <-> 74) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 6.036378 (edge 61->74, type=0, abs error=10.937021 deg, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:03:52.574) Rtabmap.cpp:2953::process() Loop closure 93->74 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:52.574) Rtabmap.cpp:2953::process() Loop closure 93->61 rejected![0m
+[33m[ WARN] (2019-11-05 18:03:52.574) Rtabmap.cpp:2953::process() Loop closure 93->78 rejected![0m
+[0m[ INFO] [1573005832.701169572]: rtabmap (94): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8493s, Maps update=0.1179s pub=0.0001s (local map=44, WM=47)[0m
+[0m[ INFO] [1573005833.692080715]: rtabmap (95): Rate=1.00s, Limit=0.700s, RTAB-Map=0.7361s, Maps update=0.1535s pub=0.0013s (local map=47, WM=47)[0m
+[0m[ INFO] [1573005834.834862675]: rtabmap (96): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8547s, Maps update=0.1134s pub=0.0011s (local map=47, WM=47)[0m
+[0m[ INFO] [1573005835.808667313]: rtabmap (97): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8023s, Maps update=0.0839s pub=0.0026s (local map=47, WM=47)[0m
+[0m[ INFO] [1573005836.668542582]: rtabmap (98): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6798s, Maps update=0.0505s pub=0.0012s (local map=51, WM=51)[0m
+[0m[ INFO] [1573005837.334387681]: rtabmap (99): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3000s, Maps update=0.0563s pub=0.0011s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005838.196534888]: rtabmap (100): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1491s, Maps update=0.0360s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005839.455780593]: rtabmap (101): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1789s, Maps update=0.1953s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005840.366294682]: rtabmap (102): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2231s, Maps update=0.0393s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005841.336826232]: rtabmap (103): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1845s, Maps update=0.0383s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005842.351682234]: rtabmap (104): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1777s, Maps update=0.0313s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005843.391836275]: rtabmap (105): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1882s, Maps update=0.0325s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005844.598784793]: rtabmap (106): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2059s, Maps update=0.1756s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005845.375971619]: rtabmap (107): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1620s, Maps update=0.0319s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005846.442596383]: rtabmap (108): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1882s, Maps update=0.0286s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005847.458604040]: rtabmap (109): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1875s, Maps update=0.0312s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005848.462252649]: rtabmap (110): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1555s, Maps update=0.0313s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005849.500242567]: rtabmap (111): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1757s, Maps update=0.0410s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005850.533614759]: rtabmap (112): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2011s, Maps update=0.0387s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005851.560609311]: rtabmap (113): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2178s, Maps update=0.0361s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005852.639886870]: rtabmap (114): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1840s, Maps update=0.0364s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005853.685142548]: rtabmap (115): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1922s, Maps update=0.0340s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005854.755745271]: rtabmap (116): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1936s, Maps update=0.0469s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005855.744370610]: rtabmap (117): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1905s, Maps update=0.0327s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005856.846005313]: rtabmap (118): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2000s, Maps update=0.0335s pub=0.0015s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005857.822474266]: rtabmap (119): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1855s, Maps update=0.0019s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005858.874240860]: rtabmap (120): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1910s, Maps update=0.0336s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005859.906631443]: rtabmap (121): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2136s, Maps update=0.0026s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005860.915304174]: rtabmap (122): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1844s, Maps update=0.0364s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005861.982261002]: rtabmap (123): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1926s, Maps update=0.0333s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005863.033679348]: rtabmap (124): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1717s, Maps update=0.0342s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005864.077950269]: rtabmap (125): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2089s, Maps update=0.0420s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005865.094508878]: rtabmap (126): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1771s, Maps update=0.0313s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005866.110473255]: rtabmap (127): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1798s, Maps update=0.0357s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005867.208271833]: rtabmap (128): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2174s, Maps update=0.0411s pub=0.0001s (local map=53, WM=53)[0m
+[0m[ INFO] [1573005868.630918400]: rtabmap (129): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6328s, Maps update=0.0622s pub=0.0014s (local map=54, WM=54)[0m
+[33m[ WARN] (2019-11-05 18:04:29.494) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 130 <-> 85) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 4.274436 (edge 82->129, type=1, abs error=0.040823 m, stddev=0.009551). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:04:29.494) Rtabmap.cpp:2953::process() Loop closure 130->85 rejected![0m
+[33m[ WARN] (2019-11-05 18:04:29.494) Rtabmap.cpp:2953::process() Loop closure 130->82 rejected![0m
+[0m[ INFO] [1573005869.536749700]: rtabmap (130): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5807s, Maps update=0.0348s pub=0.0014s (local map=55, WM=55)[0m
+[33m[ WARN] (2019-11-05 18:04:30.375) Rtabmap.cpp:2151::process() Rejected loop closure 75 -> 131: Not enough inliers 0/5 (matches=15) between 75 and 131[0m
+[0m[ INFO] [1573005870.584184995]: rtabmap (131): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5508s, Maps update=0.0348s pub=0.0015s (local map=56, WM=56)[0m
+[33m[ WARN] (2019-11-05 18:04:31.415) Rtabmap.cpp:2151::process() Rejected loop closure 42 -> 132: Cannot compute transform (cor=1 corrRatio=0.001563/0.100000 maxLaserScans=640)[0m
+[0m[ INFO] [1573005871.670016288]: rtabmap (132): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6156s, Maps update=0.0325s pub=0.0012s (local map=57, WM=57)[0m
+[0m[ INFO] [1573005872.477143990]: rtabmap (133): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4149s, Maps update=0.0400s pub=0.0017s (local map=58, WM=58)[0m
+[0m[ INFO] [1573005873.462925918]: rtabmap (134): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3628s, Maps update=0.0318s pub=0.0010s (local map=59, WM=59)[0m
+[0m[ INFO] [1573005874.524793107]: rtabmap (135): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3777s, Maps update=0.0356s pub=0.0012s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005875.349029520]: rtabmap (136): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1846s, Maps update=0.0363s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005876.348112536]: rtabmap (137): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1890s, Maps update=0.0342s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005877.351356630]: rtabmap (138): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1790s, Maps update=0.0330s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005878.366363564]: rtabmap (139): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1647s, Maps update=0.0343s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005879.402145638]: rtabmap (140): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1821s, Maps update=0.0336s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005880.631149274]: rtabmap (141): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3080s, Maps update=0.0342s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005881.429289738]: rtabmap (142): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1727s, Maps update=0.0333s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005882.487818006]: rtabmap (143): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1627s, Maps update=0.0293s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005883.491030417]: rtabmap (144): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1684s, Maps update=0.0018s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005884.620007885]: rtabmap (145): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1793s, Maps update=0.0437s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005885.731314263]: rtabmap (146): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3030s, Maps update=0.0355s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005886.662884580]: rtabmap (147): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1882s, Maps update=0.0311s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005887.622212487]: rtabmap (148): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1627s, Maps update=0.0350s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005888.631323986]: rtabmap (149): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1761s, Maps update=0.0296s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005889.723292223]: rtabmap (150): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1866s, Maps update=0.0344s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005890.786895153]: rtabmap (151): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1824s, Maps update=0.0025s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005891.743735833]: rtabmap (152): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1790s, Maps update=0.0383s pub=0.0001s (local map=60, WM=60)[0m
+[0m[ INFO] [1573005892.795853093]: rtabmap (153): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1807s, Maps update=0.0441s pub=0.0019s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005893.747894396]: rtabmap (154): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1846s, Maps update=0.0351s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005894.772042055]: rtabmap (155): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1721s, Maps update=0.0350s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005895.943611047]: rtabmap (156): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1708s, Maps update=0.1733s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005896.860940664]: rtabmap (157): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1700s, Maps update=0.0376s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005897.890221791]: rtabmap (158): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1749s, Maps update=0.0348s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005898.904493433]: rtabmap (159): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1933s, Maps update=0.0321s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005899.920576931]: rtabmap (160): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1766s, Maps update=0.0313s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005901.103904575]: rtabmap (161): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1844s, Maps update=0.1881s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005901.962539651]: rtabmap (162): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1928s, Maps update=0.0413s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005902.949948587]: rtabmap (163): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1858s, Maps update=0.0351s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005904.026642304]: rtabmap (164): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1894s, Maps update=0.0369s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005905.119339284]: rtabmap (165): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2213s, Maps update=0.0354s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005906.138510902]: rtabmap (166): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1889s, Maps update=0.0320s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005907.135303330]: rtabmap (167): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1638s, Maps update=0.0350s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005908.230867244]: rtabmap (168): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1651s, Maps update=0.0316s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005909.257196950]: rtabmap (169): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1720s, Maps update=0.0318s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005910.257982902]: rtabmap (170): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1635s, Maps update=0.0286s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005911.452523227]: rtabmap (171): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2072s, Maps update=0.1762s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005912.362454961]: rtabmap (172): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1885s, Maps update=0.0345s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005913.420270176]: rtabmap (173): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2236s, Maps update=0.0536s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005914.384923234]: rtabmap (174): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1816s, Maps update=0.0332s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005915.451260751]: rtabmap (175): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1711s, Maps update=0.0331s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005916.640001284]: rtabmap (176): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1907s, Maps update=0.1756s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005917.596389911]: rtabmap (177): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2077s, Maps update=0.0461s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005918.609162839]: rtabmap (178): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1728s, Maps update=0.0326s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005919.624611755]: rtabmap (179): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1790s, Maps update=0.0290s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005920.639848672]: rtabmap (180): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1691s, Maps update=0.0425s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005921.826600469]: rtabmap (181): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3550s, Maps update=0.0337s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005922.679452822]: rtabmap (182): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1955s, Maps update=0.0401s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005923.733824987]: rtabmap (183): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1873s, Maps update=0.0334s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005924.738514258]: rtabmap (184): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1693s, Maps update=0.0243s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005925.793088369]: rtabmap (185): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1770s, Maps update=0.0387s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005926.792116129]: rtabmap (186): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1740s, Maps update=0.0022s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005927.862838462]: rtabmap (187): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1861s, Maps update=0.0351s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005928.872010241]: rtabmap (188): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1910s, Maps update=0.0385s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005929.919485172]: rtabmap (189): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1935s, Maps update=0.0322s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005930.920137037]: rtabmap (190): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1725s, Maps update=0.0019s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005932.133122302]: rtabmap (191): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3189s, Maps update=0.0332s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005933.058365024]: rtabmap (192): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1790s, Maps update=0.0407s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005934.093432087]: rtabmap (193): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2105s, Maps update=0.0374s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005935.050276696]: rtabmap (194): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1737s, Maps update=0.0323s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005936.105454118]: rtabmap (195): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1841s, Maps update=0.0355s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005937.293376845]: rtabmap (196): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1787s, Maps update=0.1810s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005938.154851712]: rtabmap (197): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1764s, Maps update=0.0328s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005939.150748371]: rtabmap (198): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1845s, Maps update=0.0376s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005940.154539296]: rtabmap (199): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1703s, Maps update=0.0364s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005941.162443632]: rtabmap (200): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1668s, Maps update=0.0369s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005942.256500732]: rtabmap (201): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1859s, Maps update=0.0356s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005943.281675515]: rtabmap (202): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2002s, Maps update=0.0336s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005944.306137106]: rtabmap (203): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1707s, Maps update=0.0449s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005945.318334044]: rtabmap (204): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2009s, Maps update=0.0306s pub=0.0001s (local map=61, WM=61)[0m
+[0m[ INFO] [1573005946.359273341]: rtabmap (205): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1896s, Maps update=0.0474s pub=0.0024s (local map=62, WM=62)[0m
+[0m[ INFO] [1573005947.681152984]: rtabmap (206): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4538s, Maps update=0.0354s pub=0.0011s (local map=63, WM=63)[0m
+[0m[ INFO] [1573005948.654934659]: rtabmap (207): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3661s, Maps update=0.0317s pub=0.0010s (local map=64, WM=64)[0m
+[33m[ WARN] (2019-11-05 18:05:49.603) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 130 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005949.742706258]: rtabmap (208): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4242s, Maps update=0.0499s pub=0.0015s (local map=65, WM=65)[0m
+[33m[ WARN] (2019-11-05 18:05:50.671) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 131 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:05:50.729) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 11 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005950.853183149]: rtabmap (209): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4851s, Maps update=0.0457s pub=0.0010s (local map=66, WM=66)[0m
+[33m[ WARN] (2019-11-05 18:05:51.507) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 132 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:05:51.566) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 12 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005951.702256258]: rtabmap (210): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3238s, Maps update=0.0545s pub=0.0010s (local map=67, WM=67)[0m
+[33m[ WARN] (2019-11-05 18:05:52.527) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 133 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005952.853468358]: rtabmap (211): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4700s, Maps update=0.0367s pub=0.0015s (local map=68, WM=68)[0m
+[33m[ WARN] (2019-11-05 18:05:53.541) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 134 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005953.678681692]: rtabmap (212): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2736s, Maps update=0.0476s pub=0.0018s (local map=69, WM=69)[0m
+[33m[ WARN] (2019-11-05 18:05:54.558) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 135 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:05:54.566) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 15 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005954.665269639]: rtabmap (213): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2363s, Maps update=0.0354s pub=0.0020s (local map=70, WM=70)[0m
+[33m[ WARN] (2019-11-05 18:05:55.596) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 153 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:05:55.601) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005955.644754474]: rtabmap (214): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1886s, Maps update=0.0327s pub=0.0009s (local map=71, WM=71)[0m
+[33m[ WARN] (2019-11-05 18:05:56.620) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005956.686302236]: rtabmap (215): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1772s, Maps update=0.0513s pub=0.0044s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:05:57.631) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005957.685821742]: rtabmap (216): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1879s, Maps update=0.0395s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:05:58.620) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005958.676301046]: rtabmap (217): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1795s, Maps update=0.0387s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:05:59.715) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005959.772878655]: rtabmap (218): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1915s, Maps update=0.0407s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:06:00.702) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005960.741430018]: rtabmap (219): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1906s, Maps update=0.0298s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:06:01.814) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005961.865345295]: rtabmap (220): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2141s, Maps update=0.0331s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:06:02.792) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005962.980900475]: rtabmap (221): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3593s, Maps update=0.0337s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:06:03.849) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005963.900484869]: rtabmap (222): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1708s, Maps update=0.0367s pub=0.0001s (local map=72, WM=72)[0m
+[33m[ WARN] (2019-11-05 18:06:04.920) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005964.977490273]: rtabmap (223): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2073s, Maps update=0.0424s pub=0.0010s (local map=73, WM=73)[0m
+[33m[ WARN] (2019-11-05 18:06:05.985) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005966.119297716]: rtabmap (224): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2601s, Maps update=0.0549s pub=0.0014s (local map=74, WM=74)[0m
+[33m[ WARN] (2019-11-05 18:06:07.046) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 26 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005967.178036124]: rtabmap (225): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2795s, Maps update=0.0326s pub=0.0012s (local map=75, WM=75)[0m
+[33m[ WARN] (2019-11-05 18:06:08.162) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 209 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005968.291241044]: rtabmap (226): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2815s, Maps update=0.0414s pub=0.0015s (local map=76, WM=76)[0m
+[33m[ WARN] (2019-11-05 18:06:09.226) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 210 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005969.341559783]: rtabmap (227): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2826s, Maps update=0.0165s pub=0.0010s (local map=77, WM=77)[0m
+[33m[ WARN] (2019-11-05 18:06:10.302) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 211 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005970.363360457]: rtabmap (228): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2214s, Maps update=0.0443s pub=0.0010s (local map=78, WM=78)[0m
+[33m[ WARN] (2019-11-05 18:06:11.292) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 212 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005971.342164544]: rtabmap (229): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2050s, Maps update=0.0336s pub=0.0010s (local map=79, WM=79)[0m
+[0m[ INFO] [1573005972.382818469]: rtabmap (230): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2274s, Maps update=0.0336s pub=0.0011s (local map=80, WM=80)[0m
+[0m[ INFO] [1573005973.390060269]: rtabmap (231): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2226s, Maps update=0.0415s pub=0.0010s (local map=81, WM=81)[0m
+[0m[ INFO] [1573005974.369518933]: rtabmap (232): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1971s, Maps update=0.0383s pub=0.0010s (local map=82, WM=82)[0m
+[0m[ INFO] [1573005975.417714346]: rtabmap (233): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2243s, Maps update=0.0416s pub=0.0011s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005976.440512610]: rtabmap (234): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1825s, Maps update=0.0450s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005977.415290605]: rtabmap (235): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2026s, Maps update=0.0465s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005978.470891247]: rtabmap (236): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1925s, Maps update=0.0409s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005979.553537412]: rtabmap (237): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1981s, Maps update=0.0417s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005980.596432044]: rtabmap (238): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2109s, Maps update=0.0378s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005981.628825570]: rtabmap (239): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1839s, Maps update=0.0391s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005982.579113565]: rtabmap (240): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1686s, Maps update=0.0028s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005983.694811525]: rtabmap (241): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1991s, Maps update=0.0506s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005984.754911749]: rtabmap (242): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2060s, Maps update=0.0422s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005985.763868033]: rtabmap (243): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1887s, Maps update=0.0473s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005986.799731073]: rtabmap (244): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2119s, Maps update=0.0437s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005987.754201392]: rtabmap (245): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1671s, Maps update=0.0412s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005988.759507585]: rtabmap (246): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1837s, Maps update=0.0323s pub=0.0001s (local map=83, WM=83)[0m
+[0m[ INFO] [1573005989.826189781]: rtabmap (247): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2182s, Maps update=0.0309s pub=0.0010s (local map=84, WM=84)[0m
+[0m[ INFO] [1573005990.855253142]: rtabmap (248): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2008s, Maps update=0.0395s pub=0.0023s (local map=85, WM=85)[0m
+[33m[ WARN] (2019-11-05 18:06:32.597) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 45 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005992.659013694]: rtabmap (249): Rate=1.00s, Limit=0.700s, RTAB-Map=0.9725s, Maps update=0.0418s pub=0.0046s (local map=84, WM=84)[0m
+[33m[ WARN] (2019-11-05 18:06:33.091) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 227 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573005993.171582598]: rtabmap (250): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3524s, Maps update=0.0487s pub=0.0014s (local map=87, WM=87)[0m
+[0m[ INFO] [1573005994.118403845]: rtabmap (251): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3769s, Maps update=0.0332s pub=0.0012s (local map=88, WM=88)[0m
+[0m[ INFO] [1573005994.896404810]: rtabmap (252): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1492s, Maps update=0.0351s pub=0.0001s (local map=88, WM=88)[0m
+[0m[ INFO] [1573005996.007236079]: rtabmap (253): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1657s, Maps update=0.0363s pub=0.0001s (local map=88, WM=88)[0m
+[0m[ INFO] [1573005996.976203843]: rtabmap (254): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1798s, Maps update=0.0348s pub=0.0001s (local map=88, WM=88)[0m
+[0m[ INFO] [1573005997.953787519]: rtabmap (255): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1667s, Maps update=0.0385s pub=0.0001s (local map=88, WM=88)[0m
+[0m[ INFO] [1573005999.214267592]: rtabmap (256): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3693s, Maps update=0.0051s pub=0.0037s (local map=89, WM=89)[0m
+[0m[ INFO] [1573006000.013953318]: rtabmap (257): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1980s, Maps update=0.0384s pub=0.0016s (local map=90, WM=90)[0m
+[0m[ INFO] [1573006001.050849335]: rtabmap (258): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1981s, Maps update=0.0411s pub=0.0014s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006002.110515503]: rtabmap (259): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1686s, Maps update=0.0427s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006003.065040998]: rtabmap (260): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1781s, Maps update=0.0448s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006004.255071934]: rtabmap (261): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1798s, Maps update=0.1987s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006005.154877705]: rtabmap (262): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1835s, Maps update=0.0385s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006006.165199617]: rtabmap (263): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1870s, Maps update=0.0400s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006007.105614313]: rtabmap (264): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1534s, Maps update=0.0382s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006008.118302799]: rtabmap (265): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1572s, Maps update=0.0395s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006009.355047766]: rtabmap (266): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1917s, Maps update=0.1895s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006010.174808504]: rtabmap (267): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1588s, Maps update=0.0384s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006011.210578569]: rtabmap (268): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1588s, Maps update=0.0458s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006012.217124630]: rtabmap (269): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1690s, Maps update=0.0401s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006013.156063142]: rtabmap (270): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1372s, Maps update=0.0335s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006014.428355663]: rtabmap (271): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3036s, Maps update=0.0485s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006015.350817397]: rtabmap (272): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1534s, Maps update=0.0437s pub=0.0001s (local map=91, WM=91)[0m
+[0m[ INFO] [1573006016.369277254]: rtabmap (273): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1793s, Maps update=0.0027s pub=0.0015s (local map=92, WM=92)[0m
+[0m[ INFO] [1573006017.627553548]: rtabmap (274): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3785s, Maps update=0.0593s pub=0.0012s (local map=93, WM=93)[0m
+[33m[ WARN] (2019-11-05 18:06:58.694) Rtabmap.cpp:2919::process() Rejecting all added loop closures (1, first is 275 <-> 215) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.062015 (edge 274->275, type=0, abs error=0.096829 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:06:58.694) Rtabmap.cpp:2953::process() Loop closure 275->215 rejected![0m
+[0m[ INFO] [1573006018.742539002]: rtabmap (275): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3903s, Maps update=0.0390s pub=0.0031s (local map=94, WM=94)[0m
+[0m[ INFO] [1573006019.675659556]: rtabmap (276): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3583s, Maps update=0.0699s pub=0.0017s (local map=95, WM=95)[0m
+[0m[ INFO] [1573006020.879857044]: rtabmap (277): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4958s, Maps update=0.0672s pub=0.0015s (local map=96, WM=96)[0m
+[0m[ INFO] [1573006021.778536349]: rtabmap (278): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3531s, Maps update=0.0375s pub=0.0013s (local map=97, WM=97)[0m
+[33m[ WARN] (2019-11-05 18:07:03.048) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 46 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006023.139833841]: rtabmap (279): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5925s, Maps update=0.0625s pub=0.0011s (local map=98, WM=98)[0m
+[33m[ WARN] (2019-11-05 18:07:03.872) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 45 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006023.967095705]: rtabmap (280): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4476s, Maps update=0.0625s pub=0.0012s (local map=99, WM=99)[0m
+[0m[ INFO] [1573006025.212571046]: rtabmap (281): Ra [1573005829.678458011]: Got new plan[0m
+[33m[ WARN] [1573005829.707558027]: DWA planner failed to produce path.[0m
+[33m[ WARN] [1573005829.878233757]: Clearing costmap to unstuck robot (1.840000m).[0m
+[0m[ INFO] [1573005833.692352876]: Resizing costmap to 223 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005834.835347222]: Resizing costmap to 223 X 372 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005835.078545700]: Got new plan[0m
+[33m[ WARN] [1573005835.085528748]: DWA planner failed to produce path.[0m
+[33m[ WARN] [1573005835.278167943]: Rotate recovery behavior started.[0m
+[0m[ INFO] [1573005835.678218272]: Got new plan[0m
+[33m[ WARN] [1573005835.685420794]: DWA planner failed to produce path.[0m
+[0m[ INFO] [1573005837.336711758]: Resizing costmap to 223 X 372 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005867.056889481]: Got new plan[0m
+[0m[ INFO] [1573005868.056861758]: Got new plan[0m
+[0m[ INFO] [1573005868.630891852]: Resizing costmap to 223 X 371 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005869.057060517]: Got new plan[0m
+[0m[ INFO] [1573005870.056905961]: Got new plan[0m
+[0m[ INFO] [1573005871.056864162]: Got new plan[0m
+[0m[ INFO] [1573005872.057142792]: Got new plan[0m
+[0m[ INFO] [1573005873.057582657]: Got new plan[0m
+[0m[ INFO] [1573005874.056887609]: Got new plan[0m
+[0m[ INFO] [1573005874.522705994]: Resizing costmap to 223 X 379 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005874.656986061]: Goal reached[0m
+[0m[ INFO] [1573005891.317037744]: Got new plan[0m
+[0m[ INFO] [1573005892.117352183]: Goal reached[0m
+[0m[ INFO] [1573005892.795745785]: Resizing costmap to 223 X 380 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005907.566476587]: Got new plan[0m
+[0m[ INFO] [1573005907.766597269]: Got new plan[0m
+[0m[ INFO] [1573005907.766714898]: Goal reached[0m
+[0m[ INFO] [1573005936.051878340]: Got new plan[0m
+[0m[ INFO] [1573005936.052012548]: Goal reached[0m
+[0m[ INFO] [1573005949.743935162]: Resizing costmap to 223 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005950.854149885]: Resizing costmap to 223 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005951.702730348]: Resizing costmap to 223 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005963.727145427]: Got new plan[0m
+[0m[ INFO] [1573005964.926063246]: Got new plan[0m
+[0m[ INFO] [1573005965.926018377]: Got new plan[0m
+[0m[ INFO] [1573005966.119771156]: Resizing costmap to 223 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005966.926227350]: Got new plan[0m
+[0m[ INFO] [1573005967.926029081]: Got new plan[0m
+[0m[ INFO] [1573005968.926221866]: Got new plan[0m
+[0m[ INFO] [1573005969.342255316]: Resizing costmap to 230 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005969.926014528]: Got new plan[0m
+[0m[ INFO] [1573005970.363935471]: Resizing costmap to 233 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573005970.928054938]: Got new plan[0m
+[0m[ INFO] [1573005971.926072086]: Got new plan[0m
+[0m[ INFO] [1573005972.931754072]: Got new plan[0m
+[0m[ INFO] [1573005973.926396343]: Got new plan[0m
+[0m[ INFO] [1573005974.526030727]: Goal reached[0m
+[0m[ INFO] [1573006014.762315216]: Got new plan[0m
+[0m[ INFO] [1573006015.960848540]: Got new plan[0m
+[0m[ INFO] [1573006016.960821070]: Got new plan[0m
+[0m[ INFO] [1573006017.627913079]: Resizing costmap to 234 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006017.960753237]: Got new plan[0m
+[0m[ INFO] [1573006018.960770782]: Got new plan[0m
+[0m[ INFO] [1573006019.960789547]: Got new plan[0m
+[0m[ INFO] [1573006020.880391094]: Resizing costmap to 234 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006020.960788667]: Got new plan[0m
+[0m[ INFO] [1573006021.960746878]: Got new plan[0m
+[0m[ INFO] [1573006022.960891149]: Got new plan[0m
+[0m[ INFO] [1573006023.144068382]: Resizing costmap to 237 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006023.960741563]: Got new plan[0m
+[0m[ INFO] [1573006023.964178464]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006024.960725550]: Got new plan[0m
+[0m[ INFO] [1573006025.961067612]: Got new plan[0m
+[0m[ INFO] [1573006026.17te=1.00s, Limit=0.700s, RTAB-Map=0.6300s, Maps update=0.0347s pub=0.0010s (local map=100, WM=100)[0m
+[0m[ INFO] [1573006026.180193567]: rtabmap (282): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5513s, Maps update=0.0691s pub=0.0035s (local map=101, WM=101)[0m
+[33m[ WARN] (2019-11-05 18:07:07.148) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 61 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:07:07.223) Rtabmap.cpp:2919::process() Rejecting all added loop closures (3, first is 283 <-> 229) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.012575 (edge 11->12, type=0, abs error=0.095266 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:07:07.224) Rtabmap.cpp:2953::process() Loop closure 283->229 rejected![0m
+[33m[ WARN] (2019-11-05 18:07:07.224) Rtabmap.cpp:2953::process() Loop closure 283->247 rejected![0m
+[33m[ WARN] (2019-11-05 18:07:07.224) Rtabmap.cpp:2953::process() Loop closure 283->61 rejected![0m
+[0m[ INFO] [1573006027.278330688]: rtabmap (283): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6831s, Maps update=0.0449s pub=0.0011s (local map=102, WM=102)[0m
+[33m[ WARN] (2019-11-05 18:07:08.018) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 59 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006028.135272561]: rtabmap (284): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5150s, Maps update=0.0584s pub=0.0011s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006028.871304834]: rtabmap (285): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1883s, Maps update=0.0371s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006029.822885932]: rtabmap (286): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1964s, Maps update=0.0416s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006030.802945299]: rtabmap (287): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2009s, Maps update=0.0030s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006031.911943678]: rtabmap (288): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1877s, Maps update=0.0420s pub=0.0001s (local map=103, WM=103)[0m
+[33m[ WARN] (2019-11-05 18:07:12.991) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 59 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006033.102573886]: rtabmap (289): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3573s, Maps update=0.0458s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006033.875777934]: rtabmap (290): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1498s, Maps update=0.0409s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006035.104914832]: rtabmap (291): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2008s, Maps update=0.1408s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006036.056763921]: rtabmap (292): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1852s, Maps update=0.0384s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006037.058020362]: rtabmap (293): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1868s, Maps update=0.0029s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006038.108959311]: rtabmap (294): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1905s, Maps update=0.0343s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006039.113328099]: rtabmap (295): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1806s, Maps update=0.0361s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006040.188359732]: rtabmap (296): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2640s, Maps update=0.0326s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006041.152793412]: rtabmap (297): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1888s, Maps update=0.0379s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006042.217880048]: rtabmap (298): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1990s, Maps update=0.0367s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006043.224211424]: rtabmap (299): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1973s, Maps update=0.0321s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006044.218631613]: rtabmap (300): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1913s, Maps update=0.0388s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006045.384406177]: rtabmap (301): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3252s, Maps update=0.0363s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006046.237176271]: rtabmap (302): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1626s, Maps update=0.0475s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006047.225096574]: rtabmap (303): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1704s, Maps update=0.0045s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006048.286447672]: rtabmap (304): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1724s, Maps update=0.0430s pub=0.0001s (local map=103, WM=103)[0m
+[0m[ INFO] [1573006049.299977875]: rtabmap (305): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1706s, Maps update=0.0032s pub=0.0001s (local map=103, WM=103)[0m
+[33m[ WARN] (2019-11-05 18:07:30.793) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 60 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006050.899574859]: rtabmap (306): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6631s, Maps update=0.0374s pub=0.0027s (local map=104, WM=104)[0m
+[33m[ WARN] (2019-11-05 18:07:31.649) Rtabmap.cpp:2919::process() Rejecting all added loop closures (2, first is 307 <-> 248) in this iteration because a wrong loop closure has been detected after graph optimization, resulting in a maximum graph error ratio of 3.113150 (edge 11->12, type=0, abs error=0.098446 m, stddev=0.031623). The maximum error ratio parameter "RGBD/OptimizeMaxError" is 3.000000 of std deviation.[0m
+[33m[ WARN] (2019-11-05 18:07:31.649) Rtabmap.cpp:2953::process() Loop closure 307->248 rejected![0m
+[33m[ WARN] (2019-11-05 18:07:31.649) Rtabmap.cpp:2953::process() Loop closure 307->39 rejected![0m
+[0m[ INFO] [1573006051.704695950]: rtabmap (307): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4488s, Maps update=0.0466s pub=0.0014s (local map=105, WM=105)[0m
+[0m[ INFO] [1573006052.746418643]: rtabmap (308): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4825s, Maps update=0.0596s pub=0.0011s (local map=106, WM=106)[0m
+[0m[ INFO] [1573006053.602732887]: rtabmap (309): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3344s, Maps update=0.0397s pub=0.0012s (local map=107, WM=107)[0m
+[0m[ INFO] [1573006054.971682831]: rtabmap (310): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6320s, Maps update=0.0422s pub=0.0015s (local map=108, WM=108)[0m
+[33m[ WARN] (2019-11-05 18:07:35.786) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 11 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006056.089639780]: rtabmap (311): Rate=1.00s, Limit=0.700s, RTAB-Map=0.6923s, Maps update=0.0650s pub=0.0011s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006056.590822911]: rtabmap (312): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1916s, Maps update=0.0354s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006057.614434559]: rtabmap (313): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1942s, Maps update=0.0362s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006058.627751940]: rtabmap (314): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2065s, Maps update=0.0328s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006059.612052075]: rtabmap (315): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1804s, Maps update=0.0379s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006060.634678674]: rtabmap (316): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1857s, Maps update=0.0307s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006061.687076213]: rtabmap (317): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2001s, Maps update=0.0457s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006062.682060516]: rtabmap (318): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1699s, Maps update=0.0448s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006063.706010203]: rtabmap (319): Rate=1.00s, Limit=0.700s, RTAB-Map=0.20[INFO] [1573005728.612377]: Initializing Marco Movement Manager
+[INFO] [1573005728.658666]: Subscribing to /marco/pursue_cube
+[INFO] [1573005728.814694]: waiting for explore_server and move_base servers
+[INFO] [1573005739.213780]: explore_boundary: 
+  header: 
+    seq: 1
+    stamp: 
+      secs: 1573005739
+      nsecs: 212040901
+    frame_id: "map"
+  polygon: 
+    points: 
+      - 
+        x: 5.0
+        y: 5.0
+        z: 0.0
+      - 
+        x: -5.0
+        y: 5.0
+        z: 0.0
+      - 
+        x: -5.0
+        y: -5.0
+        z: 0.0
+      - 
+        x: 5.0
+        y: -5.0
+        z: 0.0
+explore_center: 
+  header: 
+    seq: 1
+    stamp: 
+      secs: 1573005739
+      nsecs: 212040901
+    frame_id: "map"
+  point: 
+    x: 1.0
+    y: 0.0
+    z: 0.0
+[INFO] [1573005739.219167]: Sending initial frontier goal from movement_manager
+[INFO] [1573005739.224132]: Created and now spinning
+[INFO] [1573005866.799163]: Entered callback to change to pursuit
+[INFO] [1573005866.800110]: Cancelling Frontier exploration goals
+[INFO] [1573005866.852755]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573005866
+    nsecs: 800900936
+  frame_id: "map"
+pose: 
+  position: 
+    x: 0.05203446211183696
+    y: 1.5469371389404318
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.7548079213157735
+    w: 0.6559458833767928
+[INFO] [1573005891.059842]: Entered callback to change to pursuit
+[INFO] [1573005891.061055]: Cancelling Frontier exploration goals
+[INFO] [1573005891.113735]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573005891
+    nsecs:  61925888
+  frame_id: "map"
+pose: 
+  position: 
+    x: 0.03720162634051737
+    y: 1.6218939507596453
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.7325082902134651
+    w: 0.6807581103215342
+[INFO] [1573005907.506093]: Entered callback to change to pursuit
+[INFO] [1573005907.510433]: Cancelling Frontier exploration goals
+[INFO] [1573005907.563565]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573005907
+    nsecs: 511652946
+  frame_id: "map"
+pose: 
+  position: 
+    x: 0.03615660719180847
+    y: 1.6218200673568364
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.730722825262549
+    w: 0.6826742654006509
+[INFO] [1573005935.794440]: Entered callback to change to pursuit
+[INFO] [1573005935.795449]: Cancelling Frontier exploration goals
+[INFO] [1573005935.848135]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573005935
+    nsecs: 796377897
+  frame_id: "map"
+pose: 
+  position: 
+    x: 0.03615660719180847
+    y: 1.6218200673568364
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.730722825262549
+    w: 0.6826742654006509
+[INFO] [1573005963.664185]: Entered callback to change to pursuit
+[INFO] [1573005963.664932]: Cancelling Frontier exploration goals
+[INFO] [1573005963.718862]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573005963
+    nsecs: 666657924
+  frame_id: "map"
+pose: 
+  position: 
+    x: -0.1167922929541616
+    y: 1.8793461769970397
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.060159784161795175
+    w: 0.998188759889434
+[INFO] [1573006014.703824]: Entered callback to change to pursuit
+[INFO] [1573006014.704486]: Cancelling Frontier exploration goals
+[INFO] [1573006014.756899]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573006014
+    nsecs: 705162048
+  frame_id: "map"
+pose: 
+  position: 
+    x: -0.23245566262909312
+    y: 1.7913825499498521
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.1298038876108203
+    w: 0.991539686931954
+[INFO] [1573006040.017431]: Entered callback to change to pursuit
+[INFO] [1573006040.154687]: Cancelling Frontier exploration goals
+[INFO] [1573006040.208178]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573006040
+    nsecs: 155894041
+  frame_id: "map"
+pose: 
+  position: 
+    x: -0.1510835867154128
+    y: 1.8314953433297267
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.19150833694364278
+    w: 0.9814909866530004
+[INFO] [1573006064.502879]: Entered callback to change to pursuit
+[INFO] [1573006064.503704]: Cancelling Frontier exploration goals
+[INFO] [1573006064.606753]: header: 
+  seq: 0
+  stamp: 
+    secs: 1573006064
+    nsecs: 504920959
+  frame_id: "map"
+pose: 55s, Maps update=0.0340s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006064.727194799]: rtabmap (320): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1817s, Maps update=0.0341s pub=0.0001s (local map=109, WM=109)[0m
+[0m[ INFO] [1573006065.766695877]: rtabmap (321): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1897s, Maps update=0.0484s pub=0.0001s (local map=109, WM=109)[0m
+[33m[ WARN] (2019-11-05 18:07:47.465) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 10 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006067.571557457]: rtabmap (322): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8099s, Maps update=0.0774s pub=0.0012s (local map=108, WM=108)[0m
+[0m[ INFO] [1573006068.744487545]: rtabmap (323): Rate=1.00s, Limit=0.700s, RTAB-Map=1.0475s, Maps update=0.0898s pub=0.0020s (local map=106, WM=107)[0m
+[33m[ WARN] (2019-11-05 18:07:49.295) Rtabmap.cpp:2151::process() Rejected loop closure 87 -> 324: Cannot compute transform (cor=27 corrRatio=0.042188/0.100000 maxLaserScans=640)[0m
+[33m[ WARN] (2019-11-05 18:07:49.760) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 283 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006069.898789621]: rtabmap (324): Rate=1.00s, Limit=0.700s, RTAB-Map=1.0561s, Maps update=0.0912s pub=0.0011s (local map=105, WM=106)[0m
+[0m[ INFO] [1573006071.203263547]: rtabmap (325): Rate=1.00s, Limit=0.700s, RTAB-Map=1.1535s, Maps update=0.1376s pub=0.0012s (local map=104, WM=105)[0m
+[33m[ WARN] (2019-11-05 18:07:52.320) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 306 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:07:52.412) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 40 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006072.625755426]: rtabmap (326): Rate=1.00s, Limit=0.700s, RTAB-Map=1.1497s, Maps update=0.1737s pub=0.0014s (local map=103, WM=104)[0m
+[33m[ WARN] (2019-11-05 18:07:53.415) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 40 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:07:53.422) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 12 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006073.608202924]: rtabmap (327): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8670s, Maps update=0.1073s pub=0.0018s (local map=102, WM=103)[0m
+[33m[ WARN] (2019-11-05 18:07:54.487) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 39 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006074.777285700]: rtabmap (328): Rate=1.00s, Limit=0.700s, RTAB-Map=0.8351s, Maps update=0.2430s pub=0.0012s (local map=100, WM=102)[0m
+[33m[ WARN] (2019-11-05 18:07:55.435) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 42 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006075.848569173]: rtabmap (329): Rate=1.00s, Limit=0.700s, RTAB-Map=0.7269s, Maps update=0.2848s pub=0.0011s (local map=100, WM=101)[0m
+[33m[ WARN] (2019-11-05 18:07:56.592) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 39 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006076.746849436]: rtabmap (330): Rate=1.00s, Limit=0.700s, RTAB-Map=0.7035s, Maps update=0.1002s pub=0.0015s (local map=105, WM=106)[0m
+[0m[ INFO] [1573006077.496118930]: rtabmap (331): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4463s, Maps update=0.0775s pub=0.0015s (local map=108, WM=109)[0m
+[33m[ WARN] (2019-11-05 18:07:58.699) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 7 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:07:58.894) MapsManager.cpp:580::updateMapCaches() Occupancy grid for location 26 should be added to global map (e..g, a ROS node is subscribed to any occupancy grid ou
+  position: 
+    x: 0.12001807029684175
+    y: 1.760000486752346
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.8029495407056679
+    w: 0.5960470074419943
+8412526]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006026.960850187]: Got new plan[0m
+[0m[ INFO] [1573006027.160842104]: Goal reached[0m
+[0m[ INFO] [1573006028.141110484]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006040.411158100]: Got new plan[0m
+[0m[ INFO] [1573006041.211205690]: Goal reached[0m
+[0m[ INFO] [1573006052.756702927]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006056.090200158]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006064.811614691]: Got new plan[0m
+[0m[ INFO] [1573006065.811545041]: Got new plan[0m
+[0m[ INFO] [1573006066.811548495]: Got new plan[0m
+[0m[ INFO] [1573006067.571944686]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006067.811594622]: Got new plan[0m
+[0m[ INFO] [1573006068.744381880]: Resizing costmap to 238 X 382 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006068.811771462]: Got new plan[0m
+[0m[ INFO] [1573006069.811613246]: Got new plan[0m
+[0m[ INFO] [1573006070.811541467]: Got new plan[0m
+[0m[ INFO] [1573006071.203687311]: Resizing costmap to 238 X 380 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006071.811727680]: Got new plan[0m
+[0m[ INFO] [1573006072.626242460]: Resizing costmap to 219 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006072.811906163]: Got new plan[0m
+[0m[ INFO] [1573006073.608438469]: Resizing costmap to 236 X 381 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006073.811544505]: Got new plan[0m
+[0m[ INFO] [1573006074.777598194]: Resizing costmap to 218 X 380 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006074.811663645]: Got new plan[0m
+[0m[ INFO] [1573006075.811585760]: Got new plan[0m
+[0m[ INFO] [1573006075.848167762]: Resizing costmap to 218 X 380 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006076.747274754]: Resizing costmap to 236 X 391 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006076.811563888]: Got new plan[0m
+[0m[ INFO] [1573006077.496450019]: Resizing costmap to 238 X 390 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006077.611676638]: Goal reached[0m
+[0m[ INFO] [1573006078.936735838]: Resizing costmap to 219 X 390 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006079.715066898]: Resizing costmap to 216 X 391 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006080.511696398]: Resizing costmap to 238 X 390 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006081.617057814]: Resizing costmap to 238 X 390 at 0.050000 m/pix[0m
+[0m[ INFO] [1573006082.572812698]: Resizing costmap to 238 X 390 at 0.050000 m/pix[0m
+tput) but it cannot be found in memory. For convenience, the occupancy grid is regenerated. Make sure parameter "RGBD/CreateOccupancyGrid" is true to avoid this warning for the next locations added to map. For older locations already in database without an occupancy grid map, you can use the "rtabmap-databaseViewer" to regenerate the missing occupancy grid maps and save them back in the database for next sessions. This warning is only shown once.[0m
+[0m[ INFO] [1573006078.936410514]: rtabmap (332): Rate=1.00s, Limit=0.700s, RTAB-Map=0.7630s, Maps update=0.1951s pub=0.0014s (local map=108, WM=108)[0m
+[33m[ WARN] (2019-11-05 18:07:59.570) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 45 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[33m[ WARN] (2019-11-05 18:07:59.576) OptimizerG2O.cpp:1061::optimize() Computing marginals: vertex 38 has negative hessian index (-1). Cannot compute last pose covariance.[0m
+[0m[ INFO] [1573006079.714612027]: rtabmap (333): Rate=1.00s, Limit=0.700s, RTAB-Map=0.5732s, Maps update=0.0994s pub=0.0010s (local map=111, WM=111)[0m
+[0m[ INFO] [1573006080.510463956]: rtabmap (334): Rate=1.00s, Limit=0.700s, RTAB-Map=0.3493s, Maps update=0.0933s pub=0.0014s (local map=114, WM=114)[0m
+[0m[ INFO] [1573006081.617014255]: rtabmap (335): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4470s, Maps update=0.0910s pub=0.0016s (local map=118, WM=118)[0m
+[0m[ INFO] [1573006082.573276094]: rtabmap (336): Rate=1.00s, Limit=0.700s, RTAB-Map=0.4091s, Maps update=0.0870s pub=0.0014s (local map=119, WM=119)[0m
+[0m[ INFO] [1573006083.319773801]: rtabmap (337): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1771s, Maps update=0.0325s pub=0.0001s (local map=119, WM=119)[0m
+[0m[ INFO] [1573006084.409610651]: rtabmap (338): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1895s, Maps update=0.0330s pub=0.0001s (local map=119, WM=119)[0m
+[0m[ INFO] [1573006085.492066397]: rtabmap (339): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2109s, Maps update=0.0465s pub=0.0001s (local map=119, WM=119)[0m
+[0m[ INFO] [1573006086.461518354]: rtabmap (340): Rate=1.00s, Limit=0.700s, RTAB-Map=0.2044s, Maps update=0.0368s pub=0.0001s (local map=119, WM=119)[0m
+[0m[ INFO] [1573006087.541468508]: rtabmap (341): Rate=1.00s, Limit=0.700s, RTAB-Map=0.1876s, Maps update=0.1442s pub=0.0001s (local map=119, WM=119)[0m
+rtabmap: Saving database/long-term memory... (located at /home/marcopolo/.ros/rtabmap.db)
+rtabmap: 2D occupancy grid map saved.
+rtabmap: Saving database/long-term memory...done! (located at /home/marcopolo/.ros/rtabmap.db, 151 MB)
+[33m[ WARN] [1573005732.188476344]: Timed out waiting for transform from base_link to map to become available before running costmap, tf error: canTransform: target_frame map does not exist.. canTransform returned after 0.100282 timeout was 0.1.[0m
+[0m[ INFO] [1573005735.244237472]: Using plugin "explore_boundary"[0m
+[0m[ INFO] [1573005735.422481125]: Using plugin "sensor"[0m
+[0m[ INFO] [1573005735.452533298]:     Subscribed to Topics: laser[0m
+[0m[ INFO] [1573005735.675685517]: Using plugin "inflation"[0m
+[33m[ WARN] [1573005736.134624181]: The origin for the sensor at (-0.05, 0.04) is out of map bounds. So, the costmap cannot raytrace for it.[0m
+[33m[ WARN] [1573005737.134691136]: The origin for the sensor at (-0.05, 0.04) is out of map bounds. So, the costmap cannot raytrace for it.[0m
+[33m[ WARN] [1573005738.334765607]: The origin for the sensor at (-0.05, 0.04) is out of map bounds. So, the costmap cannot raytrace for it.[0m
+[0m[ INFO] [1573005739.316064911]: Region boundary set[0m
+[33m[ WARN] [1573006088.728328443]: Costmap2DROS transform timeout. Current time: 1573006088.7282, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006088.728390308]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006089.728436295]: Costmap2DROS transform timeout. Current time: 1573006089.7283, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006089.728491212]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006090.728605720]: Costmap2DROS transform timeout. Current time: 1573006090.7285, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006090.728659199]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006091.728872475]: Costmap2DROS transform timeout. Current time: 1573006091.7288, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006091.728936050]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006092.734534691]: Costmap2DROS transform timeout. Current time: 1573006092.7345, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006092.828421394]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006093.734573329]: Costmap2DROS transform timeout. Current time: 1573006093.7345, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006093.828475990]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006094.827960028]: Costmap2DROS transform timeout. Current time: 1573006094.8279, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006094.928579916]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006095.828701821]: Costmap2DROS transform timeout. Current time: 1573006095.8286, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006096.028540622]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006096.928270613]: Costmap2DROS transform timeout. Current time: 1573006096.9282, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006097.128005353]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006097.928339428]: Costmap2DROS transform timeout. Current time: 1573006097.9283, global_pose stamp: 1573006088.2066, tolerance: 0.5000[0m
+[33m[ WARN] [1573006098.228444385]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006099.329059291]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006100.428281253]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006101.429016959]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006102.528638540]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006103.628745226]: Could not get robot pose, cancelling reconfiguration[0m
+[33m[ WARN] [1573006104.728475422]: Could not get robot pose, cancelling reconfigurat[0m[ INFO] [1573005726.336661144]: Please use the 'Point' tool in Rviz to select an exporation boundary.[0m
+ion[0m
+[33m[ WARN] [1573006105.729001177]: Could not get robot pose, cancelling reconfiguration[0m
+era_sr300/depth_metric_rect-31]: started with pid [31899][0m
+[1mprocess[camera_sr300/depth_metric-32]: started with pid [31920][0m
+[1mprocess[camera_sr300/depth_points-33]: started with pid [31950][0m
+[1mprocess[camera_sr300/register_depth_rgb-34]: started with pid [31972][0m
+[1mprocess[camera_sr300/points_xyzrgb_sw_registered-35]: started with pid [31986][0m
+[1mprocess[camera_sr300/depth_registered_sw_metric_rect-36]: started with pid [31999][0m
+[1mprocess[camera_sr300/disparity_depth-37]: started with pid [32015][0m
+[1mprocess[camera_sr300/disparity_registered_sw-38]: started with pid [32033][0m
+[1mprocess[navigation_velocity_smoother-39]: started with pid [32040][0m
+[1mprocess[kobuki_safety_controller-40]: started with pid [32053][0m
+[1mprocess[move_base-41]: started with pid [32068][0m
+[1mprocess[rtabmap/rtabmap-42]: started with pid [32110][0m
+[1mprocess[dock_drive_manager-43]: started with pid [32120][0m
+[1mprocess[dock_drive-44]: started with pid [32145][0m
+[1mprocess[marco_vision-45]: started with pid [32156][0m
+[1mprocess[marco_depth_finder-46]: started with pid [32167][0m
+[1mprocess[marco_mvmt_mgr-47]: started with pid [32194][0m
+[marco_mvmt_mgr-47] killing on exit
+[marco_depth_finder-46] killing on exit
+[dock_drive-44] killing on exit
+[dock_drive_manager-43] killing on exit
+[kobuki_safety_controller-40] killing on exit
+[rtabmap/rtabmap-42] killing on exit
+[move_base-41] killing on exit
+[navigation_velocity_smoother-39] killing on exit
+[marco_vision-45] killing on exit
+[camera_sr300/disparity_registered_sw-38] killing on exit
+[camera_sr300/disparity_depth-37] killing on exit
+[camera_sr300/depth_registered_sw_metric_rect-36] killing on exit
+[camera_sr300/points_xyzrgb_sw_registered-35] killing on exit
+[camera_sr300/register_depth_rgb-34] killing on exit
+[camera_sr300/depth_points-33] killing on exit
+[camera_sr300/depth_metric-32] killing on exit
+[camera_sr300/depth_metric_rect-31] killing on exit
+[camera_sr300/depth_rectify_depth-30] killing on exit
+[camera_sr300/ir_rectify_ir-29] killing on exit
+[camera_sr300/rgb_rectify_color-28] killing on exit
+[camera_sr300/rgb_rectify_mono-27] killing on exit
+[camera_sr300/rgb_debayer-26] killing on exit
+[camera_sr300/driver-25] killing on exit
+[depthimage_to_laserscan-24] killing on exit
+[camera/disparity_registered_hw-23] killing on exit
+[camera/disparity_depth-22] killing on exit
+[camera/depth_registered_metric-21] killing on exit
+[camera/depth_registered_hw_metric_rect-20] killing on exit
+[camera/points_xyzrgb_hw_registered-19] killing on exit
+[camera/depth_registered_rectify_depth-18] killing on exit
+[camera/depth_points-17] killing on exit
+[camera/depth_metric-16] killing on exit
+[camera/depth_metric_rect-15] killing on exit
+[camera/depth_rectify_depth-14] killing on exit
+[camera/ir_rectify_ir-13] killing on exit
+[camera/rgb_rectify_color-12] killing on exit
+[camera/driver-11] killing on exit
+[camera/camera_nodelet_manager-10] killing on exit
+[bumper2pointcloud-9] killing on exit
+[cmd_vel_mux-8] killing on exit
+[mobile_base-7] killing on exit
+[mobile_base_nodelet_manager-6] killing on exit
+[diagnostic_aggregator-5] killing on exit
+[robot_state_publisher-4] killing on exit
+[explore_server-3] killing on exit
+[explore_client-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

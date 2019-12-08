@@ -1,0 +1,9 @@
+<launch>
+    <include file='$(find frontier_exploration)/launch/no_global_map.launch' />
+    <include file='$(find turtlebot2i_bringup)/launch/turtlebot2i_no_arm_mapping.launch' /> 
+
+    <node name='marco_vision' pkg='video_node' type='marco_image_node.py' />
+    <node name='marco_depth_finder' pkg='depth_finder' type='depth' />
+    <node name='marco_mvmt_mgr' pkg='movement_mgr' type='mvt_mgr_node.py' output='screen'/>
+
+</launch>

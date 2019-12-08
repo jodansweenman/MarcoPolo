@@ -1,0 +1,1247 @@
+bumper2pointcloud: {pointcloud_radius: 0.24}
+camera:
+  camera_nodelet_manager: {num_worker_threads: 4}
+  depth:
+    image:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  depth_rectify_depth: {interpolation: 0}
+  depth_registered:
+    hw_registered:
+      image_rect:
+        compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+        compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+        theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+      image_rect_raw:
+        compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+        compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+        theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  depth_registered_rectify_depth: {interpolation: 0}
+  disparity_depth: {max_range: 4.0, min_range: 0.5}
+  disparity_registered_hw: {max_range: 4.0, min_range: 0.5}
+  driver: {auto_exposure: true, auto_white_balance: true, bootorder: 0, color_depth_synchronization: false,
+    color_mode: 5, color_time_offset: -0.033, data_skip: 0, depth_camera_info_url: '',
+    depth_frame_id: camera_depth_optical_frame, depth_ir_offset_x: 5.0, depth_ir_offset_y: 4.0,
+    depth_mode: 5, depth_registration: true, depth_time_offset: -0.033, device_id: '#1',
+    devnums: 1, ir_mode: 5, ir_time_offset: -0.033, rgb_camera_info_url: '', rgb_frame_id: camera_rgb_optical_frame,
+    use_device_time: true, z_offset_mm: 0, z_scaling: 1.0}
+  ir:
+    image:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_ir:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  ir_rectify_ir: {interpolation: 1}
+  rgb:
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_color:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  rgb_rectify_color: {interpolation: 1}
+camera_sr300:
+  depth:
+    image:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  depth_rectify_depth: {interpolation: 0}
+  depth_registered:
+    sw_registered:
+      image_rect:
+        compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+        compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+        theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+      image_rect_raw:
+        compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+        compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+        theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  disparity_depth: {max_range: 4.0, min_range: 0.5}
+  disparity_registered_sw: {max_range: 4.0, min_range: 0.5}
+  driver: {base_frame_id: camera_sr300_link, camera_type: SR300, color_backlight_compensation: 0,
+    color_brightness: 0, color_contrast: 50, color_enable_auto_exposure: 1, color_enable_auto_white_balance: 1,
+    color_exposure: 156, color_fps: 30, color_frame_id: camera_sr300_rgb_frame, color_gain: 64,
+    color_gamma: 300, color_height: 480, color_hue: 0, color_optical_frame_id: camera_sr300_rgb_optical_frame,
+    color_saturation: 64, color_sharpness: 50, color_white_balance: 4600, color_width: 640,
+    depth_fps: 30, depth_frame_id: camera_sr300_depth_frame, depth_height: 480, depth_optical_frame_id: camera_sr300_depth_optical_frame,
+    depth_width: 640, enable_color: true, enable_depth: true, enable_fisheye: false,
+    enable_imu: false, enable_ir: true, enable_ir2: true, enable_pointcloud: false,
+    enable_tf: false, f200_accuracy: 1, f200_confidence_threshold: 3, f200_filter_option: 5,
+    f200_laser_power: 16, f200_motion_range: 9, fisheye_frame_id: camera_sr300_fisheye_frame,
+    fisheye_optical_frame_id: camera_sr300_fisheye_optical_frame, imu_frame_id: camera_sr300_imu_frame,
+    imu_optical_frame_id: camera_sr300_imu_optical_frame, ir2_frame_id: camera_sr300_ir2_frame,
+    ir2_optical_frame_id: camera_sr300_ir2_optical_frame, ir_frame_id: camera_sr300_ir_frame,
+    ir_optical_frame_id: camera_sr300_ir_optical_frame, mode: manual, serial_no: '',
+    sr300_auto_range_enable_laser: 1, sr300_auto_range_enable_motion_versus_range: 1,
+    sr300_auto_range_lower_threshold: 650, sr300_auto_range_max_laser: 16, sr300_auto_range_max_motion_versus_range: 605,
+    sr300_auto_range_min_laser: 2, sr300_auto_range_min_motion_versus_range: 180,
+    sr300_auto_range_start_laser: -1, sr300_auto_range_start_motion_versus_range: 303,
+    sr300_auto_range_upper_threshold: 1250, usb_port_id: ''}
+  ir:
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_ir:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  ir_rectify_ir: {interpolation: 1}
+  points_xyzrgb_sw_registered: {exact_sync: true, queue_size: 100}
+  rgb:
+    image_color:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_mono:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_raw:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_color:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+    image_rect_mono:
+      compressed: {format: jpeg, jpeg_quality: 80, png_level: 9}
+      compressedDepth: {depth_max: 10.0, depth_quantization: 100.0, png_level: 9}
+      theora: {keyframe_frequency: 64, optimize_for: 1, quality: 31, target_bitrate: 800000}
+  rgb_debayer: {debayer: 0}
+  rgb_rectify_color: {interpolation: 1}
+  rgb_rectify_mono: {interpolation: 1}
+cmd_vel_mux: {yaml_cfg_data: '', yaml_cfg_file: /home/marcopolo/turtlebot2i/src/turtlebot2i/turtlebot2i_bringup/param/mux.yaml}
+depthimage_to_laserscan: {output_frame_id: /camera_depth_frame, range_max: 10.0, range_min: 0.45,
+  scan_height: 10, scan_time: 0.033}
+diagnostic_aggregator:
+  analyzers:
+    input_ports:
+      contains: [Digital Input, Analog Input]
+      path: Input Ports
+      remove_prefix: mobile_base_nodelet_manager
+      timeout: 5.0
+      type: diagnostic_aggregator/GenericAnalyzer
+    kobuki:
+      contains: [Watchdog, Motor State]
+      path: Kobuki
+      remove_prefix: mobile_base_nodelet_manager
+      timeout: 5.0
+      type: diagnostic_aggregator/GenericAnalyzer
+    power:
+      contains: [Battery, Laptop Battery]
+      path: Power System
+      remove_prefix: mobile_base_nodelet_manager
+      timeout: 5.0
+      type: diagnostic_aggregator/GenericAnalyzer
+    sensors:
+      contains: [Cliff Sensor, Wall Sensor, Wheel Drop, Motor Current, Gyro Sensor]
+      path: Sensors
+      remove_prefix: mobile_base_nodelet_manager
+      timeout: 5.0
+      type: diagnostic_aggregator/GenericAnalyzer
+  base_path: ''
+  pub_rate: 1.0
+dock_drive: {min_abs_v: 0.01, min_abs_w: 0.1}
+mobile_base: {base_frame: base_footprint, battery_capacity: 16.5, battery_dangerous: 13.2,
+  battery_low: 14.0, cmd_vel_timeout: 0.6, device_port: /dev/kobuki, odom_frame: odom,
+  publish_tf: true, use_imu_heading: true, wheel_left_joint_name: wheel_left_joint,
+  wheel_right_joint_name: wheel_right_joint}
+move_base:
+  DWAPlannerROS: {acc_lim_theta: 2.0, acc_lim_x: 1.0, acc_lim_y: 0.0, acc_limit_trans: 0.1,
+    angular_sim_granularity: 0.1, forward_point_distance: 0.325, global_frame_id: odom,
+    goal_distance_bias: 24.0, max_rot_vel: 2.0, max_scaling_factor: 0.2, max_trans_vel: 0.5,
+    max_vel_x: 0.2, max_vel_y: 0.0, min_rot_vel: 0.4, min_trans_vel: 0.1, min_vel_x: 0.0,
+    min_vel_y: 0.0, occdist_scale: 0.5, oscillation_reset_angle: 0.2, oscillation_reset_dist: 0.05,
+    path_distance_bias: 64.0, prune_plan: false, publish_cost_grid_pc: true, publish_traj_pc: true,
+    restore_defaults: false, rot_stopped_vel: 0.4, scaling_speed: 0.25, sim_granularity: 0.025,
+    sim_time: 1.7, stop_time_buffer: 0.2, trans_stopped_vel: 0.1, twirling_scale: 0.0,
+    use_dwa: true, vth_samples: 20, vtheta_samples: 20, vx_samples: 6, vy_samples: 1,
+    xy_goal_tolerance: 0.15, yaw_goal_tolerance: 0.3}
+  GlobalPlanner: {allow_unknown: true, cost_factor: 3.0, default_tolerance: 0.0, lethal_cost: 253,
+    neutral_cost: 50, old_navfn_behavior: false, planner_costmap_publish_frequency: 0.0,
+    planner_window_x: 0.0, planner_window_y: 0.0, publish_potential: true, publish_scale: 100,
+    use_dijkstra: true, use_grid_path: false, use_quadratic: true}
+  NavfnROS: {allow_unknown: false, default_tolerance: 0.0, planner_window_x: 0.0,
+    planner_window_y: 0.0, visualize_potential: false}
+  aggressive_reset: {reset_distance: 1.84}
+  base_global_planner: navfn/NavfnROS
+  base_local_planner: dwa_local_planner/DWAPlannerROS
+  clearing_rotation_allowed: true
+  conservative_reset: {reset_distance: 3.0}
+  conservative_reset_dist: 3.0
+  controller_frequency: 5.0
+  controller_patience: 3.0
+  global_costmap:
+    footprint: '[]'
+    footprint_padding: 0.01
+    global_frame: map
+    height: 10
+    inflation_layer: {cost_scaling_factor: 5.0, enabled: true, inflate_unknown: false,
+      inflation_radius: 0.5}
+    map_type: voxel
+    max_obstacle_height: 0.6
+    obstacle_layer:
+      bump: {clearing: false, data_type: PointCloud2, marking: true, max_obstacle_height: 0.15,
+        min_obstacle_height: 0.0, topic: mobile_base/sensors/bumper_pointcloud}
+      combination_method: 1
+      enabled: true
+      footprint_clearing_enabled: true
+      mark_threshold: 0
+      max_obstacle_height: 0.6
+      observation_sources: scan bump
+      obstacle_range: 2.5
+      origin_z: 0.0
+      publish_voxel_map: false
+      raytrace_range: 3.0
+      scan: {clearing: true, data_type: LaserScan, marking: true, max_obstacle_height: 0.35,
+        min_obstacle_height: 0.25, topic: scan}
+      track_unknown_space: true
+      unknown_threshold: 15
+      z_resolution: 0.2
+      z_voxels: 2
+    origin_x: 0.0
+    origin_y: 0.0
+    plugins:
+    - {name: static_layer, type: 'costmap_2d::StaticLayer'}
+    - {name: obstacle_layer, type: 'costmap_2d::VoxelLayer'}
+    - {name: inflation_layer, type: 'costmap_2d::InflationLayer'}
+    publish_frequency: 0.5
+    resolution: 0.05
+    robot_base_frame: base_footprint
+    robot_radius: 0.2
+    static_layer: {enabled: true}
+    static_map: true
+    transform_tolerance: 0.5
+    update_frequency: 1.0
+    width: 10
+  local_costmap:
+    footprint: '[]'
+    footprint_padding: 0.01
+    global_frame: odom
+    height: 4
+    inflation_layer: {cost_scaling_factor: 5.0, enabled: true, inflate_unknown: false,
+      inflation_radius: 0.5}
+    map_type: voxel
+    max_obstacle_height: 0.6
+    obstacle_layer:
+      bump: {clearing: false, data_type: PointCloud2, marking: true, max_obstacle_height: 0.15,
+        min_obstacle_height: 0.0, topic: mobile_base/sensors/bumper_pointcloud}
+      combination_method: 1
+      enabled: true
+      footprint_clearing_enabled: true
+      mark_threshold: 0
+      max_obstacle_height: 0.6
+      observation_sources: scan bump
+      obstacle_range: 2.5
+      origin_z: 0.0
+      publish_voxel_map: false
+      raytrace_range: 3.0
+      scan: {clearing: true, data_type: LaserScan, marking: true, max_obstacle_height: 0.35,
+        min_obstacle_height: 0.25, topic: scan}
+      track_unknown_space: true
+      unknown_threshold: 15
+      z_resolution: 0.2
+      z_voxels: 2
+    origin_x: 0.0
+    origin_y: 0.0
+    plugins:
+    - {name: obstacle_layer, type: 'costmap_2d::VoxelLayer'}
+    - {name: inflation_layer, type: 'costmap_2d::InflationLayer'}
+    publish_frequency: 2.0
+    resolution: 0.05
+    robot_base_frame: base_footprint
+    robot_radius: 0.2
+    rolling_window: true
+    static_layer: {enabled: true}
+    static_map: false
+    transform_tolerance: 0.5
+    update_frequency: 5.0
+    width: 4
+  max_planning_retries: -1
+  oscillation_distance: 0.2
+  oscillation_timeout: 10.0
+  planner_frequency: 1.0
+  planner_patience: 5.0
+  recovery_behavior_enabled: true
+  restore_defaults: false
+  shutdown_costmaps: false
+navigation_velocity_smoother: {accel_lim_v: 1.0, accel_lim_w: 2.0, decel_factor: 1.5,
+  frequency: 20.0, robot_feedback: 2, speed_lim_v: 0.8, speed_lim_w: 5.4}
+robot: {name: turtlebot, type: turtlebot}
+robot_description: "<?xml version=\"1.0\" ?>\n<!-- ===================================================================================\
+  \ -->\n<!-- |    This document was autogenerated by xacro from /home/marcopolo/turtlebot2i/src/turtlebot2i/turtlebot2i_description/robots/kobuki_interbotix_astra.urdf.xacro\
+  \ | -->\n<!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                \
+  \                 | -->\n<!-- ===================================================================================\
+  \ -->\n<!--\n    - Base      : kobuki\n    - Stacks    : interbotix\n    - 3d Sensor\
+  \ : astra\n\n    - arm : TODO: supported arms?\n-->\n<robot name=\"turtlebot\" xmlns:xacro=\"\
+  http://ros.org/wiki/xacro\">\n  <!-- \n    These properties must be observed by\
+  \ any machine\n    that wants to be defined as a turtlebot. Refer\n    to the REP\
+  \ for more details.\n    \n    http://www.ros.org/reps/rep-0119.html\n   -->\n \
+  \ <!-- TODO: Intertia fields do not contain valid data. Follow tutorial to correct\
+  \ them: http://gazebosim.org/tutorials?tut=inertia -->\n  <!--TODO: Base link for\
+  \ turtlebot is 10.2mm from floor. Why? -->\n  <gazebo>\n    <plugin filename=\"\
+  libgazebo_ros_control.so\" name=\"gazebo_ros_control\">\n      <robotNamespace>/turtlebot</robotNamespace>\n\
+  \      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>\n    </plugin>\n\
+  \  </gazebo>\n  <!-- \n    These properties must be observed by any machine\n  \
+  \  that wants to be defined as a turtlebot. Refer\n    to the REP for more details.\n\
+  \    \n    http://www.ros.org/reps/rep-0119.html\n   -->\n  <!--Sensor base is ~34.6mm\
+  \ below origin-->\n  <gazebo>\n    <plugin filename=\"libgazebo_ros_control.so\"\
+  \ name=\"gazebo_ros_control\">\n      <robotNamespace>/turtlebot</robotNamespace>\n\
+  \      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>\n    </plugin>\n\
+  \  </gazebo>\n  <!-- \n    These properties must be observed by any machine\n  \
+  \  that wants to be defined as a turtlebot. Refer\n    to the REP for more details.\n\
+  \    \n    http://www.ros.org/reps/rep-0119.html\n   -->\n  <gazebo>\n    <plugin\
+  \ filename=\"libgazebo_ros_control.so\" name=\"gazebo_ros_control\">\n      <robotNamespace>/turtlebot</robotNamespace>\n\
+  \      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>\n    </plugin>\n\
+  \  </gazebo>\n  <!-- \n    These properties must be observed by any machine\n  \
+  \  that wants to be defined as a turtlebot. Refer\n    to the REP for more details.\n\
+  \    \n    http://www.ros.org/reps/rep-0119.html\n   -->\n  <link name=\"base_footprint\"\
+  />\n  <!--\n       Base link is set at the bottom of the base mould.\n       This\
+  \ is done to be compatible with the way base link\n       was configured for turtlebot\
+  \ 1. Refer to\n\n       https://github.com/turtlebot/turtlebot/issues/40\n\n   \
+  \    To put the base link at the more oft used wheel\n       axis, set the z-distance\
+  \ from the base_footprint\n       to 0.352.\n      -->\n  <joint name=\"base_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0.0102\"/>\n    <parent link=\"\
+  base_footprint\"/>\n    <child link=\"base_link\"/>\n  </joint>\n  <link name=\"\
+  base_link\">\n    <visual>\n      <geometry>\n        <!-- new mesh -->\n      \
+  \  <mesh filename=\"package://kobuki_description/meshes/main_body.dae\"/>\n    \
+  \  </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0.001 0 0.05199\"/>\n    </visual>\n\
+  \    <collision name=\"base\">\n      <geometry>\n        <cylinder length=\"0.10938\"\
+  \ radius=\"0.178\"/>\n      </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0.0 0\
+  \ 0.05949\"/>\n    </collision>\n    <inertial>\n      <!-- COM experimentally determined\
+  \ -->\n      <origin xyz=\"0.01 0 0\"/>\n      <mass value=\"2.4\"/>\n      <!--\
+  \ 2.4/2.6 kg for small/big battery pack -->\n      <!-- Kobuki's inertia tensor\
+  \ is approximated by a cylinder with homogeneous mass distribution\n           \
+  \  More details: http://en.wikipedia.org/wiki/List_of_moment_of_inertia_tensors\n\
+  \             m = 2.4 kg; h = 0.09 m; r = 0.175 m\n             ixx = 1/12 * m *\
+  \ (3 * r^2 + h^2)\n             iyy = 1/12 * m * (3 * r^2 + h^2)\n             izz\
+  \ = 1/2 * m * r^2\n          -->\n      <inertia ixx=\"0.019995\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.019995\" iyz=\"0.0\" izz=\"0.03675\"/>\n    </inertial>\n  </link>\n\
+  \  <joint name=\"wheel_left_joint\" type=\"continuous\">\n    <parent link=\"base_link\"\
+  />\n    <child link=\"wheel_left_link\"/>\n    <origin rpy=\"-1.570795 0 0\" xyz=\"\
+  0.00 0.115 0.0250\"/>\n    <axis xyz=\"0 0 1\"/>\n  </joint>\n  <link name=\"wheel_left_link\"\
+  >\n    <visual>\n      <geometry>\n        <mesh filename=\"package://kobuki_description/meshes/wheel.dae\"\
+  />\n      </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n    </visual>\n\
+  \    <collision>\n      <geometry>\n        <cylinder length=\"0.0206\" radius=\"\
+  0.0352\"/>\n      </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n   \
+  \ </collision>\n    <inertial>\n      <mass value=\"0.01\"/>\n      <origin xyz=\"\
+  0 0 0\"/>\n      <inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"\
+  0.0\" izz=\"0.001\"/>\n    </inertial>\n  </link>\n  <joint name=\"wheel_right_joint\"\
+  \ type=\"continuous\">\n    <parent link=\"base_link\"/>\n    <child link=\"wheel_right_link\"\
+  />\n    <origin rpy=\"-1.570795 0 0\" xyz=\"0.00 -0.115 0.0250\"/>\n    <axis xyz=\"\
+  0 0 1\"/>\n  </joint>\n  <link name=\"wheel_right_link\">\n    <visual>\n      <geometry>\n\
+  \        <mesh filename=\"package://kobuki_description/meshes/wheel.dae\"/>\n  \
+  \    </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n    </visual>\n \
+  \   <collision>\n      <geometry>\n        <cylinder length=\"0.0206\" radius=\"\
+  0.0350\"/>\n      </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n   \
+  \ </collision>\n    <inertial>\n      <mass value=\"0.01\"/>\n      <origin xyz=\"\
+  0 0 0\"/>\n      <inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"\
+  0.0\" izz=\"0.001\"/>\n    </inertial>\n  </link>\n  <joint name=\"caster_front_joint\"\
+  \ type=\"fixed\">\n    <parent link=\"base_link\"/>\n    <child link=\"caster_front_link\"\
+  />\n    <origin rpy=\"-1.570795 0 0\" xyz=\"0.115 0.0 0.007\"/>\n  </joint>\n  <link\
+  \ name=\"caster_front_link\">\n    <collision>\n      <geometry>\n        <cylinder\
+  \ length=\"0.0176\" radius=\"0.017\"/>\n      </geometry>\n      <origin rpy=\"\
+  0 0 0\" xyz=\"0 0 0\"/>\n    </collision>\n    <inertial>\n      <mass value=\"\
+  0.01\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.001\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"0.001\"/>\n    </inertial>\n  </link>\n\
+  \  <joint name=\"caster_back_joint\" type=\"fixed\">\n    <parent link=\"base_link\"\
+  />\n    <child link=\"caster_back_link\"/>\n    <origin rpy=\"-1.570795 0 0\" xyz=\"\
+  -0.135 0.0 0.009\"/>\n  </joint>\n  <link name=\"caster_back_link\">\n    <collision>\n\
+  \      <geometry>\n        <cylinder length=\"0.0176\" radius=\"0.017\"/>\n    \
+  \  </geometry>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n    </collision>\n\
+  \    <inertial>\n      <mass value=\"0.01\"/>\n      <origin xyz=\"0 0 0\"/>\n \
+  \     <inertia ixx=\"0.001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.001\" iyz=\"0.0\" izz=\"\
+  0.001\"/>\n    </inertial>\n  </link>\n  <!-- Kobuki's sensors -->\n  <joint name=\"\
+  gyro_joint\" type=\"fixed\">\n    <axis xyz=\"0 1 0\"/>\n    <origin rpy=\"0 0 0\"\
+  \ xyz=\"0.056 0.062 0.0202\"/>\n    <parent link=\"base_link\"/>\n    <child link=\"\
+  gyro_link\"/>\n  </joint>\n  <link name=\"gyro_link\">\n    <inertial>\n      <mass\
+  \ value=\"0.001\"/>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <inertia\
+  \ ixx=\"0.0001\" ixy=\"0\" ixz=\"0\" iyy=\"0.000001\" iyz=\"0\" izz=\"0.0001\"/>\n\
+  \    </inertial>\n  </link>\n  <joint name=\"cliff_sensor_left_joint\" type=\"fixed\"\
+  >\n    <origin rpy=\"0 1.570795 0\" xyz=\"0.08734 0.13601 0.0214\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"cliff_sensor_left_link\"/>\n  </joint>\n\
+  \  <link name=\"cliff_sensor_left_link\">\n    <inertial>\n      <mass value=\"\
+  0.0001\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.0001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.0001\" iyz=\"0.0\" izz=\"0.0001\"/>\n    </inertial>\n\
+  \  </link>\n  <joint name=\"cliff_sensor_right_joint\" type=\"fixed\">\n    <origin\
+  \ rpy=\"0 1.570795 0\" xyz=\"0.085 -0.13601 0.0214\"/>\n    <parent link=\"base_link\"\
+  />\n    <child link=\"cliff_sensor_right_link\"/>\n  </joint>\n  <link name=\"cliff_sensor_right_link\"\
+  >\n    <inertial>\n      <mass value=\"0.0001\"/>\n      <origin xyz=\"0 0 0\"/>\n\
+  \      <inertia ixx=\"0.0001\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.0001\" iyz=\"0.0\"\
+  \ izz=\"0.0001\"/>\n    </inertial>\n  </link>\n  <joint name=\"cliff_sensor_front_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 1.570795 0\" xyz=\"0.156 0.00 0.0214\"/>\n\
+  \    <parent link=\"base_link\"/>\n    <child link=\"cliff_sensor_front_link\"/>\n\
+  \  </joint>\n  <link name=\"cliff_sensor_front_link\">\n    <inertial>\n      <mass\
+  \ value=\"0.0001\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.0001\"\
+  \ ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.0001\" iyz=\"0.0\" izz=\"0.0001\"/>\n    </inertial>\n\
+  \  </link>\n  <gazebo reference=\"wheel_left_link\">\n    <mu1>1.0</mu1>\n    <mu2>1.0</mu2>\n\
+  \    <kp>1000000.0</kp>\n    <kd>100.0</kd>\n    <minDepth>0.001</minDepth>\n  \
+  \  <maxVel>1.0</maxVel>\n  </gazebo>\n  <gazebo reference=\"wheel_right_link\">\n\
+  \    <mu1>1.0</mu1>\n    <mu2>1.0</mu2>\n    <kp>1000000.0</kp>\n    <kd>100.0</kd>\n\
+  \    <minDepth>0.001</minDepth>\n    <maxVel>1.0</maxVel>\n  </gazebo>\n  <gazebo\
+  \ reference=\"caster_front_link\">\n    <mu1>0.0</mu1>\n    <mu2>0.0</mu2>\n   \
+  \ <kp>1000000.0</kp>\n    <kd>100.0</kd>\n    <minDepth>0.001</minDepth>\n    <maxVel>1.0</maxVel>\n\
+  \  </gazebo>\n  <gazebo reference=\"caster_back_link\">\n    <mu1>0.0</mu1>\n  \
+  \  <mu2>0.0</mu2>\n    <kp>1000000.0</kp>\n    <kd>100.0</kd>\n    <minDepth>0.001</minDepth>\n\
+  \    <maxVel>1.0</maxVel>\n  </gazebo>\n  <gazebo reference=\"base_link\">\n   \
+  \ <mu1>0.3</mu1>\n    <mu2>0.3</mu2>\n    <sensor name=\"bumpers\" type=\"contact\"\
+  >\n      <always_on>1</always_on>\n      <update_rate>50.0</update_rate>\n     \
+  \ <visualize>true</visualize>\n      <contact>\n        <collision>base_footprint_fixed_joint_lump__base_collision</collision>\n\
+  \      </contact>\n    </sensor>\n  </gazebo>\n  <gazebo reference=\"cliff_sensor_left_link\"\
+  >\n    <sensor name=\"cliff_sensor_left\" type=\"ray\">\n      <always_on>true</always_on>\n\
+  \      <update_rate>50</update_rate>\n      <visualize>true</visualize>\n      <ray>\n\
+  \        <scan>\n          <horizontal>\n            <samples>50</samples>\n   \
+  \         <resolution>1.0</resolution>\n            <min_angle>-0.0436</min_angle>\n\
+  \            <!-- -2.5 degree -->\n            <max_angle>0.0436</max_angle>\n \
+  \           <!-- 2.5 degree -->\n          </horizontal>\n          <!--       \
+  \     Can't use vertical rays until this bug is resolved: -->\n          <!--  \
+  \          https://bitbucket.org/osrf/gazebo/issue/509/vertical-sensor-doesnt-works\
+  \ -->\n          <!-- \t          <vertical> -->\n          <!-- \t            <samples>50</samples>\
+  \ -->\n          <!-- \t            <resolution>1.0</resolution> -->\n         \
+  \ <!-- \t            <min_angle>-0.0436</min_angle>  -2.5 degree -->\n         \
+  \ <!-- \t            <max_angle>0.0436</max_angle> 2.5 degree -->\n          <!--\
+  \ \t          </vertical> -->\n        </scan>\n        <range>\n          <min>0.01</min>\n\
+  \          <max>0.15</max>\n          <resolution>1.0</resolution>\n        </range>\n\
+  \      </ray>\n    </sensor>\n  </gazebo>\n  <gazebo reference=\"cliff_sensor_right_link\"\
+  >\n    <sensor name=\"cliff_sensor_right\" type=\"ray\">\n      <always_on>true</always_on>\n\
+  \      <update_rate>50</update_rate>\n      <visualize>true</visualize>\n      <ray>\n\
+  \        <scan>\n          <horizontal>\n            <samples>50</samples>\n   \
+  \         <resolution>1.0</resolution>\n            <min_angle>-0.0436</min_angle>\n\
+  \            <!-- -2.5 degree -->\n            <max_angle>0.0436</max_angle>\n \
+  \           <!-- 2.5 degree -->\n          </horizontal>\n          <!--       \
+  \     Can't use vertical rays until this bug is resolved: -->\n          <!--  \
+  \          https://bitbucket.org/osrf/gazebo/issue/509/vertical-sensor-doesnt-works\
+  \ -->\n          <!-- \t          <vertical> -->\n          <!-- \t            <samples>50</samples>\
+  \ -->\n          <!-- \t            <resolution>1.0</resolution> -->\n         \
+  \ <!-- \t            <min_angle>-0.0436</min_angle>  -2.5 degree -->\n         \
+  \ <!-- \t            <max_angle>0.0436</max_angle> 2.5 degree -->\n          <!--\
+  \ \t          </vertical> -->\n        </scan>\n        <range>\n          <min>0.01</min>\n\
+  \          <max>0.15</max>\n          <resolution>1.0</resolution>\n        </range>\n\
+  \      </ray>\n    </sensor>\n  </gazebo>\n  <gazebo reference=\"cliff_sensor_front_link\"\
+  >\n    <sensor name=\"cliff_sensor_front\" type=\"ray\">\n      <always_on>true</always_on>\n\
+  \      <update_rate>50</update_rate>\n      <visualize>true</visualize>\n      <ray>\n\
+  \        <scan>\n          <horizontal>\n            <samples>50</samples>\n   \
+  \         <resolution>1.0</resolution>\n            <min_angle>-0.0436</min_angle>\n\
+  \            <!-- -2.5 degree -->\n            <max_angle>0.0436</max_angle>\n \
+  \           <!-- 2.5 degree -->\n          </horizontal>\n          <!-- \t    \
+  \      Can't use vertical rays until this bug is resolved: -->\n          <!-- \
+  \           https://bitbucket.org/osrf/gazebo/issue/509/vertical-sensor-doesnt-works\
+  \ -->\n          <!-- \t          <vertical> -->\n          <!-- \t            <samples>50</samples>\
+  \ -->\n          <!-- \t            <resolution>1.0</resolution> -->\n         \
+  \ <!-- \t            <min_angle>-0.0436</min_angle>  -2.5 degree -->\n         \
+  \ <!-- \t            <max_angle>0.0436</max_angle> 2.5 degree -->\n          <!--\
+  \ \t          </vertical> -->\n        </scan>\n        <range>\n          <min>0.01</min>\n\
+  \          <max>0.15</max>\n          <resolution>1.0</resolution>\n        </range>\n\
+  \      </ray>\n    </sensor>\n  </gazebo>\n  <gazebo reference=\"gyro_link\">\n\
+  \    <sensor name=\"imu\" type=\"imu\">\n      <always_on>true</always_on>\n   \
+  \   <update_rate>50</update_rate>\n      <visualize>false</visualize>\n      <imu>\n\
+  \        <noise>\n          <type>gaussian</type>\n          <rate>\n          \
+  \  <mean>0.0</mean>\n            <stddev>1.96e-06</stddev>\n            <!-- 0.25\
+  \ x 0.25 (deg/s) -->\n            <bias_mean>0.0</bias_mean>\n            <bias_stddev>0.0</bias_stddev>\n\
+  \          </rate>\n          <accel>\n            <!-- not used in the plugin and\
+  \ real robot, hence using tutorial values -->\n            <mean>0.0</mean>\n  \
+  \          <stddev>1.7e-2</stddev>\n            <bias_mean>0.1</bias_mean>\n   \
+  \         <bias_stddev>0.001</bias_stddev>\n          </accel>\n        </noise>\n\
+  \      </imu>\n    </sensor>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"libgazebo_ros_kobuki.so\"\
+  \ name=\"kobuki_controller\">\n      <publish_tf>1</publish_tf>\n      <left_wheel_joint_name>wheel_left_joint</left_wheel_joint_name>\n\
+  \      <right_wheel_joint_name>wheel_right_joint</right_wheel_joint_name>\n    \
+  \  <wheel_separation>.230</wheel_separation>\n      <wheel_diameter>0.070</wheel_diameter>\n\
+  \      <torque>1.0</torque>\n      <velocity_command_timeout>0.6</velocity_command_timeout>\n\
+  \      <cliff_sensor_left_name>cliff_sensor_left</cliff_sensor_left_name>\n    \
+  \  <cliff_sensor_center_name>cliff_sensor_front</cliff_sensor_center_name>\n   \
+  \   <cliff_sensor_right_name>cliff_sensor_right</cliff_sensor_right_name>\n    \
+  \  <cliff_detection_threshold>0.04</cliff_detection_threshold>\n      <bumper_name>bumpers</bumper_name>\n\
+  \      <imu_name>imu</imu_name>\n    </plugin>\n  </gazebo>\n  <joint name=\"standoff_50mm_0_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.12 0.082 0.1123\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_0_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_0_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_0_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_1_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.055 0.12 0.1123\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_1_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_1_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_1_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_2_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.055 0.12 0.1123\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_2_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_2_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_2_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_3_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.12 -0.082 0.1123\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_3_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_3_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_3_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_4_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.055 -0.12 0.1123\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_4_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_4_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_4_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_5_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.055 -0.12 0.1123\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_50mm_5_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_5_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_5_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"plate_bottom_joint\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.1396\"/>\n    <parent link=\"\
+  base_link\"/>\n    <child link=\"plate_bottom_link\"/>\n  </joint>\n  <link name=\"\
+  plate_bottom_link\">\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n\
+  \      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_BottomPlate.stl\"\
+  />\n      </geometry>\n      <material name=\"near_black\">\n        <color rgba=\"\
+  0.125 0.125 0.125 1\"/>\n      </material>\n    </visual>\n    <collision>\n   \
+  \   <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"\
+  0.006\" radius=\"0.170\"/>\n      </geometry>\n    </collision>\n    <inertial>\n\
+  \      <mass value=\"0.311\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.003328\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.003328\" iyz=\"0.0\" izz=\"0.006656\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"plate_bottom_link\">\n   \
+  \ <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n\
+  \  </gazebo>\n  <joint name=\"standoff_50mm_6_joint\" type=\"fixed\">\n    <origin\
+  \ rpy=\"0 0 0\" xyz=\"0.069 0.13 0.1669\"/>\n    <parent link=\"base_link\"/>\n\
+  \    <child link=\"standoff_50mm_6_link\"/>\n  </joint>\n  <link name=\"standoff_50mm_6_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 3.14159 0\" xyz=\"0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_6_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_7_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.069 -0.13 0.1669\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_50mm_7_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_7_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_7_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_8_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.001 0.162 0.1669\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_50mm_8_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_8_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_8_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_9_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.001 -0.162 0.1669\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_50mm_9_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_9_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_9_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_10_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 0.098 0.1669\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_50mm_10_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_50mm_10_link\">\n    <visual>\n      <origin rpy=\"0 3.14159\
+  \ 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\"\
+  \ radius=\"0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000003805\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_50mm_10_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_50mm_11_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 -0.098 0.1669\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_50mm_11_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_50mm_11_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 3.14159 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"\
+  package://turtlebot2i_description/meshes/stacks/interbotix/standoff_50mm.stl\"/>\n\
+  \      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8 0.0\
+  \ 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+  0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.05\" radius=\"\
+  0.006\"/>\n      </geometry>\n    </collision>\n    <inertial>\n      <mass value=\"\
+  0.012\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000003805\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000003805\" iyz=\"0.0\" izz=\"0.000000216\"/>\n    </inertial>\n\
+  \  </link>\n  <gazebo reference=\"standoff_50mm_11_link\">\n    <material>Gazebo/Black</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"plate_middle_joint\" type=\"fixed\">\n    <origin rpy=\"0 0 0\"\
+  \ xyz=\"0.0 0.0 0.1942\"/>\n    <parent link=\"base_link\"/>\n    <child link=\"\
+  plate_middle_link\"/>\n  </joint>\n  <link name=\"plate_middle_link\">\n    <visual>\n\
+  \      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"\
+  package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_MiddlePlate.stl\"\
+  />\n      </geometry>\n      <material name=\"near_black\">\n        <color rgba=\"\
+  0.125 0.125 0.125 1\"/>\n      </material>\n    </visual>\n    <collision>\n   \
+  \   <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"/>\n      <geometry>\n        <mesh\
+  \ filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_MiddlePlate.stl\"\
+  />\n      </geometry>\n    </collision>\n    <inertial>\n      <mass value=\"0.299\"\
+  />\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.003328\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.003328\" iyz=\"0.0\" izz=\"0.006656\"/>\n    </inertial>\n  </link>\n\
+  \  <gazebo reference=\"plate_middle_link\">\n    <material>Gazebo/Black</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"standoff_100mm_6_joint\" type=\"fixed\">\n    <origin rpy=\"0 0\
+  \ 0\" xyz=\"-0.001 0.162 0.2215\"/>\n    <parent link=\"base_link\"/>\n    <child\
+  \ link=\"standoff_100mm_6_link\"/>\n  </joint>\n  <link name=\"standoff_100mm_6_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_6_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_7_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.001 -0.162 0.2215\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_7_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_100mm_7_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_7_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_8_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 0.098 0.2215\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_8_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_100mm_8_link\">\n    <visual>\n      <origin rpy=\"0 0\
+  \ 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_8_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_9_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 -0.098 0.2215\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_9_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_100mm_9_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_9_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"plate_utility_lower\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.2488\"/>\n    <parent link=\"\
+  base_link\"/>\n    <child link=\"plate_utility_lower_link\"/>\n  </joint>\n  <link\
+  \ name=\"plate_utility_lower_link\">\n    <visual>\n      <origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_CameraPlate.stl\"\
+  />\n      </geometry>\n      <material name=\"near_black\">\n        <color rgba=\"\
+  0.125 0.125 0.125 1\"/>\n      </material>\n    </visual>\n    <collision>\n   \
+  \   <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"/>\n      <geometry>\n        <mesh\
+  \ filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_CameraPlate.stl\"\
+  />\n      </geometry>\n    </collision>\n    <inertial>\n      <mass value=\"0.151\"\
+  />\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.003328\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.003328\" iyz=\"0.0\" izz=\"0.006656\"/>\n    </inertial>\n  </link>\n\
+  \  <gazebo reference=\"plate_utility_lower_link\">\n    <material>Gazebo/Black</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"standoff_100mm_0_joint\" type=\"fixed\">\n    <origin rpy=\"0 0\
+  \ 0\" xyz=\"-0.001 0.162 0.3011\"/>\n    <parent link=\"base_link\"/>\n    <child\
+  \ link=\"standoff_100mm_0_link\"/>\n  </joint>\n  <link name=\"standoff_100mm_0_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_0_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_1_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.001 -0.162 0.3011\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_1_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_100mm_1_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_1_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_2_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 0.098 0.3011\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_2_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_100mm_2_link\">\n    <visual>\n      <origin rpy=\"0 0\
+  \ 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_2_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_3_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 -0.098 0.3011\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_3_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_100mm_3_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_3_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"plate_utility_upper\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.3534\"/>\n    <parent link=\"\
+  base_link\"/>\n    <child link=\"plate_utility_upper_link\"/>\n  </joint>\n  <link\
+  \ name=\"plate_utility_upper_link\">\n    <visual>\n      <origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_UtilityPlate.stl\"\
+  />\n      </geometry>\n      <material name=\"near_black\">\n        <color rgba=\"\
+  0.125 0.125 0.125 1\"/>\n      </material>\n    </visual>\n    <collision>\n   \
+  \   <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"/>\n      <geometry>\n        <mesh\
+  \ filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_UtilityPlate.stl\"\
+  />\n      </geometry>\n    </collision>\n    <inertial>\n      <mass value=\"0.153\"\
+  />\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.003328\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.003328\" iyz=\"0.0\" izz=\"0.006656\"/>\n    </inertial>\n  </link>\n\
+  \  <gazebo reference=\"plate_utility_upper_link\">\n    <material>Gazebo/Black</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"standoff_100mm_10_joint\" type=\"fixed\">\n    <origin rpy=\"0\
+  \ 0 0\" xyz=\"-0.001 0.162 0.4057\"/>\n    <parent link=\"base_link\"/>\n    <child\
+  \ link=\"standoff_100mm_10_link\"/>\n  </joint>\n  <link name=\"standoff_100mm_10_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_10_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_11_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.001 -0.162 0.4057\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_11_link\"/>\n\
+  \  </joint>\n  <link name=\"standoff_100mm_11_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_11_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_12_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 0.098 0.4057\"/>\n   \
+  \ <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_12_link\"/>\n \
+  \ </joint>\n  <link name=\"standoff_100mm_12_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_12_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_100mm_13_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.104 -0.098 0.4057\"/>\n  \
+  \  <parent link=\"base_link\"/>\n    <child link=\"standoff_100mm_13_link\"/>\n\
+  \  </joint>\n  <link name=\"standoff_100mm_13_link\">\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_100mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.1\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.060\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_100mm_13_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"plate_top_joint\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.458\"/>\n    <parent link=\"\
+  base_link\"/>\n    <child link=\"plate_top_link\"/>\n  </joint>\n  <link name=\"\
+  plate_top_link\">\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n \
+  \     <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_TopPlate.stl\"\
+  />\n      </geometry>\n      <material name=\"near_black\">\n        <color rgba=\"\
+  0.125 0.125 0.125 1\"/>\n      </material>\n    </visual>\n    <collision>\n   \
+  \   <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"\
+  package://turtlebot2i_description/meshes/stacks/interbotix/TurtleBot2i_TopPlate.stl\"\
+  />\n      </geometry>\n    </collision>\n    <inertial>\n      <mass value=\"0.377\"\
+  />\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.003328\" ixy=\"0.0\" ixz=\"\
+  0.0\" iyy=\"0.003328\" iyz=\"0.0\" izz=\"0.006656\"/>\n    </inertial>\n  </link>\n\
+  \  <gazebo reference=\"plate_top_link\">\n    <material>Gazebo/Black</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"standoff_258mm_0_joint\" type=\"fixed\">\n    <origin rpy=\"0 0\
+  \ 0\" xyz=\"0.069 0.13 0.3255\"/>\n    <parent link=\"base_link\"/>\n    <child\
+  \ link=\"standoff_258mm_0_link\"/>\n  </joint>\n  <link name=\"standoff_258mm_0_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_258mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.258\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.031\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_258mm_0_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"standoff_258mm_1_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.069 -0.13 0.3255\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"standoff_258mm_1_link\"/>\n  </joint>\n\
+  \  <link name=\"standoff_258mm_1_link\">\n    <visual>\n      <origin rpy=\"0 0\
+  \ 0\" xyz=\" 0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/stacks/interbotix/standoff_258mm.stl\"\
+  />\n      </geometry>\n      <material name=\"pink\">\n        <color rgba=\"0.8\
+  \ 0.0 0.4 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <cylinder length=\"0.258\"\
+  \ radius=\"0.012\"/>\n      </geometry>\n    </collision>\n    <inertial>\n    \
+  \  <mass value=\"0.031\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.000206991\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000206991\" iyz=\"0.0\" izz=\"0.000001080\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"standoff_258mm_1_link\">\n\
+  \    <material>Gazebo/Black</material>\n    <selfCollide>true</selfCollide>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <joint name=\"camera_rgb_joint\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"-0.05 0.0 0.285\"/>\n    <parent link=\"\
+  base_link\"/>\n    <child link=\"camera_rgb_frame\"/>\n  </joint>\n  <link name=\"\
+  camera_rgb_frame\"/>\n  <joint name=\"camera_rgb_optical_joint\" type=\"fixed\"\
+  >\n    <origin rpy=\"-1.570795 0 -1.570795\" xyz=\"0 0.012 0\"/>\n    <parent link=\"\
+  camera_rgb_frame\"/>\n    <child link=\"camera_rgb_optical_frame\"/>\n  </joint>\n\
+  \  <link name=\"camera_rgb_optical_frame\"/>\n  <joint name=\"camera_joint\" type=\"\
+  fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n    <parent link=\"camera_rgb_frame\"\
+  />\n    <child link=\"camera_link\"/>\n  </joint>\n  <link name=\"camera_link\"\
+  >\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://turtlebot2i_description/meshes/sensors/astra_new.stl\"\
+  />\n      </geometry>\n      <material name=\"black\">\n        <color rgba=\"0.1\
+  \ 0.1 0.1 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"-0.017 0.0 0.0\"/>\n      <geometry>\n        <box size=\"\
+  0.0440 0.1650 0.0300\"/>\n      </geometry>\n    </collision>\n    <inertial>\n\
+  \      <mass value=\"0.3\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"\
+  0.003881243\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000498940\" iyz=\"0.0\" izz=\"0.003879257\"\
+  />\n    </inertial>\n  </link>\n  <gazebo reference=\"camera_link\">\n    <material>Gazebo/Blue</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <joint name=\"camera_depth_joint\" type=\"fixed\">\n    <origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0.038 0\"/>\n    <parent link=\"camera_rgb_frame\"/>\n    <child link=\"\
+  camera_depth_frame\"/>\n  </joint>\n  <link name=\"camera_depth_frame\"/>\n  <joint\
+  \ name=\"camera_depth_optical_joint\" type=\"fixed\">\n    <origin rpy=\"-1.570795\
+  \ 0 -1.570795\" xyz=\"0 0 0\"/>\n    <parent link=\"camera_depth_frame\"/>\n   \
+  \ <child link=\"camera_depth_optical_frame\"/>\n  </joint>\n  <link name=\"camera_depth_optical_frame\"\
+  />\n  <gazebo reference=\"camera_link\">\n    <sensor name=\"camera\" type=\"depth\"\
+  >\n      <always_on>true</always_on>\n      <update_rate>20.0</update_rate>\n  \
+  \    <camera>\n        <horizontal_fov>1.04719666667</horizontal_fov>\n        <image>\n\
+  \          <format>B8G8R8</format>\n          <width>640</width>\n          <height>480</height>\n\
+  \        </image>\n        <clip>\n          <near>0.05</near>\n          <far>8.0</far>\n\
+  \        </clip>\n      </camera>\n      <plugin filename=\"libgazebo_ros_openni_kinect.so\"\
+  \ name=\"kinect_camera_controller\">\n        <cameraName>camera</cameraName>\n\
+  \        <alwaysOn>true</alwaysOn>\n        <updateRate>10</updateRate>\n      \
+  \  <imageTopicName>rgb/image_raw</imageTopicName>\n        <depthImageTopicName>depth/image_raw</depthImageTopicName>\n\
+  \        <pointCloudTopicName>depth/points</pointCloudTopicName>\n        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>\n\
+  \        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>\n\
+  \        <frameName>camera_depth_optical_frame</frameName>\n        <baseline>0.1</baseline>\n\
+  \        <distortion_k1>0.0</distortion_k1>\n        <distortion_k2>0.0</distortion_k2>\n\
+  \        <distortion_k3>0.0</distortion_k3>\n        <distortion_t1>0.0</distortion_t1>\n\
+  \        <distortion_t2>0.0</distortion_t2>\n        <pointCloudCutoff>0.4</pointCloudCutoff>\n\
+  \      </plugin>\n    </sensor>\n  </gazebo>\n  <!--\n    ==  Intel SR300 body joints\
+  \ & links ==\n    -->\n  <!-- camera_sr300 body -->\n  <joint name=\"camera_sr300_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.138 0.0 0.444\"/>\n    <parent\
+  \ link=\"base_link\"/>\n    <child link=\"camera_sr300\"/>\n  </joint>\n  <link\
+  \ name=\"camera_sr300\">\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"\
+  />\n      <geometry>\n        <mesh filename=\"package://turtlebot2i_description/meshes/sensors/sr300_tb2i.stl\"\
+  />\n      </geometry>\n      <material name=\"black\">\n        <color rgba=\"0.1\
+  \ 0.1 0.1 1\"/>\n      </material>\n    </visual>\n    <collision>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"/>\n      <geometry>\n        <mesh filename=\"\
+  package://turtlebot2i_description/meshes/sensors/sr300_tb2i.stl\" scale=\"2.0 2.0\
+  \ 2.0\"/>\n      </geometry>\n    </collision>\n    <!-- This inertial field needs\
+  \ doesn't contain reliable data!! -->\n    <inertial>\n      <mass value=\"0.15\"\
+  />\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.003881243\" ixy=\"0.0\"\
+  \ ixz=\"0.0\" iyy=\"0.000498940\" iyz=\"0.0\" izz=\"0.003879257\"/>\n    </inertial>\n\
+  \  </link>\n  <gazebo reference=\"camera_sr300\">\n    <material>Gazebo/Blue</material>\n\
+  \    <selfCollide>true</selfCollide>\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <!--\n    ==  RGB joints & links ==\n    -->\n  <joint name=\"camera_sr300_rgb_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 1.16 0\" xyz=\"0.0 0.003 0.0\"/>\n    <parent\
+  \ link=\"camera_sr300\"/>\n    <child link=\"camera_sr300_rgb_frame\"/>\n  </joint>\n\
+  \  <link name=\"camera_sr300_rgb_frame\"/>\n  <joint name=\"camera_sr300_rgb_optical_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"-1.570795 0 -1.570795\" xyz=\"0 0 0\"/>\n \
+  \   <parent link=\"camera_sr300_rgb_frame\"/>\n    <child link=\"camera_sr300_rgb_optical_frame\"\
+  />\n  </joint>\n  <link name=\"camera_sr300_rgb_optical_frame\"/>\n  <!--\n    ==\
+  \  Depth joints & links ==\n    -->\n  <joint name=\"camera_sr300_depth_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 -0.024 0\"/>\n    <parent link=\"\
+  camera_sr300_rgb_frame\"/>\n    <child link=\"camera_sr300_depth_frame\"/>\n  </joint>\n\
+  \  <link name=\"camera_sr300_depth_frame\"/>\n  <joint name=\"camera_sr300_depth_optical_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"-1.570795 0 -1.570795\" xyz=\"0 0 0\"/>\n \
+  \   <parent link=\"camera_sr300_depth_frame\"/>\n    <child link=\"camera_sr300_depth_optical_frame\"\
+  />\n  </joint>\n  <link name=\"camera_sr300_depth_optical_frame\"/>\n  <!-- Simulation\
+  \ sensor -->\n  <gazebo reference=\"camera_sr300\">\n    <sensor name=\"camera_sr300\"\
+  \ type=\"depth\">\n      <always_on>true</always_on>\n      <update_rate>20.0</update_rate>\n\
+  \      <camera>\n        <horizontal_fov>1.04719666667</horizontal_fov>\n      \
+  \  <image>\n          <format>B8G8R8</format>\n          <width>640</width>\n  \
+  \        <height>480</height>\n        </image>\n        <clip>\n          <near>0.05</near>\n\
+  \          <far>8.0</far>\n        </clip>\n      </camera>\n      <plugin filename=\"\
+  libgazebo_ros_openni_kinect.so\" name=\"kinect_camera_controller\">\n        <cameraName>camera_sr300</cameraName>\n\
+  \        <alwaysOn>true</alwaysOn>\n        <updateRate>10</updateRate>\n      \
+  \  <imageTopicName>rgb/image_raw</imageTopicName>\n        <depthImageTopicName>depth/image_raw</depthImageTopicName>\n\
+  \        <pointCloudTopicName>depth/points</pointCloudTopicName>\n        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>\n\
+  \        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>\n\
+  \        <frameName>camera_sr300_depth_optical_frame</frameName>\n        <baseline>0.1</baseline>\n\
+  \        <distortion_k1>0.0</distortion_k1>\n        <distortion_k2>0.0</distortion_k2>\n\
+  \        <distortion_k3>0.0</distortion_k3>\n        <distortion_t1>0.0</distortion_t1>\n\
+  \        <distortion_t2>0.0</distortion_t2>\n        <pointCloudCutoff>0.2</pointCloudCutoff>\n\
+  \      </plugin>\n    </sensor>\n  </gazebo>\n  <joint name=\"arm_base_joint\" type=\"\
+  fixed\">\n    <origin xyz=\"0.145 0.0 0.124\"/>\n    <parent link=\"base_link\"\
+  />\n    <child link=\"arm_base_link\"/>\n  </joint>\n  <link name=\"arm_base_link\"\
+  >\n    <!-- TODO: This inertial field needs doesn't contain reliable data!! -->\n\
+  \    <inertial>\n      <mass value=\"0.055\"/>\n      <origin xyz=\"0 0 0\"/>\n\
+  \      <inertia ixx=\"0.000017012\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000013258\"\
+  \ iyz=\"0.0\" izz=\"0.000009483\"/>\n    </inertial>\n    <visual>\n      <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherBase.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Black\"/>\n\
+  \    </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n \
+  \     <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherBase.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"arm_base_link\">\n    <material>Gazebo/Black</material>\n    <gravity>true</gravity>\n\
+  \  </gazebo>\n  <joint name=\"arm_shoulder_pan_joint\" type=\"revolute\">\n    <origin\
+  \ rpy=\"0 0 0\" xyz=\"0 0 0.020\"/>\n    <axis xyz=\"0 0 1\"/>\n    <limit effort=\"\
+  6\" lower=\"-1.74\" upper=\"1.74\" velocity=\"1.571\"/>\n    <dynamics friction=\"\
+  0.13\"/>\n    <parent link=\"arm_base_link\"/>\n    <child link=\"arm_shoulder_pan_link\"\
+  />\n  </joint>\n  <link name=\"arm_shoulder_pan_link\">\n    <!-- TODO: This inertial\
+  \ field needs doesn't contain reliable data!! -->\n    <inertial>\n      <mass value=\"\
+  0.008\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n \
+  \       <mesh filename=\"package://phantomx_pincher_arm_description/meshes/F2Bracket.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n  \
+  \    <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/F2Bracket.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"arm_shoulder_pan_link\">\n    <material>Gazebo/Red</material>\n  \
+  \  <gravity>true</gravity>\n  </gazebo>\n  <transmission name=\"arm_shoulder_pan_transmission\"\
+  >\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"\
+  arm_shoulder_pan_joint\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \    </joint>\n    <actuator name=\"arm_shoulder_pan_actuator\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\
+  \  <joint name=\"arm_bicep_joint\" type=\"revolute\">\n    <origin rpy=\"0 0 0\"\
+  \ xyz=\"0 0 0.027\"/>\n    <axis xyz=\"0 1 0\"/>\n    <limit effort=\"6\" lower=\"\
+  -1.98\" upper=\"1.88\" velocity=\"1.571\"/>\n    <dynamics friction=\"0.13\"/>\n\
+  \    <parent link=\"arm_shoulder_pan_link\"/>\n    <child link=\"arm_bicep_link\"\
+  />\n  </joint>\n  <link name=\"arm_bicep_link\">\n    <!-- TODO: This inertial field\
+  \ needs doesn't contain reliable data!! -->\n    <inertial>\n      <mass value=\"\
+  0.016\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0 \"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherBicep.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"\
+  />\n      <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherBicep.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"arm_bicep_link\">\n    <material>Gazebo/Red</material>\n    <gravity>true</gravity>\n\
+  \  </gazebo>\n  <transmission name=\"arm_bicep_transmission\">\n    <type>transmission_interface/SimpleTransmission</type>\n\
+  \    <joint name=\"arm_bicep_joint\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \    </joint>\n    <actuator name=\"arm_bicep_actuator\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\
+  \  <joint name=\"arm_forearm_joint\" type=\"revolute\">\n    <origin rpy=\"0 0 0\"\
+  \ xyz=\"0.0325 0 0.104\"/>\n    <axis xyz=\"0 -1 0\"/>\n    <limit effort=\"6\"\
+  \ lower=\"-1.58\" upper=\"0.59\" velocity=\"1.571\"/>\n    <dynamics friction=\"\
+  0.13\"/>\n    <parent link=\"arm_bicep_link\"/>\n    <child link=\"arm_forearm_link\"\
+  />\n  </joint>\n  <link name=\"arm_forearm_link\">\n    <!-- TODO: This inertial\
+  \ field needs doesn't contain reliable data!! -->\n    <inertial>\n      <mass value=\"\
+  0.016\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0 \"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherForeArm.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"\
+  />\n      <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherForeArm.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"arm_forearm_link\">\n    <material>Gazebo/Red</material>\n    <gravity>true</gravity>\n\
+  \  </gazebo>\n  <transmission name=\"arm_forearm_transmission\">\n    <type>transmission_interface/SimpleTransmission</type>\n\
+  \    <joint name=\"arm_forearm_joint\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \    </joint>\n    <actuator name=\"arm_forearm_actuator\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\
+  \  <joint name=\"arm_wrist_flex_joint\" type=\"revolute\">\n    <origin rpy=\"0\
+  \ 0 0\" xyz=\"0.104 0 0\"/>\n    <axis xyz=\"0 -1 0\"/>\n    <limit effort=\"6\"\
+  \ lower=\"-1.79\" upper=\"1.67\" velocity=\"1.571\"/>\n    <dynamics friction=\"\
+  0.13\"/>\n    <parent link=\"arm_forearm_link\"/>\n    <child link=\"arm_wrist_flex_link\"\
+  />\n  </joint>\n  <link name=\"arm_wrist_flex_link\">\n    <!-- TODO: This inertial\
+  \ field needs doesn't contain reliable data!! -->\n    <inertial>\n      <mass value=\"\
+  0.01\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\" 0 0 0 \"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherWristGripper.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0.0 0.0 0.0\"\
+  />\n      <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherWristGripper.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"arm_wrist_flex_link\">\n    <material>Gazebo/Red</material>\n    <gravity>true</gravity>\n\
+  \  </gazebo>\n  <transmission name=\"arm_wrist_flex_transmission\">\n    <type>transmission_interface/SimpleTransmission</type>\n\
+  \    <joint name=\"arm_wrist_flex_joint\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \    </joint>\n    <actuator name=\"arm_wrist_flex_actuator\">\n      <hardwareInterface>EffortJointInterface</hardwareInterface>\n\
+  \      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\
+  \  <!-- gripper joint -->\n  <!-- Finger 1 -->\n  <joint name=\"gripper_joint\"\
+  \ type=\"prismatic\">\n    <origin rpy=\"0 0 0\" xyz=\"0.070 0 0\"/>\n    <axis\
+  \ xyz=\"0 1 0\"/>\n    <limit effort=\"30\" lower=\"0.002\" upper=\"0.032\" velocity=\"\
+  0.5\"/>\n    <parent link=\"arm_wrist_flex_link\"/>\n    <child link=\"gripper_active_link\"\
+  />\n  </joint>\n  <link name=\"gripper_active_link\">\n    <inertial>\n      <!--\
+  \ TODO: This inertial field needs doesn't contain reliable data!! -->\n      <mass\
+  \ value=\"0.01\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\"\
+  \ ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n \
+  \       <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherFinger.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n  \
+  \    <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherFinger.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"gripper_active_link\">\n    <material>Gazebo/Red</material>\n    <!--selfCollide>true</selfCollide-->\n\
+  \    <gravity>true</gravity>\n  </gazebo>\n  <!-- Finger 2 -->\n  <!-- Note: currently\
+  \ static but should be a Mimic of Finger 1 -->\n  <joint name=\"gripper2_joint\"\
+  \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.070 -0.016 0\"/>\n    <parent\
+  \ link=\"arm_wrist_flex_link\"/>\n    <child link=\"gripper_active2_link\"/>\n \
+  \ </joint>\n  <link name=\"gripper_active2_link\">\n    <inertial>\n      <!-- TODO:\
+  \ This inertial field needs doesn't contain reliable data!! -->\n      <mass value=\"\
+  0.01\"/>\n      <origin xyz=\"0 0 0\"/>\n      <inertia ixx=\"0.000001\" ixy=\"\
+  0.0\" ixz=\"0.0\" iyy=\"0.000001\" iyz=\"0.0\" izz=\"0.000001\"/>\n    </inertial>\n\
+  \    <visual>\n      <origin rpy=\"3.14159 0 0\" xyz=\"0 0 0\"/>\n      <geometry>\n\
+  \        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherFinger.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n      <material name=\"Red\"/>\n \
+  \   </visual>\n    <collision>\n      <origin rpy=\"3.14159 0 0\" xyz=\"0 0 0\"\
+  />\n      <geometry>\n        <mesh filename=\"package://phantomx_pincher_arm_description/meshes/PincherFinger.stl\"\
+  \ scale=\"1.0 1.0 1.0\"/>\n      </geometry>\n    </collision>\n  </link>\n  <gazebo\
+  \ reference=\"gripper_active2_link\">\n    <material>Gazebo/Red</material>\n   \
+  \ <!--selfCollide>true</selfCollide-->\n    <gravity>true</gravity>\n  </gazebo>\n\
+  \  <!-- Using Mimic -->\n  <!-- gripper 2 joint -->\n  <!--  TODO: Test Mimic ->\n\
+  \    <joint name=\"gripper2_joint\" type=\"prismatic\">\n      <origin xyz=\"0.070\
+  \ 0 0\" rpy=\"0 0 0\"/>\n      <axis xyz=\"0 1 0\"/>\n      <limit effort=\"30\"\
+  \ velocity=\"0.5\" lower=\"-0.016\" upper=\"-0.002\"/>\n      <parent link=\"arm_wrist_flex_link\"\
+  />\n      <child link=\"gripper_active2_link\"/>\n      <mimic joint=\"gripper_joint\"\
+  \ multiplier=\"-1\"  offset = \"0\"/>\n    </joint-->\n  <!-- gripper_link -->\n\
+  \  <link name=\"gripper_link\"/>\n  <joint name=\"gripper_link_joint\" type=\"revolute\"\
+  >\n    <origin rpy=\"0 0 0\" xyz=\"0.110 0 0\"/>\n    <parent link=\"arm_wrist_flex_link\"\
+  />\n    <child link=\"gripper_link\"/>\n    <limit effort=\"6\" lower=\"-3.14\"\
+  \ upper=\"3.14\" velocity=\"1\"/>\n    <axis xyz=\"1 0 0\"/>\n  </joint>\n  <!--gazebo>\n\
+  \      <gripper name=\"gripper\">\n        <grasp_check>\n          <attach_steps>5</attach_steps>\n\
+  \          <detach_steps>10</detach_steps>\n          <min_contact_count>2</min_contact_count>\n\
+  \        </grasp_check>\n      </gripper>\n      <gripper_link>gripper_active_link</gripper_link>\n\
+  \      <palm_link>gripper_servo_link</palm_link>\n  </gazebo-->\n</robot>\n\n"
+robot_state_publisher: {publish_frequency: 5.0}
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_192_168_1_101__43359: 'http://192.168.1.101:43359/'}
+rosversion: '1.12.14
+
+  '
+rtabmap:
+  BRIEF: {Bytes: '32'}
+  BRISK: {Octaves: '3', PatternScale: '1', Thresh: '30'}
+  Bayes: {FullPredictionUpdate: 'false', PredictionLC: 0.1 0.36 0.30 0.16 0.062 0.0151
+      0.00255 0.000324 2.5e-05 1.3e-06 4.8e-08 1.2e-09 1.9e-11 2.2e-13 1.7e-15 8.5e-18
+      2.9e-20 6.9e-23, VirtualPlacePriorThr: '0.9'}
+  DbSqlite3: {CacheSize: '10000', InMemory: 'false', JournalMode: '3', Synchronous: '0',
+    TempStore: '2'}
+  FAST: {CV: '0', Gpu: 'false', GpuKeypointsRatio: '0.05', GridCols: '0', GridRows: '0',
+    MaxThreshold: '200', MinThreshold: '7', NonmaxSuppression: 'true', Threshold: '20'}
+  FREAK: {NOctaves: '4', OrientationNormalized: 'true', PatternScale: '22', ScaleNormalized: 'true'}
+  GFTT: {BlockSize: '3', K: '0.04', MinDistance: '3', QualityLevel: '0.001', UseHarrisDetector: 'false'}
+  GTSAM: {Optimizer: '1'}
+  Grid: {3D: 'true', CellSize: '0.05', ClusterRadius: '0.1', DepthDecimation: '4',
+    DepthRoiRatios: 0.0 0.0 0.0 0.0, FlatObstacleDetected: 'true', FootprintHeight: '0.0',
+    FootprintLength: '0.0', FootprintWidth: '0.0', FromDepth: 'false', GroundIsObstacle: 'false',
+    MapFrameProjection: 'false', MaxGroundAngle: '45', MaxGroundHeight: '0.0', MaxObstacleHeight: '0.0',
+    MinClusterSize: '10', MinGroundHeight: '0.0', NoiseFilteringMinNeighbors: '5',
+    NoiseFilteringRadius: '0.0', NormalK: '20', NormalsSegmentation: 'true', PreVoxelFiltering: 'true',
+    RangeMax: '0', RangeMin: '0.0', RayTracing: 'false', Scan2dUnknownSpaceFilled: 'false',
+    ScanDecimation: '1'}
+  GridGlobal: {Eroded: 'false', FootprintRadius: '0.0', FullUpdate: 'true', MaxNodes: '0',
+    MinSize: '0.0', OccupancyThr: '0.5', ProbClampingMax: '0.971', ProbClampingMin: '0.1192',
+    ProbHit: '0.7', ProbMiss: '0.4', UpdateError: '0.01'}
+  Icp: {CorrespondenceRatio: '0.1', DownsamplingStep: '1', Epsilon: '0', Iterations: '30',
+    MaxCorrespondenceDistance: '0.05', MaxRotation: '0.78', MaxTranslation: '0.2',
+    PM: 'false', PMConfig: '', PMMatcherEpsilon: '0.0', PMMatcherKnn: '1', PMOutlierRatio: '0.95',
+    PointToPlane: 'false', PointToPlaneK: '5', PointToPlaneMinComplexity: '0.02',
+    PointToPlaneRadius: '1.0', RangeMax: '0', RangeMin: '0', VoxelSize: '0.0'}
+  ImuFilter: {ComplementaryBiasAlpha: '0.01', ComplementaryDoAdpativeGain: 'true',
+    ComplementaryDoBiasEstimation: 'true', ComplementaryGainAcc: '0.01', MadgwickGain: '0.1',
+    MadgwickZeta: '0.0'}
+  KAZE: {Diffusivity: '1', Extended: 'false', NOctaveLayers: '4', NOctaves: '4', Threshold: '0.001',
+    Upright: 'false'}
+  Kp: {BadSignRatio: '0.5', DetectorStrategy: '6', DictionaryPath: '', FlannRebalancingFactor: '2.0',
+    GridCols: '1', GridRows: '1', IncrementalDictionary: 'true', IncrementalFlann: 'true',
+    MaxDepth: '4.0', MaxFeatures: '500', MinDepth: '0', NNStrategy: '1', NewWordsComparedTogether: 'true',
+    NndrRatio: '0.8', Parallelized: 'true', RoiRatios: 0.0 0.0 0.0 0.0, SubPixEps: '0.02',
+    SubPixIterations: '0', SubPixWinSize: '3', TfIdfLikelihoodUsed: 'true'}
+  Marker: {CornerRefinementMethod: '0', Dictionary: '0', Length: '0', MaxDepthError: '0.01',
+    VarianceAngular: '0.01', VarianceLinear: '0.001'}
+  Mem: {BadSignaturesIgnored: 'false', BinDataKept: 'true', CompressionParallelized: 'true',
+    CovOffDiagIgnored: 'true', DepthAsMask: 'true', GenerateIds: 'true', ImageCompressionFormat: .jpg,
+    ImageKept: 'false', ImagePostDecimation: '1', ImagePreDecimation: '1', IncrementalMemory: 'true',
+    InitWMWithAllNodes: 'false', IntermediateNodeDataKept: 'false', LaserScanDownsampleStepSize: '1',
+    LaserScanNormalK: '0', LaserScanNormalRadius: '0.0', LaserScanVoxelSize: '0.0',
+    MapLabelsAdded: 'true', NotLinkedNodesKept: 'true', RawDescriptorsKept: 'true',
+    RecentWmRatio: '0.2', ReduceGraph: 'false', RehearsalIdUpdatedToNewOne: 'false',
+    RehearsalSimilarity: '0.30', RehearsalWeightIgnoredWhileMoving: 'false', STMSize: '10',
+    SaveDepth16Format: 'false', TransferSortingByWeightId: 'false', UseOdomFeatures: 'true',
+    UseOdomGravity: 'false'}
+  ORB: {EdgeThreshold: '31', FirstLevel: '0', Gpu: 'false', NLevels: '8', PatchSize: '31',
+    ScaleFactor: '1.2', ScoreType: '0', WTA_K: '2'}
+  Optimizer: {Epsilon: '0.0', GravitySigma: '0.0', Iterations: '20', LandmarksIgnored: 'false',
+    PriorsIgnored: 'true', Robust: 'false', Strategy: '1', VarianceIgnored: 'false'}
+  RGBD: {AngularSpeedUpdate: '0.0', AngularUpdate: '0.1', CreateOccupancyGrid: 'true',
+    Enabled: 'true', GoalReachedRadius: '0.5', GoalsSavedInUserData: 'false', LinearSpeedUpdate: '0.0',
+    LinearUpdate: '0.1', LocalBundleOnLoopClosure: 'false', LocalImmunizationRatio: '0.25',
+    LocalRadius: '10', LoopClosureReextractFeatures: 'false', LoopCovLimited: 'false',
+    MarkerDetection: 'false', MaxLocalRetrieved: '2', MaxLoopClosureDistance: '0.0',
+    MaxOdomCacheSize: '0', NeighborLinkRefining: 'false', NewMapOdomChangeDistance: '0',
+    OptimizeFromGraphEnd: 'false', OptimizeMaxError: '3.0', PlanAngularVelocity: '0',
+    PlanLinearVelocity: '0', PlanStuckIterations: '0', ProximityAngle: '45', ProximityBySpace: 'true',
+    ProximityByTime: 'false', ProximityMaxGraphDepth: '50', ProximityMaxPaths: '3',
+    ProximityPathFilteringRadius: '1', ProximityPathMaxNeighbors: '10', ProximityPathRawPosesUsed: 'true',
+    SavedLocalizationIgnored: 'false', ScanMatchingIdsSavedInLinks: 'true'}
+  Reg: {Force3DoF: 'true', RepeatOnce: 'true', Strategy: '1'}
+  Rtabmap: {ComputeRMSE: 'true', CreateIntermediateNodes: 'false', DetectionRate: '1',
+    ImageBufferSize: '1', ImagesAlreadyRectified: 'true', LoopGPS: 'true', LoopRatio: '0',
+    LoopThr: '0.11', MaxRetrieved: '2', MemoryThr: '0', PublishLastSignature: 'true',
+    PublishLikelihood: 'true', PublishPdf: 'true', PublishRAMUsage: 'false', PublishStats: 'true',
+    RectifyOnlyFeatures: 'false', SaveWMState: 'false', StartNewMapOnGoodSignature: 'false',
+    StartNewMapOnLoopClosure: 'false', StatisticLogged: 'false', StatisticLoggedHeaders: 'true',
+    StatisticLogsBufferedInRAM: 'true', TimeThr: '700', WorkingDirectory: /home/marcopolo/.ros}
+  SIFT: {ContrastThreshold: '0.04', EdgeThreshold: '10', NFeatures: '0', NOctaveLayers: '3',
+    Sigma: '1.6'}
+  SURF: {Extended: 'false', GpuKeypointsRatio: '0.01', GpuVersion: 'false', HessianThreshold: '500',
+    OctaveLayers: '2', Octaves: '4', Upright: 'false'}
+  Stereo: {DenseStrategy: '0', Eps: '0.01', Iterations: '30', MaxDisparity: '128.0',
+    MaxLevel: '5', MinDisparity: '0.5', OpticalFlow: 'true', SSD: 'true', WinHeight: '3',
+    WinWidth: '15'}
+  StereoBM: {BlockSize: '15', Disp12MaxDiff: '-1', MinDisparity: '0', NumDisparities: '128',
+    PreFilterCap: '31', PreFilterSize: '9', SpeckleRange: '4', SpeckleWindowSize: '100',
+    TextureThreshold: '10', UniquenessRatio: '15'}
+  StereoSGBM: {BlockSize: '15', Disp12MaxDiff: '1', MinDisparity: '0', Mode: '0',
+    NumDisparities: '128', P1: '2', P2: '5', PreFilterCap: '31', SpeckleRange: '4',
+    SpeckleWindowSize: '100', UniquenessRatio: '20'}
+  VhEp: {Enabled: 'false', MatchCountMin: '8', RansacParam1: '3', RansacParam2: '0.99'}
+  Vis: {BundleAdjustment: '1', CorFlowEps: '0.01', CorFlowIterations: '30', CorFlowMaxLevel: '3',
+    CorFlowWinSize: '16', CorGuessMatchToProjection: 'false', CorGuessWinSize: '20',
+    CorNNDR: '0.6', CorNNType: '1', CorType: '0', DepthAsMask: 'true', EpipolarGeometryVar: '0.02',
+    EstimationType: '1', FeatureType: '6', ForwardEstOnly: 'true', GridCols: '1',
+    GridRows: '1', InlierDistance: '0.1', Iterations: '300', MaxDepth: '0', MaxFeatures: '1000',
+    MeanInliersDistance: '0.0', MinDepth: '0', MinInliers: '5', MinInliersDistribution: '0.0',
+    PnPFlags: '0', PnPRefineIterations: '0', PnPReprojError: '2', RefineIterations: '5',
+    RoiRatios: 0.0 0.0 0.0 0.0, SubPixEps: '0.02', SubPixIterations: '0', SubPixWinSize: '3'}
+  g2o: {Baseline: '0.075', Optimizer: '0', PixelVariance: '1.0', RobustKernelDelta: '8',
+    Solver: '0'}
+  is_rtabmap_paused: false
+  rtabmap:
+    Grid: {FromDepth: 'false'}
+    Icp: {CoprrespondenceRatio: '0.3'}
+    Kp: {MaxDepth: '4.0'}
+    Mem: {IncrementalMemory: 'true', InitWMWithAllNodes: 'false', RehearsalSimilarity: '0.30'}
+    RGBD: {AngularUpdate: '0.1', LinearUpdate: '0.1', OptimizeFromGraphEnd: 'false',
+      ProximityBySpace: 'true'}
+    Reg: {Force3DoF: 'true', Strategy: '1'}
+    Rtabmap: {TimeThr: '700'}
+    Vis: {InlierDistance: '0.1', MinInliers: '5'}
+    database_path: rtabmap.db
+    frame_id: base_footprint
+    odom_frame_id: odom
+    subscribe_depth: true
+    subscribe_scan: true
+    wait_for_transform_duration: 0.2
+run_id: dc28c8c8-003c-11ea-bdf3-a0c589041e7e
