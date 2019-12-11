@@ -31,6 +31,12 @@ class MPOverlord(StateMachine):
         self.playrq_pub.publish(playrq)
         return
     
+    def on_enter_ballfound_pursuing(self):
+        rospy.loginfo("Now in %s" % self.ballfound_pursuing.name)
+        playrq = PlayRq(synth_name=self.ballfound_pursuing.identifier)
+        self.playrq_pub.publish(playrq)
+        return
+    
     def on_enter_search_mapping(self):
         rospy.loginfo("Now in %s" % self.search_mapping.name)
         playrq = PlayRq(synth_name=self.search_mapping.identifier)
@@ -124,7 +130,7 @@ class MPOverlord(StateMachine):
     def _rq_gen_state_trans_msgs(self):
         rospy.loginfo('Requesting generation of state messages')
         for state in self.states:
-            rospy.sleep(1)
+            rospy.sleep(2)
             print(state.name)
             synrq = SynthRq(synth_name=state.identifier,
                             synth_text="Now in %s" % state.name,
@@ -134,7 +140,7 @@ class MPOverlord(StateMachine):
     def _rq_gen_default_message(self):
         rospy.loginfo('Requesting generation of default message')
         defaultsynrq = SynthRq(synth_name='ball_not_found',
-                               synth_text="I haven't found the ball yet!"
+                               synth_text="I haven't found the ball yet!",
                                force_resynth=False)
         self.synrq_pub.publish(defaultsynrq)
 
@@ -200,6 +206,8 @@ class MPOverlord(StateMachine):
                 # Sending an empty string pursue request is enough to move into position
                 pursuerq = String()
                 self.pursuerq_pub.publish(pursuerq)
+                playrq = PlayRq()
+                playrq.synth_name = self.ballfound_pursuing.identifier
         
         else:
             rospy.loginfo("Unknown Query")

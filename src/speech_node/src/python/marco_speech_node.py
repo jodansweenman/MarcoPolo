@@ -54,6 +54,7 @@ class MarcoSpeaker:
 
     def handle_play_rq(self, data):
         synth_name = data.synth_name
+        rospy.loginfo("Received message to play %s" % synth_name)
 
         if synth_name in self.synth_jobs.keys():
             self._play_audio_file(file_path=self.synth_jobs[synth_name])
