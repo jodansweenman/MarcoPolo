@@ -1,30 +1,37 @@
 #!/usr/bin/env python
 
+#Imports
 import rospy
 import numpy as np
 import time
 from std_msgs.msg import Float64
 from std_msgs.msg import Bool
 
+#Declaration of Publishers for all joints
 bicep = rospy.Publisher('/arm_bicep_joint/command', Float64, queue_size=10)
 forearm = rospy.Publisher('/arm_forearm_joint/command', Float64, queue_size=10)
 shoulder = rospy.Publisher('/arm_shoulder_pan_joint/command', Float64, queue_size=10)
 wrist = rospy.Publisher('/arm_wrist_flex_joint/command', Float64, queue_size=10)
 gripper = rospy.Publisher('gripper_joint/command', Float64, queue_size=10)
 
-b_val = np.array([-1.57, -1.0, -1.0, -0.5, 0.0, -0.5, -1.0, -1.0, -1.57])
-f_val = np.array([-1.57, -1.0, -0.5, -0.1, 0.0, -0.1, -0.5, -1.0, -1.57])
-s_val = np.array([1.57, 1.57, 0.0, 0.0, 0.0, 0.0, 0.0, 1.57, 1.57])
-w_val = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-g_val = np.array([0.0, 0.0, 0.0, 0.0, -0.9, -0.9, -0.9, -0.9, -0.9])
 
+#Array of command values for joints
+b_val = np.array([-1.57, -1.0, -1.0, -0.5, 0.0, 0.0, 0.0, 0.0, -0.5, -1.0, -1.0, -1.57])
+f_val = np.array([-1.57, -1.0, -0.5, -0.1, 0.0, 0.0, 0.0, 0.0, -0.1, -0.5, -1.0, -1.57])
+s_val = np.array([1.57, 1.57, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,  0.0, 0.0, 1.57, 1.57])
+w_val = np.array([0.0, 0.0, 0.0, 0.0, -0.65, -0.65, -0.65, -0.65, 0.0, 0.0, 0.0, 0.0])
+g_val = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.9, -0.9, -0.9, -0.9, -0.9, -0.9])
+
+#Count defined
 count = 0
 
+#Callback for changing of published values
 def arm_callback(data):
 
     global count
 
     if data.data == True:
+        #Looping through values
         for i in range(len(b_val)):
             count += 1
             bicep.publish(Float64(b_val[i]))
@@ -34,7 +41,7 @@ def arm_callback(data):
             gripper.publish(Float64(g_val[i]))
             time.sleep(1.5)
 
-
+#Initiation of arm control
 def arm_control():
     rospy.init_node('arm_control', anonymous=True)
     rospy.Subscriber('/move_goal_true', Bool, arm_callback)
@@ -47,6 +54,7 @@ def arm_control():
     gripper.publish(Float64(g_val[count]))
     rospy.spin()
 
+#Main function
 if __name__ == '__main__':
     try:
         arm_control()
