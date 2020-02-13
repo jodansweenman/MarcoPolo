@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /TF1
         - /TF1/Frames1
         - /PointCloud21
       Splitter Ratio: 0.5
@@ -78,8 +79,16 @@ Visualization Manager:
         All Enabled: false
         arm_base_link:
           Value: false
+        arm_bicep_link:
+          Value: false
+        arm_forearm_link:
+          Value: false
+        arm_shoulder_pan_link:
+          Value: false
         arm_wrist_flex_link:
           Value: false
+        ball_position:
+          Value: true
         base_footprint:
           Value: true
         base_link:
@@ -115,6 +124,10 @@ Visualization Manager:
         cliff_sensor_right_link:
           Value: false
         gripper_active2_link:
+          Value: false
+        gripper_active_link:
+          Value: false
+        gripper_link:
           Value: false
         gyro_link:
           Value: false
@@ -196,10 +209,21 @@ Visualization Manager:
       Tree:
         map:
           odom:
+            ball_position:
+              {}
             base_footprint:
               base_link:
                 arm_base_link:
-                  {}
+                  arm_shoulder_pan_link:
+                    arm_bicep_link:
+                      arm_forearm_link:
+                        arm_wrist_flex_link:
+                          gripper_active2_link:
+                            {}
+                          gripper_active_link:
+                            {}
+                          gripper_link:
+                            {}
                 camera_rgb_frame:
                   camera_depth_frame:
                     camera_depth_optical_frame:
@@ -322,7 +346,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 100
       Min Color: 0; 0; 0
-      Min Intensity: 100
+      Min Intensity: 50
       Name: PointCloud2
       Position Transformer: XYZ
       Queue Size: 10
@@ -363,7 +387,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.5129812955856323
+      Distance: 4.842593193054199
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1

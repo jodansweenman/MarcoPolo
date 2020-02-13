@@ -54,6 +54,7 @@ class MarcoSpeaker:
 
     def handle_play_rq(self, data):
         synth_name = data.synth_name
+        rospy.loginfo("Received message to play %s" % synth_name)
 
         if synth_name in self.synth_jobs.keys():
             self._play_audio_file(file_path=self.synth_jobs[synth_name])
@@ -75,16 +76,20 @@ class MarcoSpeaker:
 
     def handle_synth_rq(self, data):
         synth_name = data.synth_name
-        synth_filename = synth_name + ".mp3"
         synth_text = data.synth_text
-
-        rospy.loginfo("Synthesizing text for '%s'" % synth_text)
-        response = self._get_synth_result(synth_text, self.polly_client)
-
+        force_resynth = data.force_resynth
+        synth_filename = synth_name + ".mp3"
         synth_fullname = os.path.join(self.basePath, synth_filename)
 
-        rospy.loginfo("Writing file: '%s'" % synth_fullname)
-        self._write_audio_file(response, file_name=synth_fullname)
+        # Only perform the synthesis and saving of mp3 if it doesnt already exist or if forced
+        if force_resynth or (not os.path.isfile(synth_fullname)):
+            rospy.loginfo("Synthesizing text for '%s'" % synth_text)
+            response = self._get_synth_result(synth_text, self.polly_client)
+
+            rospy.loginfo("Writing file: '%s'" % synth_fullname)
+            self._write_audio_file(response, file_name=synth_fullname)
+        else:
+            print("Not synthesizing, already exists.  Adding to accessible jobs for playback.")
 
         self.synth_jobs[synth_name] = synth_fullname
 
